@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="@dimen/_230sdp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="3">
+
+            <RelativeLayout
+                android:id="@+id/rl_header"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".8"
+                android:background="@drawable/splash_layer"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="@dimen/_72sdp"
+                    android:layout_height="@dimen/_72sdp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_launcher" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/poppins_semi_bold_0"
+                    android:text="@string/all_india_bank_employees_association"
+                    android:textColor="@color/White"
+                    android:textSize="@dimen/_9sdp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.2"
+                android:background="@color/White">
+
+                <android.support.v4.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/_74sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp">
+
+                        <LinearLayout
+                            android:id="@+id/ll_about_us"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <android.support.v7.widget.AppCompatImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="@dimen/_15sdp"
+                                android:src="@drawable/ic_about_us" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:fontFamily="@font/poppins_regular_0"
+                                android:padding="@dimen/_6sdp"
+                                android:text="About UBSAUP"
+
+                                android:textColor="@color/Black"
+                                android:textSize="@dimen/_13sdp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_news"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <android.support.v7.widget.AppCompatImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="@dimen/_15sdp"
+                                android:src="@drawable/ic_news" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:fontFamily="@font/poppins_regular_0"
+                                android:padding="@dimen/_6sdp"
+                                android:text="News"
+                                android:textColor="@color/Black"
+                                android:textSize="@dimen/_13sdp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_achievements"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <android.support.v7.widget.AppCompatImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="@dimen/_15sdp"
+                                android:src="@drawable/ic_achievement" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:fontFamily="@font/poppins_regular_0"
+                                android:padding="@dimen/_6sdp"
+                                android:text="Achievements"
+                                android:textColor="@color/Black"
+                                android:textSize="@dimen/_13sdp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_bank_wise_settlement"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <android.support.v7.widget.AppCompatImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="@dimen/_15sdp"
+                                android:src="@drawable/ic_service" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/poppins_regular_0"
+                                android:padding="@dimen/_6sdp"
+                                android:text="Bank wise settlement"
+                                android:textColor="@color/Black"
+                                android:textSize="@dimen/_13sdp" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            android:layout_marginEnd="@dimen/_15sdp"
+                            android:background="@drawable/button_circle" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_photo_gallery"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <android.support.v7.widget.AppCompatImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="@dimen/_15sdp"
+                                android:src="@drawable/ic_gallery" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:fontFamily="@font/poppins_regular_0"
+                                android:padding="@dimen/_6sdp"
+                                android:text="Photo Gallery"
+                                android:textColor="@color/Black"
+                                android:textSize="@dimen/_13sdp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_contact_us"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <android.support.v7.widget.AppCompatImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="@dimen/_15sdp"
+                                android:src="@drawable/ic_contact_us" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:fontFamily="@font/poppins_regular_0"
+                                android:padding="@dimen/_6sdp"
+                                android:text="Contact us"
+                                android:textColor="@color/Black"
+                                android:textSize="@dimen/_13sdp" />
+                        </LinearLayout>
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:layout_marginEnd="@dimen/_15sdp"
+                            android:background="@drawable/button_circle" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_activities"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <android.support.v7.widget.AppCompatImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="@dimen/_15sdp"
+                                android:src="@drawable/ic_activities" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/poppins_regular_0"
+                                android:padding="@dimen/_6sdp"
+                                android:text="Our Activities"
+                                android:textColor="@color/Black"
+                                android:textSize="@dimen/_13sdp" />
+
+                            <android.support.v7.widget.AppCompatImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="@dimen/_15sdp"
+                                android:src="@drawable/ic_down" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/ll_service_condition"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <android.support.v7.widget.AppCompatImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="@dimen/_15sdp"
+                                android:src="@drawable/ic_service" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/poppins_regular_0"
+                                android:padding="@dimen/_6sdp"
+                                android:text="Service Condition"
+                                android:textColor="@color/Black"
+                                android:textSize="@dimen/_13sdp" />
+
+                            <android.support.v7.widget.AppCompatImageView
+                                android:id="@+id/iv_service_condition_submenu"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="@dimen/_15sdp"
+                                android:src="@drawable/ic_down" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_service_condition_submenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_50sdp"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/tv_at_glance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/poppins_regular_0"
+                                android:padding="@dimen/_6sdp"
+                                android:text="10th BPS At Glance"
+                                android:textColor="@color/Black"
+                                android:textSize="@dimen/_11sdp" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/tv_sub_service_condition"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/poppins_regular_0"
+                                android:padding="@dimen/_6sdp"
+                                android:text="Service Conditions"
+                                android:textColor="@color/Black"
+                                android:textSize="@dimen/_11sdp" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/tv_disciplinary_action"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/poppins_regular_0"
+                                android:padding="@dimen/_6sdp"
+                                android:text="Disciplinary Action"
+                                android:textColor="@color/Black"
+                                android:textSize="@dimen/_11sdp" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/tv_new_medical_scheme"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/poppins_regular_0"
+                                android:padding="@dimen/_6sdp"
+                                android:text="New Medical Scheme"
+                                android:textColor="@color/Black"
+                                android:textSize="@dimen/_11sdp" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/tv_clearical_deployment_condition"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/poppins_regular_0"
+                                android:padding="@dimen/_6sdp"
+                                android:text="Clearical Deployment Conditions"
+                                android:textColor="@color/Black"
+                                android:textSize="@dimen/_11sdp" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/tv_pansion_scheme"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/poppins_regular_0"
+                                android:padding="@dimen/_6sdp"
+                                android:text="Pension Scheme"
+                                android:textColor="@color/Black"
+                                android:textSize="@dimen/_11sdp" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:layout_marginEnd="@dimen/_15sdp"
+                            android:background="@drawable/button_circle" />
+
+
+                    </LinearLayout>
+                </android.support.v4.widget.NestedScrollView>
+
+                <RelativeLayout
+                    android:id="@+id/rl_logout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/_20sdp">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:src="@drawable/ic_logout" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_40sdp"
+                        android:background="@drawable/logout_round"
+                        android:fontFamily="@font/poppins_semi_bold_0"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:paddingStart="@dimen/_45sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_25sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:text="Log Out"
+                        android:textColor="@color/Red"
+                        android:textSize="@dimen/_13sdp" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

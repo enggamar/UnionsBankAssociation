@@ -16,12 +16,20 @@
                 android:id="@+id/toolbar"
                 layout="@layout/actionbarlayout" />
 
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_notification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toolbar"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:padding="@dimen/_5sdp" />
+
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_gravity="left"
+            android:layout_gravity="start"
             android:orientation="vertical">
 
             <include layout="@layout/side_menu" />

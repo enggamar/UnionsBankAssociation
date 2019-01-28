@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.widget.LinearLayoutManager;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
@@ -12,7 +13,9 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.unionbankassociation.adapters.NotificationAdapter;
 import com.unionbankassociation.databinding.ActivityHomeBinding;
+import com.unionbankassociation.models.NotificationResponse;
 import com.unionbankassociation.utils.AppConstant;
 import com.unionbankassociation.utils.AppSharedPreference;
 import com.unionbankassociation.R;
@@ -20,11 +23,16 @@ import com.unionbankassociation.R;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+
 public class HomeActivity extends BaseActivity implements View.OnClickListener {
     private DrawerLayout mDrawerLayout;
     private ImageView ivMenu, ivServiceConditionSubmenu;
     private LinearLayout mSubMenuServiceConditions, llServiceCondition;
     private ActivityHomeBinding mBinding;
+    private ArrayList<NotificationResponse> mNotificationList;
+    private NotificationAdapter adapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +40,15 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_home);
         initView();
         setLisner();
+        setUpView();
+    }
+
+    private void setUpView() {
+        mNotificationList = new ArrayList<>();
+        adapter = new NotificationAdapter(this, mNotificationList,this);
+        LinearLayoutManager manager = new LinearLayoutManager(this);
+        mBinding.rvNotification.setLayoutManager(manager);
+        mBinding.rvNotification.setAdapter(adapter);
     }
 
     private void setLisner() {

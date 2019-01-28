@@ -155,18 +155,6 @@ public class AppUtils {
         return false;
     }
 
-    /**
-     * Checks if the SD Card is mounted on the device.
-     **/
-    public static boolean isSdCardMounted() {
-        String status = Environment.getExternalStorageState();
-
-        if (status != null && status.equals(Environment.MEDIA_MOUNTED)) {
-            return true;
-        }
-
-        return false;
-    }
 
     /**
      * Shows an alert dialog with the OK button. When the user presses OK button, the dialog
@@ -209,84 +197,6 @@ public class AppUtils {
         builder.show();
     }
 
-    /**
-     * Serializes the Bitmap to Base64
-     *
-     * @return Base64 string value of a {@linkplain Bitmap} passed in as a parameter
-     * @throws NullPointerException If the parameter bitmap is null.
-     **/
-    public static String toBase64(Bitmap bitmap) {
-
-        if (bitmap == null) {
-            throw new NullPointerException("Bitmap cannot be null");
-        }
-
-        String base64Bitmap = null;
-        ByteArrayOutputStream stream = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
-        byte[] imageBitmap = stream.toByteArray();
-        base64Bitmap = Base64.encodeToString(imageBitmap, Base64.DEFAULT);
-
-        return base64Bitmap;
-    }
-
-    /**
-     * Converts the passed in drawable to Bitmap representation
-     *
-     * @throws NullPointerException If the parameter drawable is null.
-     **/
-    public static Bitmap drawableToBitmap(Drawable drawable) {
-
-        if (drawable == null) {
-            throw new NullPointerException("Drawable to convert should NOT be null");
-        }
-
-        if (drawable instanceof BitmapDrawable) {
-            return ((BitmapDrawable) drawable).getBitmap();
-        }
-
-        if (drawable.getIntrinsicWidth() <= 0 && drawable.getIntrinsicHeight() <= 0) {
-            return null;
-        }
-
-        Bitmap bitmap = Bitmap.createBitmap(drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight(), Config.ARGB_8888);
-        Canvas canvas = new Canvas(bitmap);
-        drawable.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());
-        drawable.draw(canvas);
-
-        return bitmap;
-    }
-
-    /**
-     * Converts the given bitmap to {@linkplain InputStream}.
-     *
-     * @throws NullPointerException If the parameter bitmap is null.
-     **/
-    public static InputStream bitmapToInputStream(Bitmap bitmap) throws NullPointerException {
-
-        if (bitmap == null) {
-            throw new NullPointerException("Bitmap cannot be null");
-        }
-
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
-        InputStream inputstream = new ByteArrayInputStream(baos.toByteArray());
-
-        return inputstream;
-    }
-
-    /**
-     * Shows a progress dialog with a spinning animation in it. This method must preferably called
-     * from a UI thread.
-     *
-     * @param ctx           Activity context
-     * @param title         Title of the progress dialog
-     * @param body          Body/Message to be shown in the progress dialog
-     * @param isCancellable True if the dialog can be cancelled on back button press, false otherwise
-     **/
-    public static void showProgressDialog(Context ctx, String title, String body, boolean isCancellable) {
-        showProgressDialog(ctx, title, body, null, isCancellable);
-    }
 
     /**
      * Shows a progress dialog with a spinning animation in it. This method must preferably called
@@ -437,26 +347,6 @@ public class AppUtils {
         builder.setMessage(message).setPositiveButton(positiveBtnLabel, dialogClickListener).setNegativeButton(negativeBtnLabel, dialogClickListener).show();
     }
 
-    /**
-     * Gets the version name of the application. For e.g. 1.9.3
-     **/
-    public static String getApplicationVersionNumber(Context context) {
-
-        String versionName = null;
-
-        if (context == null) {
-            return versionName;
-        }
-
-        try {
-            versionName = context.getPackageManager().getPackageInfo(context.getPackageName(), 0).versionName;
-        } catch (NameNotFoundException e) {
-            e.printStackTrace();
-        }
-
-        return versionName;
-    }
-
     public static String getDeviceId(Context context) {
         String androidId = Settings.Secure.getString(context.getContentResolver(), Settings.Secure.ANDROID_ID);
         return androidId;
@@ -478,45 +368,6 @@ public class AppUtils {
         return versionCode;
     }
 
-    /**
-     * Gets the version number of the Android OS For e.g. 2.3.4 or 4.1.2
-     **/
-    public static String getOsVersion() {
-        return Build.VERSION.RELEASE;
-    }
-
-    /**
-     * Checks if the service with the given name is currently running on the device.
-     *
-     * @param serviceName Fully qualified name of the server. <br/>
-     *                    For e.g. nl.changer.myservice.name
-     **/
-    public static boolean isServiceRunning(Context ctx, String serviceName) {
-
-        if (serviceName == null) {
-            throw new NullPointerException("Service name cannot be null");
-        }
-
-        // use application level context to avoid unnecessary leaks.
-        ActivityManager manager = (ActivityManager) ctx.getApplicationContext().getSystemService(Context.ACTIVITY_SERVICE);
-        for (RunningServiceInfo service : manager.getRunningServices(Integer.MAX_VALUE)) {
-            if (service.service.getClassName().equals(serviceName)) {
-                return true;
-            }
-        }
-
-        return false;
-    }
-
-    /**
-     * Gets the device unique id called IMEI. Sometimes, this returns 00000000000000000 for the
-     * rooted devices.
-     **/
-    public static String getDeviceImei(Context ctx) {
-        // use application level context to avoid unnecessary leaks.
-        TelephonyManager telephonyManager = (TelephonyManager) ctx.getApplicationContext().getSystemService(Context.TELEPHONY_SERVICE);
-        return telephonyManager.getDeviceId();
-    }
 
     /**
      * Shares an application over the social network like Facebook, Twitter etc.
@@ -1607,8 +1458,7 @@ public class AppUtils {
      * @param ctx
      * @param savingUri
      * @param durationInSeconds
-     * @return
-     * Creates an intent to take a video from camera or gallery or any other application that can
+     * @return Creates an intent to take a video from camera or gallery or any other application that can
      * handle the intent.
      */
     public static Intent createTakeVideoIntent(Activity ctx, Uri savingUri, int durationInSeconds) {
@@ -1648,10 +1498,10 @@ public class AppUtils {
     /**
      * @param savingUri Uri to store a high resolution image at. If the user takes the picture using the
      *                  camera the image will be stored at this uri.
-     * Creates a ACTION_IMAGE_CAPTURE photo & ACTION_GET_CONTENT intent. This intent will be
-     * aggregation of intents required to take picture from Gallery and Camera at the minimum. The
-     * intent will also be directed towards the apps that are capable of sourcing the image data.
-     * For e.g. Dropbox, Astro file manager.
+     *                  Creates a ACTION_IMAGE_CAPTURE photo & ACTION_GET_CONTENT intent. This intent will be
+     *                  aggregation of intents required to take picture from Gallery and Camera at the minimum. The
+     *                  intent will also be directed towards the apps that are capable of sourcing the image data.
+     *                  For e.g. Dropbox, Astro file manager.
      **/
     public static Intent createTakePictureIntent(Activity ctx, Uri savingUri) {
 
@@ -1959,4 +1809,4 @@ public class AppUtils {
     }
 
 
- }
+}

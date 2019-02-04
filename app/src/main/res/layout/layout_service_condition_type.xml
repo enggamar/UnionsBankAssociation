@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    android:orientation="vertical">
+
+    <include layout="@layout/actionbarlayout" />
+
+    <LinearLayout
+        android:id="@+id/ll_service_condition"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_clerical_staff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semi_bold_0"
+            android:padding="@dimen/_15sdp"
+            android:text="@string/clerical_staff"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/_14sdp" />
+
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_sub_staff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semi_bold_0"
+            android:padding="@dimen/_15sdp"
+            android:text="@string/sub_staff"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/_14sdp" />
+
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_part_time_employees"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semi_bold_0"
+            android:padding="@dimen/_15sdp"
+            android:text="@string/part_time_employees"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/_14sdp" />
+    </LinearLayout>
+</LinearLayout>

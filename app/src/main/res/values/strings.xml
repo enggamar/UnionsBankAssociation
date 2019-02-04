@@ -38,4 +38,333 @@
     <string name="password">Password</string>
     <string name="username">Username</string>
     <string name="all_india_bank_employees_association">All India Bank Employees Association</string>
+    <string name="about_us_text">Association is the oldest and largest national trade union Centre of bank employees in India, was founded in 1946 on the 20th of April in Kolkata. They were being paid paltry wages with no regulated service conditions at all. It was a rule of hire and fire. Bank empgroaning but did not have the necessary courage to form unions. They saw the workers in the factories fighting and making some progress in terms of wages and betterment in service conditions. Bank employees also gathered some courage here and there and started to organize themselves into unions in a sporadic way. Some protest actions and strikes were undertaken but the disputes were referred to tribunals and employees did not get justice or satisfaction. Hence unrest and dissatisfaction amongst the employees were brewing and many Unions were formed during the period. With the advent of AIBEA on the scene, this gave a fillip to the formation of unions in different banks. With the formation of the Unions, there were innumerable agitations, struggles and strikes in the banks. Banking was a State subject at that time and hence there were number of Tribunals and Awards. The growing discontentment amongst the bank employees was sensed by the management and the authorities and banking was made a central subject.</string>
+    <string name="basic_increment_stages">BASIC-INCREMENT-STAGES</string>
+    <string name="clerical_payscale">CLERICAL PAYSCALE</string>
+    <string name="clerical_payscale_data">BASIC-INCREMENT-STAGES\n
+11765-0655-3\n
+
+13730-0815-3\n
+
+16175-0980-4\n
+
+20095-1145-7\n
+
+28110-2120-1\n
+
+30230-1310-1\n
+</string>
+    <string name="substaff_payscale">SUBSTAFF PAYSCALE</string>
+    <string name="substaff_payscale_data">BASIC-INCREMENT-STAGES
+09560-325-4\n
+
+10860-410-5\n
+
+12910-490-4\n
+
+14870-570-3\n
+
+16580-655-3\n
+</string>
+    <string name="stagnation_increment">STAGNATION INCREMENT</string>
+    <string name="stagnation_increment_data"><strong>Clerical: 8</strong> stagnation Increments of Rs. 1310 each and 5 increments once in 3 years and increments once in 2 years\n\n
+
+<b>Substaff : 8</b> Stagnation Increments of Rs. 655 each and All stagnation increments once in 2 years\n\n
+
+        <b>Additional 8th Stagnation Increment :</b> Those already in receipt of 7 stagnation increments shall be eligible for the 8th stagnation increment on 1-5-2015 or 2 years after receiving the 7th stagnation increment, whichever is later. 5th to 6th Stagnation Increment – Period reduced to 2 years ( 3 years under 9th BPS) : An employee who has completed 2 years or more after receiving 5th stagnation increment as on 1st November 2012 shall receive the 6th stagnation increment as on 1st November 2012.
+</string>
+    <string name="new_provision_important">NEW PROVISION: IMPORTANT</string>
+    <string name="new_provision_important_data">In case where the non-subordinate employee as on the date of this Settlement, has already acquired JAIIB (Part-I) or CAIIB (Part-II)/ Graduation after reaching maximum of the scale of Pay (in case of JAIIB/ CAIIB/ Graduation) or after reaching 19th stage of scale of Pay (in case of CAIIB/Graduation), and has not earned increment(s), otherwise entitled on account of acquiring such qualification, when there were no increments to provide in the scale of pay of those employees, the stagnation increment in such cases may be advanced by one year or two years as the case may be.
+</string>
+    <string name="additional_increment_for_educational_professional_qualification">Additional Increment for Educational/Professional Qualification:</string>
+    <string name="additional_increment_for_educational_professional_qualification_data">Graduation / N D Com : 2 additional increments\n
+
+JAIIB: 1 additional increment\n
+
+CAIIB: 2 additional increments
+</string>
+    <string name="professional_qualification_pay_graduation_pay_pqp">Professional Qualification Pay/Graduation Pay (PQP) :</string>
+    <string name="professional_qualification_pay_graduation_pay_pqp_data">1 year after reaching 20th stage : 9th BPS - 250 , 10th BPS - 410\n
+
+2 years after reaching 20th stage : 9th BPS - 490 , 10th BPS - 800\n
+
+3 years after reaching 20th stage : 9th BPS - 740 , 10th BPS - 1210\n
+
+4 years after reaching 20th stage: 9th BPS - 990 , 10th BPS - 1620\n
+
+5 years after reaching 20th stage: 9th BPS - 1230 , 10th BPS - 2010\n
+</string>
+    <string name="fpp_where_quarters_are_provided">FPP – where Quarters are provided:</string>
+    <string name="fpp_where_quarters_are_provided_data">
+
+CLERICAL – Increment portion : 9th BPS - 860 , 10th BPS - 1450\n
+
+SUBSTAFF – Increment portion : 9th BPS - 430 , 10th BPS - 725
+
+</string>
+    <string name="total_ffpp_as_per_area_of_posting">Total FFPP as per area of posting</string>
+    <string name="total_ffpp_as_per_area_of_posting_data">(i)Places with population of more than 45 lakhs : 9th BPS - 940 , 10th BPS - 1585\n
+
+(ii)Places with population of 12 lakhs and above including State of Goa : 9th BPS - 930 , 10th BPS - 1570\n
+
+(iii)Places with population of 5 lakhs and above, Capitals of States, UTs : 9th BPS - 920 , 10th BPS - 1550\n
+
+(iv)Other places not covered in above : 9th BPS - 915 , 10th BPS - 1550\n
+
+(i)Places with population of more than 45 lakhs : 9th BPS - 470 , 10th BPS - 790\n
+
+(ii)Places with population of 12 lakhs and above including State of Goa : 9th BPS - 465 , 10th BPS - 790\n
+
+(iii)Places with population of 5 lakhs and above, Capitals of States, UTs : 9th BPS - 460 , 10th BPS - 780\n
+
+(iv)Other places not covered in above : 9th BPS - 460 , 10th BPS - 780\n
+</string>
+    <string name="special_pay">SPECIAL PAY:</string>
+    <string name="special_pay_data">Single Window Operator : 9th BPS - 500 , 10th BPS - 820\n
+
+Head Cashier : 9th BPS - 780 , 10th BPS - 1280\n
+
+Special Assistant : 9th BPS - 1180 , 10th BPS - 1930\n
+
+Bill Collector/Armed Guard : 9th BPS - 240 , 10th BPS - 390\n
+
+Daftary : 9th BPS - 340 , 10th BPS - 560\n
+
+Head Peon : 9th BPS - 450 , 10th BPS - 740\n
+
+AC Plant Helper/Electrician : 9th BPS - 1250 , 10th BPS - 2040\n
+
+Driver : 9th BPS - 1450 , 10th BPS - 2370\n
+</string>
+    <string name="dearness_allowance">Dearness Allowance-</string>
+    <string name="dearness_allowance_data">9TH BPS: Clerical and Sub Staff - 0.15 % of ‘pay’ per slab over 2836 pts\n
+
+10TH BPS: Clerical and Sub Staff - 0.10 % of ‘pay’ per slab over 4440 pts\n
+
+Note: DA is payable on Special Allowance ( New Allowance) also.\n
+
+Quarter - 9TH BPS - 10TH BPS\n
+
+Nov 2012 to Jan 2013 - 76.50 % - 10.90%\n
+
+Feb 2013 to Apr 2013 - 80.25 % - 13.40 %\n
+
+May 2013 to Jul 2013 - 84.15 % - 16.00 %\n
+
+Aug 2013 to Oct 2013 - 88.95 % - 19.20 %\n
+
+Nov 2013 to Jan 2014 - 96.15 % - 24.00 %\n
+
+Feb 2014 to Apr 2014 - 99.90 % - 26.50 %\n
+
+May 2014 to Jul 2014 - 97.50 % - 24.90 %\n
+
+Aug 2014 to Oct 2014 - 102.45 % - 28.20 %\n
+
+Nov 2014 to Jan 2015 - 109.80 % - 33.10 %\n
+
+Feb 2015 to Apr 2015 - 110.10 % - 33.30 %\n
+
+May 2015 to Jul 2015 - 110.70 % - 33.70 %\n
+
+DA per slab of 4 points\n\n
+
+1st stage\n\n
+
+clerical - 9th 10.80, 10th \n
+
+
+Basic pay-CLERICAL PAYSCALE\n
+BASIC-INCREMENT-STAGES\n
+11765-0655-3\n
+
+13730-0815-3\n
+
+16175-0980-4\n
+
+20095-1145-7\n
+
+28110-2120-1\n
+
+30230-1310-1\n
+
+STAGNATION INCREMENT\n
+31540-1310-8\n
+
+NOTE: Stagnation Increment 5 once in 3 year and 3 once in 2 year Interval\n
+
+</string>
+    <string name="definition_of_pay_for_da">Definition of Pay for DA :</string>
+    <string name="definition_of_pay_for_da_data">Basic Pay, Stagnation increments, PQP, Special Pay, Offg. Pay, SPECIAL ALLOWANCE. Definition of Pay for HRA Basic Pay, Stagnation increments, PQP, Special Pay, Offg. Pay. Definition of Pay for Superannuation benefits: Basic Pay, Stagnation increments , PQP, Special Pay, Offg. Pay, Increment portion of FPP\n
+
+(a) It is clarified that there shall be no ceiling on Dearness Allowance.\n
+
+(b) Dearness Allowance shall be calculated and paid on Basic Pay, Special Pay,Graduation Pay, Professional Qualification Pay and Officiating Pay, if any,payable under this settlement in respect of both clerical and subordinate staff.\n
+
+(c) All other existing provisions relating to Dearness Allowance Scheme shall remain unchanged.\n
+
+</string>
+    <string name="hra_housing_rent_allowance">HRA-HOUSING RENT ALLOWANCE</string>
+    <string name="hra_housing_rent_allowance_data">(i) Places with population of more than 45 lakhs and Project Area Centres in Group ‘A’
+\n
+10.00%\n
+(ii) Places with population of 12 lakhs and above including State of Goa and Project Area Centres in Group ‘B’
+\n
+09.00%\n
+(iii) Other places not covered in (i) and (ii) above
+\n
+07.50%\n
+Note: (1) Where quarters are provided, HRA shall not be payable and the rent to be recovered shall be 0.3% of the first stage of the Scales of Pay.
+\n
+Project Area HRA: Group “A” Centres – 10% and Group “B” Centres – 9%
+</string>
+    <string name="special_allowance_special_allowance">Special allowance-SPECIAL ALLOWANCE</string>
+    <string name="_7_75_on_basic_pay_including_stagnation_increment_not_counted_for_super_annulation_benefits">7.75 % on Basic pay including Stagnation Increment.(not counted for super annulation benefits)</string>
+    <string name="tarnsport_allowance_transport_allowance">TARNSPORT ALLOWANCE-TRANSPORT ALLOWANCE</string>
+    <string name="tarnsport_allowance_transport_allowance_data">Upto 15th stage of the scale of Pay - Rs.425/- per month
+\n
+16th stage &amp; Above of the scale of Pay - Rs.470/- per month
+\n
+Provided that a sub-staff drawing transport allowance at Rs.470/- per month, on being promoted to clerical cadre is fitted at a stage lower than 16th stage, he shall continue to be paid the same Transport Allowance of Rs.470/- per month.
+\n
+i) All permanent part time employees including those on probation and drawing scale wages shall be paid transport allowance on pro rata basis as under:
+\n
+Upto 15 years of service - Pro rata @Rs.425/- per month
+\n
+Above 15 years of service - Pro rata @Rs.470/- per month
+\n
+(ii) This provision by itself will not preclude the payment of any existing allowance of this nature paid as a result of Government guidelines/bank level settlements.
+\n
+\n
+
+Special PAY-SPECIAL PAY\n
+1.SWO-B:820+DA\n\n
+
+2.HEADCASHIER II:1280+DA\n
+\n
+3.SPECIAL ASSISTANT:1930+DA
+\n\n
+
+
+Officiating- OFFICIATING ALLOWANCE
+\n\nABH:
+15% of the Basic Pay divided by No of Days of that Month gives Officiating pay for a day
+\n
+Head Cashier II:
+\nSpecial Pay of Head cashier divided by No of Days of that month gives Officiating pay for a day
+\n
+
+\nPQP &amp; FPP-Professional Qualification Pay/ Graduation Pay: PQP
+\nRs.410/- p.m. after they complete 1 year
+
+\nRs.800/- p.m. after they complete 2 years
+
+\nRs.1210/-p.m. after they complete 3 years
+
+\nRs.1620/-p.m. after they complete 4 years
+
+\nRs.2010/-p.m. after they complete 5 years.
+
+\n(1)Those who pass Graduation or CAIIB II when they are in 19th stage will be given one increment and one PQP from the date of passing and balance 4 installments of PQP in one year intervals thereafter.
+
+\n(2)Those who pass Graduation/JAIIB/CAIIB after reaching 20th stage will be given 1st PQP from date of passing and balance 4 installments of PQP in one year intervals thereafter.
+
+\n(3)Direct Graduation/Post graduation will be treated as Graduation and given 2 increments.
+\n
+Fixed Personal Pay:
+\nCLERICAL – Increment portion 1310 ,SUBSTSAFF – Increment portion 655
+\n
+FPP – where Quarters are provided ,CLERICAL – Increment portion 1450 ,SUBSTSAFF – Increment portion 725
+\n
+CLERK: Total FPP as per area of posting
+\n
+(i)	Places with population of more than 45 lakhs - 1585
+\n
+(ii)	Places with population of 12 lakhs and above including State of Goa - 1570
+\n
+(iii)	Places with population of 5 lakhs and above, Capitals of States, UTs - 1550
+\n
+(iv)	Other places not covered in above - 1550
+\n\n
+SUBSTAFF:
+\n
+(i)	Places with population of more than 45 lakhs - 790
+\n
+(ii)Places with population of 12 lakhs and above including State of Goa - 790
+\n
+(iii)Places with population of 5 lakhs and above, Capitals of States, UTs - 780
+</string>
+    <string name="medical_aid">Medical aid-MEDICAL AID</string>
+    <string name="clerical_staff">Clerical Staff</string>
+    <string name="sub_staff">Sub Staff</string>
+    <string name="part_time_employees">Part Time Employees</string>
+    <string name="deployment_of_non_subordinate">Deployment of non-subordinate Staff</string>
+    <string name="deployment_of_non_subordinate_data">(i)A workman in the non-subordinate cadre is liable to be deployed anywhere within a ‘District’, irrespective of the distance involved.\n\n
+(ii)In cases necessitating deployment outside the District, the workmen concerned may be deployed to any branch/office of the bank situated outside the District upto a distance not exceeding 100 km. from his present place of posting.\n\n
+(iii)Bank may identify, based on length of stay at the centre/branch/office, the number of workmen employees, to be redeployed from each centre/branch/office to meet its requirements.\n\n
+(iv)The period of deployment shall be 2 years in a difficult centre decided by the bank in accordance with the Government guidelines and 3 years in other centres.\n\n
+(v)Repatriation to the original centre shall be after serving in the deployed centre for period as in\n
+(iv) above. In case it is not administratively possible for the bank to repatriate the employee to his original centre after the above period, the employee may be required to give 3 centres of his choice so that he can be transferred to any one of the 3 centres opted by him.\n\n
+(vi)Female employees above the age of 55 and male employees above the age of 56 shall be exempt from redeployment. However, if the required and eligible number of employees re not available to be deployed in terms of the Settlement, the age upto the age of 58 years so as to ensure that the required and eligible number of employees are deployed to be identified centres.\n\n
+(vii)Employees having mentally retarded/spastic children, certified as such by the attending Doctor, may be deployed only at centres where specialized treatment for such children and special facilities their schooling are available.\n\n
+(viii)Employees affected by serious ailments requiring specialized treatment as certified by the attending Doctor, will be deployed only at centres where medical facilities for treatment of such ailments are available.\n\n
+(ix)Redeployment of physically handicapped/challenged employees shall be in accordance with the extant Government guidelines.\n\n
+(x)A workman in the non-subordinate cadre so long as he serves in the deployed centre shall draw a lump sum amount of Rs. 400/- p.m. (not ranking for any other benefit) besides protection of emoluments drawn at the original centre. These shall cease on the employee’s repatriation to the original centre.\n\n
+(xi)The above lump sum amount if not payable in case of transfers made at the request of the employee.\n\n
+(xii)In North-Eastern States, banks may decide on the level and extent of deployment having regard to their requirements within the above norms.\n\n
+(xiii)The above provisions on deployment are without prejudice to the provisions of paragraphs 535 and 536 of the Sastry Award relating to transfer of workmen.\n\n
+(xiv)The above provisions on deployment shall be the minimum applicable to all the banks which are parties to this Settlement. Parties agree that any existing bank-level settlement on transfer or deployment whose provisions are restrictive and not upto the minimum provisions on deployment as mentioned above will be modified/terminated as per procedure under the Industrial Disputes Act so as to give effect to the above mentioned provisions on deployment.\n\n
+(xv)Any bank which is a party to this Settlement and having bank-level Settlement on transfer or deployment may, however, modify and improve upon the above provisions to suit the needs of the bank ensuring, however, that the norms relating to the geographical minimum area of deployment, period of stay at the deployed centre, conditions for repatriation as mentioned hereinabove are not relaxed or diluted in any manner.\n\n
+(xvi)In banks which are parties to this Settlement where bank level settlements/policies on transfer or deployment of workmen exist which provide for transferability of employees over a larger geographical area, such bank level settlements on transfer or deployment shall remain operative.\n\n
+</string>
+    <string name="deployment_of_non_subordinate_some_clarifications">SOME CLARIFICATIONS</string>
+    <string name="deployment_of_non_subordinate_some_clarification_data">
+1.This industry level agreement on mobility deals only with transfer of employees from surplus to deficit areas, if any\n\n
+2.This Settlement does not cover any other case of mobility like rotational transfers, general transfers, periodical transfers, request transfers, mutual transfers, etc.\n\n
+3.These norms are only applicable to Clerical employees AND NOT FOR SUBSTAFF.\n\n
+</string>
+    <string name="gratuity">GRATUITY</string>
+    <string name="gratuity_data">1.In terms of Section 4 (5) of the Payment of Gratuity Act, 1972, Gratuity under Gratuity Act or BPS provisions whichever is higher is payable.\n\n
+2.Hence for every retiring employee, Gratuity has to be calculated both under the Act and under BPS and higher of the two will be paid.\n\n
+3.For those employees who have retired from November, 2012, Gratuity will be re-calculated both under the Act and as per 10th BPS and arrears/difference if any will be paid to them.\n\n
+Gratuity under the Act: (Pay+DA)/26 x 15 Days x No. of years of service Max. Rs. 10 lakhs\n
+Gratuity under BPS : Pay x No. of years’ service\n
+1.One month pay for one year of service\n
+2.Max. 15 months’ Pay upto 30 years’ service\n
+3.Above 30 years, half month pay per year of service.\n
+4.No ceiling or max. on Gratuity under BPS\n
+</string>
+    <string name="new_pension">NEW PENSION DATA</string>
+    <string name="new_pension_data">Those who have joined/joining the Banks on and from 1-4-2010 will be governed by the New Defined Contributory Pension Scheme.\n\n
+AGE OF RETIREMENT :60 years\n\n
+Features of New Pension Scheme:\n
+a.	Effective from 1-4-2010\n
+b.	There will be two tiers of contribution i.e. Tier I and Tier II\n
+c.	Contribution to Tier I is compulsory and contribution under Tier II is optional.\n
+d.	Under Tier I, employees will contribute 10% of Pay plus DA.\n
+e.	Banks will make matching contribution.\n
+f.	For Tier II contributions, there will be no matching contribution by the Banks.\n
+g.	Tier I contributions will be kept in Non-refundable account.\n
+h.	Tier II contributions will be kept in a separate account and are withdrawable at the option of the employee.\n
+i.	There will be no separate PF account or contribution by the employees.\n
+j.	The account will be maintained by a Central Record keeping Agency.\n
+k.	The contributions will be managed by Pension Fund Managers.\n
+l.	PFRDA - Pension Fund Regulatory and Development Authority will regulate the scheme.\n
+m.	On retirement at the age of 60, it would be mandatory to invest 40% of the contributions in Pension Annuity and 60% can be taken as cash. Employee can also invest more than 40% in Pension Annuity.\n
+n.	For those who retire/exit service before the age of 60 years, 80% of the contributions shall be invested in Pension Annuity.\n
+o.	Each employee will be given a Permanent Pension Account Number (PPAN).\n
+p.	Pension Fund Manager will offer three options to employees to invest their contributinons according to their choice.\n
+q.	Employees will have the choice to invest the contributions in Equity or in Corporate Sector or in Government Sector.\n
+r.	Maximum permissible limit for investmennts:\n
+In Equity - 50% of contribution\n
+In Corporate Sector - 100% of contribution
+In Government Sector - 100% of contribution\n
+s.	Employee can choose any mixture of investment upto above ceilings.\n
+t.	If employee does not give his choice, Fund Manager will invest the contribution under Auto Choice Method.\n
+u.	Even under Auto Choice Method, investment in Equity will not exceed 50% of the contribution.\n
+v.	Employee will have the choice to choose the Fund Manager and the investment pattern.\n
+w.	Employee has the right to change the Fund Manager annually.\n
+x.	Employee has also the choice to change the investment pattern between investment in Equity, in Corporate Sector and in Government sector looking to the returns on investment and perceived risks in investments.\n
+y.	Contribution to Tier I is non-withdrawable during service but Tier II contribution can be withdrawn at his option.\n
+z.	Pension based on the Annuity purchased will be payable for lifetime of the employee/dependent parents/spouse.</string>
 </resources>

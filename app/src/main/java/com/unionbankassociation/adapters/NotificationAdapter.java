@@ -2,14 +2,15 @@ package com.unionbankassociation.adapters;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.unionbankassociation.R;
-import com.unionbankassociation.activities.HomeActivity;
 import com.unionbankassociation.models.NotificationResponse;
+import com.unionbankassociation.utils.AppUtils;
 
 import java.util.ArrayList;
 
@@ -44,6 +45,14 @@ public class NotificationAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
     private class NotificationViewHolder extends RecyclerView.ViewHolder {
         public NotificationViewHolder(View view) {
             super(view);
+
+            AppCompatImageView imageView = view.findViewById(R.id.iv_share);
+            imageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    AppUtils.share(context, "Under Development", "Union Bank Association", "Share Link");
+                }
+            });
         }
     }
 }

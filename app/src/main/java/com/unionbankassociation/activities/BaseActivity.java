@@ -1,6 +1,7 @@
 package com.unionbankassociation.activities;
 
 import android.content.Context;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.view.View;
@@ -34,5 +35,27 @@ public class BaseActivity extends AppCompatActivity {
         return super.dispatchTouchEvent(ev);
     }
 
+    public void addFragmentWithBackstack(int layoutResId, Fragment fragment, String tag) {
+        getSupportFragmentManager().beginTransaction()
+                .add(layoutResId, fragment, tag)
+                .addToBackStack(tag)
+                .commit();
+    }
+
+
+    public void replaceFragment(int layoutResId, Fragment fragment, String tag) {
+        if (getSupportFragmentManager().findFragmentByTag(tag) == null)
+            getSupportFragmentManager().beginTransaction()
+
+                    .replace(layoutResId, fragment, tag)
+                    .commit();
+    }
+
+    public void replaceFragmentWithBackstack(int layoutResId, Fragment fragment, String tag) {
+        getSupportFragmentManager().beginTransaction()
+                .replace(layoutResId, fragment, tag)
+                .addToBackStack(tag)
+                .commit();
+    }
 
 }

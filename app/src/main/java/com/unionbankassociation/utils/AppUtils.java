@@ -2,8 +2,6 @@
 package com.unionbankassociation.utils;
 
 import android.app.Activity;
-import android.app.ActivityManager;
-import android.app.ActivityManager.RunningServiceInfo;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.ComponentName;
@@ -28,7 +26,6 @@ import android.graphics.PorterDuff.Mode;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
 import android.graphics.Typeface;
-import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.location.Location;
 import android.location.LocationManager;
@@ -49,7 +46,8 @@ import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.annotation.StringRes;
-import android.telephony.TelephonyManager;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
 import android.text.TextUtils;
@@ -64,7 +62,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 
 import java.io.BufferedReader;
-import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
@@ -1808,5 +1805,12 @@ public class AppUtils {
         return ext;
     }
 
+
+
+    public Fragment getCurrentFragment(FragmentManager fragmentManager) {
+        String fragmentTag = fragmentManager.getBackStackEntryAt(fragmentManager.getBackStackEntryCount() - 1).getName();
+        Fragment currentFragment = fragmentManager.findFragmentByTag(fragmentTag);
+        return currentFragment;
+    }
 
 }

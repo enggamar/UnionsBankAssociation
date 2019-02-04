@@ -4,35 +4,28 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.Gravity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
 
+import com.unionbankassociation.R;
 import com.unionbankassociation.adapters.NotificationAdapter;
 import com.unionbankassociation.databinding.ActivityHomeBinding;
 import com.unionbankassociation.models.NotificationResponse;
-import com.unionbankassociation.utils.AppConstant;
-import com.unionbankassociation.utils.AppSharedPreference;
-import com.unionbankassociation.R;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 
 public class HomeActivity extends BaseActivity implements View.OnClickListener {
     private DrawerLayout mDrawerLayout;
     private ImageView ivMenu, ivServiceConditionSubmenu;
-    private LinearLayout mSubMenuServiceConditions, llServiceCondition;
+    private LinearLayout mSubMenuServiceConditions, llServiceCondition, llAboutus;
     private ActivityHomeBinding mBinding;
     private ArrayList<NotificationResponse> mNotificationList;
     private NotificationAdapter adapter;
-
+    private AppCompatTextView tvGlance,tvClearicalDeploymentCondition;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +38,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
 
     private void setUpView() {
         mNotificationList = new ArrayList<>();
-        adapter = new NotificationAdapter(this, mNotificationList,this);
+        adapter = new NotificationAdapter(this, mNotificationList, this);
         LinearLayoutManager manager = new LinearLayoutManager(this);
         mBinding.rvNotification.setLayoutManager(manager);
         mBinding.rvNotification.setAdapter(adapter);
@@ -55,6 +48,9 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
         llServiceCondition.setOnClickListener(this);
         ivMenu.setOnClickListener(this);
         llServiceCondition.setSelected(false);
+        llAboutus.setOnClickListener(this);
+        tvGlance.setOnClickListener(this);
+        tvClearicalDeploymentCondition.setOnClickListener(this);
     }
 
     /*
@@ -66,7 +62,9 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
         llServiceCondition = (LinearLayout) findViewById(R.id.ll_service_condition);
         ivServiceConditionSubmenu = (ImageView) findViewById(R.id.iv_service_condition_submenu);
         mSubMenuServiceConditions = (LinearLayout) findViewById(R.id.ll_service_condition_submenu);
-
+        llAboutus = (LinearLayout) findViewById(R.id.ll_about_us);
+        tvGlance = (AppCompatTextView) findViewById(R.id.tv_at_glance);
+        tvClearicalDeploymentCondition=(AppCompatTextView) findViewById(R.id.tv_clearical_deployment_condition);
     }
 
     private void openMenu() {
@@ -92,6 +90,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
                 openMenu();
                 break;
             case R.id.ll_about_us:
+                openActivityForFragments(1);
                 break;
             case R.id.ll_achievements:
                 break;
@@ -108,8 +107,10 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
             case R.id.ll_service_condition_submenu:
                 break;
             case R.id.tv_at_glance:
+                openActivityForFragments(2);
                 break;
             case R.id.tv_clearical_deployment_condition:
+                openActivityForFragments(3);
                 break;
             case R.id.tv_disciplinary_action:
                 break;
@@ -142,5 +143,11 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
             ivServiceConditionSubmenu.setImageDrawable(getResources().getDrawable(R.drawable.ic_up_arrow));
         else
             ivServiceConditionSubmenu.setImageDrawable(getResources().getDrawable(R.drawable.ic_down));
+    }
+
+    private void openActivityForFragments(int type) {
+        Intent intent = new Intent(HomeActivity.this, CommonActivityForFragment.class);
+        intent.putExtra("FRAGMENT", type);
+        startActivity(intent);
     }
 }

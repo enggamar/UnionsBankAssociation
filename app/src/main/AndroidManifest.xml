@@ -25,24 +25,22 @@
         </activity>
         <activity
             android:name="com.unionbankassociation.activities.WalkThroughActivity"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name="com.unionbankassociation.activities.MainActivity"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.intent.action.VIEW" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
                     android:host="budfiesta.applaurels.com"
-                    android:scheme="http"
-                    />
+                    android:scheme="http" />
             </intent-filter>
 
-            </activity>
+        </activity>
         <activity
             android:name="com.unionbankassociation.activities.LogInActivity"
             android:screenOrientation="portrait" />
@@ -52,6 +50,9 @@
             android:screenOrientation="portrait" />
         <activity
             android:name="com.unionbankassociation.activities.HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.unionbankassociation.activities.CommonActivityForFragment"
             android:screenOrientation="portrait" />
 
         <service android:name="com.unionbankassociation.fcm.MyFirebaseMessagingService">
@@ -72,7 +73,7 @@
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/provider"/>
+                android:resource="@xml/provider" />
         </provider>
 
     </application>

@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 
 import com.google.firebase.iid.FirebaseInstanceId;
+import com.unionbankassociation.R;
 import com.unionbankassociation.databinding.ActivityLoginBinding;
 import com.unionbankassociation.interfaces.NetworkListener;
 import com.unionbankassociation.network.ApiCall;
@@ -19,7 +20,6 @@ import com.unionbankassociation.network.RestApi;
 import com.unionbankassociation.utils.AppConstant;
 import com.unionbankassociation.utils.AppSharedPreference;
 import com.unionbankassociation.utils.AppUtils;
-import com.unionbankassociation.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -117,6 +117,9 @@ public class LogInActivity extends BaseActivity implements NetworkListener {
         } else if (mBinding.etPassword.getText().toString().trim().length() == 0) {
             mBinding.textInputEmail.setErrorEnabled(true);
             mBinding.textInputPassword.setError(getString(R.string.h_password));
+            return false;
+        } else if (!(mBinding.etEmail.getText().toString().equals("test") && mBinding.etPassword.getText().toString().equals("123456"))) {
+            AppUtils.showToast(this, "Username and password is incorrect");
             return false;
         }
         return true;

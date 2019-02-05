@@ -29,7 +29,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * This class is used to handling operation for Service
  */
 public class RestApi {
-    static final String API_BASE_URL = "http://rccapi.appinventive.com/";
+    static final String API_BASE_URL = "http://52.2.121.230/api/";
 
     private static OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
     private static Retrofit.Builder retrofitBuilder =

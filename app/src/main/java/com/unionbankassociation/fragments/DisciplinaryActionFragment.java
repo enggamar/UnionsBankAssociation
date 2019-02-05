@@ -17,7 +17,7 @@ import com.unionbankassociation.activities.CommonActivityForFragment;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class PensionFragment extends Fragment {
+public class DisciplinaryActionFragment extends Fragment {
 
     private AppCompatTextView tvTitle;
     private AppCompatImageView ivBack;
@@ -34,11 +34,15 @@ public class PensionFragment extends Fragment {
     CardView cardGraduity;
     @BindView(R.id.tv_pf_graduity)
     CardView cardPfGraduity;
+    @BindView(R.id.tv_suspension_allowance)
+    CardView tvSuspensionAllowance;
+    @BindView(R.id.card_tv_suspension_allowance)
+    CardView carSuspension;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.layout_pension, container, false);
+        View view = inflater.inflate(R.layout.layout_disciplinary_action, container, false);
         ButterKnife.bind(this, view);
         initView(view);
         return view;
@@ -85,6 +89,7 @@ public class PensionFragment extends Fragment {
                     cardNewPensionData.setVisibility(View.GONE);
 
                 }
+                carSuspension.setVisibility(View.GONE);
                 cardViewOldPension.setVisibility(View.GONE);
             }
         });
@@ -94,12 +99,33 @@ public class PensionFragment extends Fragment {
             public void onClick(View v) {
                 if (!cardPfGraduity.isSelected()) {
                     cardPfGraduity.setSelected(true);
+
                     cardGraduity.setVisibility(View.VISIBLE);
                 } else {
                     cardPfGraduity.setSelected(false);
+
                     cardGraduity.setVisibility(View.GONE);
 
                 }
+                cardViewOldPension.setVisibility(View.GONE);
+                cardNewPensionData.setVisibility(View.GONE);
+                carSuspension.setVisibility(View.GONE);
+            }
+        });
+        tvSuspensionAllowance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!tvSuspensionAllowance.isSelected()) {
+                    tvSuspensionAllowance.setSelected(true);
+
+                    carSuspension.setVisibility(View.VISIBLE);
+                } else {
+                    tvSuspensionAllowance.setSelected(false);
+
+                    carSuspension.setVisibility(View.GONE);
+
+                }
+                cardGraduity.setVisibility(View.GONE);
                 cardViewOldPension.setVisibility(View.GONE);
                 cardNewPensionData.setVisibility(View.GONE);
             }

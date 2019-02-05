@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 
 import com.unionbankassociation.R;
 import com.unionbankassociation.fragments.AboutUsFragment;
+import com.unionbankassociation.fragments.DisciplinaryActionFragment;
 import com.unionbankassociation.fragments.NonSunOrdinatorFragment;
 import com.unionbankassociation.fragments.PensionFragment;
 import com.unionbankassociation.fragments.ServiceConditionbpsFragment;
@@ -29,6 +30,9 @@ public class CommonActivityForFragment extends BaseActivity {
                 break;
             case 4:
                 addFragmentWithBackstack(R.id.container, new PensionFragment(), PensionFragment.class.getSimpleName());
+                break;
+            case 5:
+                addFragmentWithBackstack(R.id.container, new DisciplinaryActionFragment(), DisciplinaryActionFragment.class.getSimpleName());
                 break;
 
         }

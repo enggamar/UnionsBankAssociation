@@ -27,6 +27,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
     private NotificationAdapter adapter;
     private AppCompatTextView tvGlance, tvClearicalDeploymentCondition;
     private AppCompatTextView tvPensionScheme;
+    private AppCompatTextView tvDispliniary;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +54,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
         tvGlance.setOnClickListener(this);
         tvClearicalDeploymentCondition.setOnClickListener(this);
         tvPensionScheme.setOnClickListener(this);
+        tvDispliniary.setOnClickListener(this);
     }
 
     /*
@@ -68,6 +70,8 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
         tvGlance = (AppCompatTextView) findViewById(R.id.tv_at_glance);
         tvClearicalDeploymentCondition = (AppCompatTextView) findViewById(R.id.tv_clearical_deployment_condition);
         tvPensionScheme = (AppCompatTextView) findViewById(R.id.tv_pansion_scheme);
+        tvDispliniary = (AppCompatTextView) findViewById(R.id.tv_disciplinary_action);
+
     }
 
     private void openMenu() {
@@ -116,6 +120,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
                 openActivityForFragments(3);
                 break;
             case R.id.tv_disciplinary_action:
+                openActivityForFragments(5);
                 break;
             case R.id.tv_discription:
                 break;

@@ -367,4 +367,24 @@ w.	Employee has the right to change the Fund Manager annually.\n
 x.	Employee has also the choice to change the investment pattern between investment in Equity, in Corporate Sector and in Government sector looking to the returns on investment and perceived risks in investments.\n
 y.	Contribution to Tier I is non-withdrawable during service but Tier II contribution can be withdrawn at his option.\n
 z.	Pension based on the Annuity purchased will be payable for lifetime of the employee/dependent parents/spouse.</string>
+    <string name="pension_data">
+AGE OF RETIREMENT :60 years\n\n
+
+Those who joined the Banks before 1-4-2010 and had opted for pension scheme are covered by the pension Scheme in lieu of CPF.\n\n
+
+Basic pension is payable at 50% of the last drawn Pay.\n\n
+
+1/3 of basic pension can be commuted into lump sum payment\n\n
+
+Balance pension + DA on full pension would be paid.\n\n
+
+DA at the rates like workmen would be paid once in 6 months in Feb. and August every year.\n
+
+</string>
+    <string name="pension">PENSION</string>
+    <string name="old_pension_scheme">OLD PENSION SCHEME</string>
+    <string name="new_pension_scheme">NEW PENSION SCHEME</string>
+    <string name="pf_gradtuiy"><![CDATA[PF & GRADTUITY]]></string>
+    <string name="pension_scheme">PENSION SCHEME</string>
+
 </resources>

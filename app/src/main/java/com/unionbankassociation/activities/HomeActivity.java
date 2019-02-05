@@ -25,7 +25,8 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
     private ActivityHomeBinding mBinding;
     private ArrayList<NotificationResponse> mNotificationList;
     private NotificationAdapter adapter;
-    private AppCompatTextView tvGlance,tvClearicalDeploymentCondition;
+    private AppCompatTextView tvGlance, tvClearicalDeploymentCondition;
+    private AppCompatTextView tvPensionScheme;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +52,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
         llAboutus.setOnClickListener(this);
         tvGlance.setOnClickListener(this);
         tvClearicalDeploymentCondition.setOnClickListener(this);
+        tvPensionScheme.setOnClickListener(this);
     }
 
     /*
@@ -64,7 +66,8 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
         mSubMenuServiceConditions = (LinearLayout) findViewById(R.id.ll_service_condition_submenu);
         llAboutus = (LinearLayout) findViewById(R.id.ll_about_us);
         tvGlance = (AppCompatTextView) findViewById(R.id.tv_at_glance);
-        tvClearicalDeploymentCondition=(AppCompatTextView) findViewById(R.id.tv_clearical_deployment_condition);
+        tvClearicalDeploymentCondition = (AppCompatTextView) findViewById(R.id.tv_clearical_deployment_condition);
+        tvPensionScheme = (AppCompatTextView) findViewById(R.id.tv_pansion_scheme);
     }
 
     private void openMenu() {
@@ -120,6 +123,9 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
 
                 break;
             case R.id.tv_new_medical_scheme:
+                break;
+            case R.id.tv_pansion_scheme:
+                openActivityForFragments(4);
                 break;
             case R.id.ll_service_condition:
                 if (ivServiceConditionSubmenu.isSelected()) {

@@ -3,13 +3,17 @@ package com.unionbankassociation.activities;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import com.google.gson.Gson;
 import com.unionbankassociation.R;
@@ -42,6 +46,10 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
     private AppCompatTextView tvGlance, tvClearicalDeploymentCondition;
     private AppCompatTextView tvPensionScheme;
     private AppCompatTextView tvDispliniary;
+    private LinearLayout tvNews, tvAchievment, tvBankWiseSettleMent;
+    private int currentPageNumber = 1;
+    private boolean isLoading;
+    private RelativeLayout rlLogOut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,10 +62,36 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
 
     private void setUpView() {
         mNotificationList = new ArrayList<>();
-        adapter = new NotificationAdapter(this, mNotificationList, this);
-        LinearLayoutManager manager = new LinearLayoutManager(this);
-        mBinding.rvNotification.setLayoutManager(manager);
+        adapter = new NotificationAdapter(this, mNotificationList);
+        final LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        mBinding.rvNotification.setLayoutManager(layoutManager);
         mBinding.rvNotification.setAdapter(adapter);
+        mBinding.rvNotification.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+            }
+
+            @Override
+            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+                if (dy > 0) {
+                    int visibleItemCount = layoutManager.getChildCount();
+                    int totalItems = layoutManager.getItemCount();
+                    int firstVisibleItemPosition = layoutManager.findFirstVisibleItemPosition();
+
+                    if (isLoading) {
+                        if ((visibleItemCount + firstVisibleItemPosition) >= totalItems
+                                && firstVisibleItemPosition >= 0) {
+                            isLoading = false;
+                            hitNewsListing(currentPageNumber++);
+
+                        }
+                    }
+                }
+
+            }
+        });
     }
 
     private void setLisner() {
@@ -69,6 +103,10 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
         tvClearicalDeploymentCondition.setOnClickListener(this);
         tvPensionScheme.setOnClickListener(this);
         tvDispliniary.setOnClickListener(this);
+        tvAchievment.setOnClickListener(this);
+        tvNews.setOnClickListener(this);
+        tvBankWiseSettleMent.setOnClickListener(this);
+        rlLogOut.setOnClickListener(this);
     }
 
     /*
@@ -85,14 +123,25 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
         tvClearicalDeploymentCondition = (AppCompatTextView) findViewById(R.id.tv_clearical_deployment_condition);
         tvPensionScheme = (AppCompatTextView) findViewById(R.id.tv_pansion_scheme);
         tvDispliniary = (AppCompatTextView) findViewById(R.id.tv_disciplinary_action);
-        hitNewsListing();
+        tvNews = (LinearLayout) findViewById(R.id.ll_news);
+        tvBankWiseSettleMent = (LinearLayout) findViewById(R.id.ll_bank_wise_settlement);
+        tvAchievment = (LinearLayout) findViewById(R.id.ll_achievements);
+        rlLogOut = (RelativeLayout) findViewById(R.id.rl_logout);
+        hitNewsListing(1);
+        mBinding.swipe.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                hitNewsListing(1);
+            }
+        });
 
     }
 
-    private void hitNewsListing() {
-        mBinding.progressBar.setVisibility(View.VISIBLE);
+    private void hitNewsListing(int currentPage) {
+        if (!mBinding.swipe.isRefreshing())
+            mBinding.progressBar.setVisibility(View.VISIBLE);
         ApiInterface apiInterface = RestApi.getConnection(ApiInterface.class, AppConstant.BASE_URL);
-        Call<ResponseBody> call = apiInterface.getNotice(AppSharedPreference.getInstance().getString(this, AppSharedPreference.ACCESS_TOKEN), "1", 1);
+        Call<ResponseBody> call = apiInterface.getNotice(AppSharedPreference.getInstance().getString(this, AppSharedPreference.ACCESS_TOKEN), "1", currentPage);
         ApiCall.getInstance().hitService(HomeActivity.this, call, this, 1);
 
     }
@@ -123,14 +172,17 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
                 openActivityForFragments(1);
                 break;
             case R.id.ll_achievements:
+                openActivityForFragments(7);
                 break;
             case R.id.ll_activities:
                 break;
             case R.id.ll_bank_wise_settlement:
+                openActivityForFragments(8);
                 break;
             case R.id.ll_contact_us:
                 break;
             case R.id.ll_news:
+                openActivityForFragments(6);
                 break;
             case R.id.ll_photo_gallery:
                 break;
@@ -181,6 +233,9 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
     }
 
     private void openActivityForFragments(int type) {
+        if (mDrawerLayout.isDrawerOpen(Gravity.START)) {
+            mDrawerLayout.closeDrawer(Gravity.START);
+        }
         Intent intent = new Intent(HomeActivity.this, CommonActivityForFragment.class);
         intent.putExtra("FRAGMENT", type);
         startActivity(intent);
@@ -189,12 +244,22 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
     @Override
     public void onSuccess(int responseCode, String response, int requestCode) {
         mBinding.progressBar.setVisibility(View.GONE);
+        if (mBinding.swipe != null) {
+            mBinding.swipe.setRefreshing(false);
+            mNotificationList.clear();
+        }
         String token = null, refreshToken = null;
         try {
             JSONObject object = new JSONObject(response);
             AppUtils.showToast(HomeActivity.this, object.getString(AppConstant.message));
             NoticModel bean = new Gson().fromJson(response, NoticModel.class);
             int code = object.getInt(AppConstant.code);
+
+            if (bean.getNextpage() > 0) {
+                isLoading = true;
+            } else {
+                isLoading = false;
+            }
             mNotificationList.addAll(bean.getmNotice().getNoticeDetails());
             adapter.notifyDataSetChanged();
         } catch (Exception e) {
@@ -206,11 +271,16 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
     @Override
     public void onError(String response, int requestCode) {
         mBinding.progressBar.setVisibility(View.GONE);
-
+        if (mBinding.swipe != null) {
+            mBinding.swipe.setRefreshing(false);
+        }
     }
 
     @Override
     public void onFailure() {
         mBinding.progressBar.setVisibility(View.GONE);
+        if (mBinding.swipe != null) {
+            mBinding.swipe.setRefreshing(false);
+        }
     }
 }

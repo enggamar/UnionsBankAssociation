@@ -2,7 +2,9 @@ package com.unionbankassociation.models;
 
 import com.google.gson.annotations.SerializedName;
 
-public class NoticData {
+import java.io.Serializable;
+
+public class NoticData implements Serializable {
 
 
     @SerializedName("id")
@@ -17,6 +19,16 @@ public class NoticData {
     private String status;
     @SerializedName("created_date")
     private String createdDateTime;
+    @SerializedName("description")
+    private String description;
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
     public String getId() {
         return id;

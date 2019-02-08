@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <android.support.v7.widget.CardView
+        android:id="@+id/main_card"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_100sdp"
         app:cardBackgroundColor="@color/White"
@@ -31,6 +32,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
                     android:layout_marginEnd="@dimen/_5sdp"
                     android:layout_weight="1"
                     android:fontFamily="@font/poppins_medium_0"

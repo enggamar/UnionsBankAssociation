@@ -1,15 +1,18 @@
 package com.unionbankassociation.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.AppCompatTextView;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.unionbankassociation.R;
+import com.unionbankassociation.activities.NoticeDetailActivity;
 import com.unionbankassociation.models.NoticData;
 import com.unionbankassociation.utils.AppUtils;
 
@@ -20,10 +23,10 @@ public class NotificationAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
     private ArrayList<NoticData> mNotificationList;
     private View.OnClickListener listener;
 
-    public NotificationAdapter(Context context, ArrayList<NoticData> mNotificationList, View.OnClickListener listener) {
+    public NotificationAdapter(Context context, ArrayList<NoticData> mNotificationList) {
         this.context = context;
         this.mNotificationList = mNotificationList;
-        this.listener = listener;
+//        this.listener = listener;
     }
 
     @NonNull
@@ -47,6 +50,7 @@ public class NotificationAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
 
     private class NotificationViewHolder extends RecyclerView.ViewHolder {
         private AppCompatTextView title, tvTime;
+        private CardView mainCard;
 
         public NotificationViewHolder(View view) {
             super(view);
@@ -54,12 +58,22 @@ public class NotificationAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
             AppCompatImageView imageView = view.findViewById(R.id.iv_share);
             title = view.findViewById(R.id.title);
             tvTime = view.findViewById(R.id.time);
+            mainCard=view.findViewById(R.id.main_card);
             imageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     AppUtils.share(context, "Under Development", "Union Bank Association", "Share Link");
                 }
             });
+            mainCard.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(context, NoticeDetailActivity.class);
+                    intent.putExtra("DETAILS", mNotificationList.get(getAdapterPosition()));
+                    context.startActivity(intent);
+                }
+            });
+
         }
 
         public void bind(NoticData noticData) {

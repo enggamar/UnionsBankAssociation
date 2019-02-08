@@ -16,13 +16,20 @@
                 android:id="@+id/toolbar"
                 layout="@layout/actionbarlayout" />
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/rv_notification"
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/swipe"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/toolbar"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:padding="@dimen/_5sdp" />
+
+                android:layout_below="@+id/toolbar">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_notification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:padding="@dimen/_5sdp" />
+            </android.support.v4.widget.SwipeRefreshLayout>
 
             <ProgressBar
                 android:id="@+id/progress_bar"

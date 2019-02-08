@@ -104,6 +104,7 @@
                                 android:layout_marginStart="@dimen/_10sdp"
                                 android:fontFamily="@font/poppins_regular_0"
                                 android:padding="@dimen/_6sdp"
+
                                 android:text="News"
                                 android:textColor="@color/Black"
                                 android:textSize="@dimen/_13sdp" />

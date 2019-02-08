@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Union Bank Of Association</string>
+    <string name="app_name">U.P. Bank Employees Union</string>
     <string name="no_internet">No internet connection...!</string>
     <string name="retry">Retry</string>
     <string name="crash_toast_text">Oops ! App crashed, but a report has been sent to  developers to help fix the issue !</string>
@@ -37,7 +37,7 @@
     <string name="match">Old password and new password doesn\'t match</string>
     <string name="password">Password</string>
     <string name="username">Username</string>
-    <string name="all_india_bank_employees_association">All India Bank Employees Association</string>
+    <string name="all_india_bank_employees_association">U.P. Bank Employees Union</string>
     <string name="about_us_text">Association is the oldest and largest national trade union Centre of bank employees in India, was founded in 1946 on the 20th of April in Kolkata. They were being paid paltry wages with no regulated service conditions at all. It was a rule of hire and fire. Bank empgroaning but did not have the necessary courage to form unions. They saw the workers in the factories fighting and making some progress in terms of wages and betterment in service conditions. Bank employees also gathered some courage here and there and started to organize themselves into unions in a sporadic way. Some protest actions and strikes were undertaken but the disputes were referred to tribunals and employees did not get justice or satisfaction. Hence unrest and dissatisfaction amongst the employees were brewing and many Unions were formed during the period. With the advent of AIBEA on the scene, this gave a fillip to the formation of unions in different banks. With the formation of the Unions, there were innumerable agitations, struggles and strikes in the banks. Banking was a State subject at that time and hence there were number of Tribunals and Awards. The growing discontentment amongst the bank employees was sensed by the management and the authorities and banking was made a central subject.</string>
     <string name="basic_increment_stages">BASIC-INCREMENT-STAGES</string>
     <string name="clerical_payscale">CLERICAL PAYSCALE</string>
@@ -992,4 +992,12 @@ j.	Eligible to count actual total service for pension ( not pro-rata) (10th BPS)
 
 
 Page 7 of 9</string>
+    <string name="u_p_bank_employees_union">U.P. Bank Employees Union</string>
+    <string name="news">News</string>
+    <string name="achivments">Achievements</string>
+    <string name="bank_wise_sttlement">Bank Wise Settlement</string>
+    <string name="about_us">About Us</string>
+    <string name="subject">Subject: -</string>
+    <string name="description">Description :-</string>
+    <string name="created_at">Created At:-</string>
 </resources>

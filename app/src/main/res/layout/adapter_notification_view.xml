@@ -12,43 +12,45 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="horizontal">
 
             <android.support.v7.widget.AppCompatImageView
                 android:layout_width="@dimen/_96sdp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_vertical"
-                android:src="@drawable/splash_layer" />
+                android:src="@drawable/ic_logo" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="vertical">
 
                 <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_10sdp"
                     android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_weight="1"
                     android:fontFamily="@font/poppins_medium_0"
-                    android:text="Risk of new dam burst forces 24,000 to evacute homes in Brazil."
                     android:textColor="@color/Black"
                     android:textSize="@dimen/_12sdp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
                     android:layout_marginEnd="@dimen/_5sdp"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
                     <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/time"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_9sdp"
                         android:layout_weight="1"
-                        android:text="27 Jan 2019 10:53PM"
                         android:textColor="@color/Black" />
 
                     <android.support.v7.widget.AppCompatImageView

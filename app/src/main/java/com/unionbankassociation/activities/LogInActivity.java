@@ -11,9 +11,11 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 
 import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.gson.Gson;
 import com.unionbankassociation.R;
 import com.unionbankassociation.databinding.ActivityLoginBinding;
 import com.unionbankassociation.interfaces.NetworkListener;
+import com.unionbankassociation.models.LoginModel;
 import com.unionbankassociation.network.ApiCall;
 import com.unionbankassociation.network.ApiInterface;
 import com.unionbankassociation.network.RestApi;
@@ -49,11 +51,9 @@ public class LogInActivity extends BaseActivity implements NetworkListener {
             public void onClick(View v) {
                 if (AppUtils.isInternetAvailable(LogInActivity.this)) {
                     if (validate()) {
-                        Intent intent = new Intent(LogInActivity.this, HomeActivity.class);
-                        startActivity(intent);
-                        finish();
+                        hitLogInAPI();
                     }
-//                        hitLogInAPI();
+//
                 } else
                     AppUtils.showToast(LogInActivity.this, getResources().getString(R.string.no_internet));
             }
@@ -118,10 +118,11 @@ public class LogInActivity extends BaseActivity implements NetworkListener {
             mBinding.textInputEmail.setErrorEnabled(true);
             mBinding.textInputPassword.setError(getString(R.string.h_password));
             return false;
-        } else if (!(mBinding.etEmail.getText().toString().equals("test") && mBinding.etPassword.getText().toString().equals("123456"))) {
-            AppUtils.showToast(this, "Username and password is incorrect");
-            return false;
         }
+//        else if (!(mBinding.etEmail.getText().toString().equals("test") && mBinding.etPassword.getText().toString().equals("123456"))) {
+//            AppUtils.showToast(this, "Username and password is incorrect");
+//            return false;
+//        }
         return true;
     }
 
@@ -129,32 +130,33 @@ public class LogInActivity extends BaseActivity implements NetworkListener {
      * Hit login Api through email and password
      * */
     private void hitLogInAPI() {
-        bar.setVisibility(View.VISIBLE);
-        ApiInterface apiInterface = RestApi.createService(LogInActivity.this, ApiInterface.class);
+        mBinding.progressBar.setVisibility(View.VISIBLE);
+        ApiInterface apiInterface = RestApi.getConnection(ApiInterface.class, AppConstant.BASE_URL);
         final HashMap params = new HashMap<>();
-        params.put("email", etEmail.getText().toString());
-        params.put("password", etPassword.getText().toString());
+        params.put("user_email", mBinding.etEmail.getText().toString());
+        params.put("user_password", mBinding.etPassword.getText().toString());
         params.put("device_id", AppUtils.getDeviceId(LogInActivity.this));
         params.put("device_token", FirebaseInstanceId.getInstance().getToken());
-        params.put("platform", "1");
+        params.put("device_type", "1");
         Call<ResponseBody> call = apiInterface.login(params);
         ApiCall.getInstance().hitService(LogInActivity.this, call, this, 1);
     }
 
     @Override
     public void onSuccess(int responseCode, String response, int requestCode) {
-        bar.setVisibility(View.GONE);
+        mBinding.progressBar.setVisibility(View.GONE);
         String token = null, refreshToken = null;
         try {
             JSONObject object = new JSONObject(response);
             AppUtils.showToast(LogInActivity.this, object.getString(AppConstant.message));
+            LoginModel bean = new Gson().fromJson(response, LoginModel.class);
             int code = object.getInt(AppConstant.code);
             if (code == 200) {
-                token = object.getJSONObject(AppConstant.result).getString(AppConstant.accessToken);
-                refreshToken = object.getJSONObject(AppConstant.result).getString(AppConstant.refreshToken);
-                AppSharedPreference.getInstance().putString(LogInActivity.this, AppSharedPreference.ACCESS_TOKEN, token);
-                AppSharedPreference.getInstance().putString(LogInActivity.this, AppSharedPreference.REFRESH_TOKEN, refreshToken);
-                AppSharedPreference.getInstance().putString(LogInActivity.this, AppSharedPreference.PROFILE, response);
+//                token = object.getJSONObject(AppConstant.result).getString(AppConstant.accessToken);
+//                refreshToken = object.getJSONObject(AppConstant.result).getString(AppConstant.refreshToken);
+                AppSharedPreference.getInstance().putString(LogInActivity.this, AppSharedPreference.ACCESS_TOKEN, bean.getmLoginData().getAccessToken());
+//                AppSharedPreference.getInstance().putString(LogInActivity.this, AppSharedPreference.REFRESH_TOKEN, refreshToken);
+//                AppSharedPreference.getInstance().putString(LogInActivity.this, AppSharedPreference.PROFILE, response);
                 Intent intent = new Intent(LogInActivity.this, HomeActivity.class);
                 startActivity(intent);
                 finish();
@@ -165,13 +167,13 @@ public class LogInActivity extends BaseActivity implements NetworkListener {
     }
 
     public void onError(String response, int requestCode) {
-        bar.setVisibility(View.GONE);
+        mBinding.progressBar.setVisibility(View.GONE);
         AppUtils.showToast(LogInActivity.this, response + "");
     }
 
     @Override
     public void onFailure() {
-        bar.setVisibility(View.GONE);
+        mBinding.progressBar.setVisibility(View.GONE);
         AppUtils.showToast(LogInActivity.this, "Failure");
     }
 }

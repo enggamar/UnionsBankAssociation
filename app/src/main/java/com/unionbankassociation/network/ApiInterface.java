@@ -9,10 +9,13 @@ import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.FieldMap;
 import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
+import retrofit2.http.Header;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.Part;
 import retrofit2.http.PartMap;
+import retrofit2.http.Query;
 import retrofit2.http.QueryMap;
 
 
@@ -29,11 +32,11 @@ public interface ApiInterface {
 
     @FormUrlEncoded
     @POST("login")
-    Call<ResponseBody> login(@FieldMap HashMap<String,String> map);
+    Call<ResponseBody> login(@FieldMap HashMap<String, String> map);
 
-    @FormUrlEncoded
-    @POST("signup")
-    Call<ResponseBody> signUp(@FieldMap HashMap<String,String> map);
+
+    @GET("notice")
+    Call<ResponseBody> getNotice(@Header("access_token") String accessToken, @Query("notice_type") String noticeType, @Query("page_no") int pageNumber);
 
     @Multipart
     @POST("signup")
@@ -41,15 +44,15 @@ public interface ApiInterface {
 
     @FormUrlEncoded
     @POST("change-password")
-    Call<ResponseBody> changePassword(@FieldMap HashMap<String,String> map);
+    Call<ResponseBody> changePassword(@FieldMap HashMap<String, String> map);
 
     @FormUrlEncoded
     @POST("forget-password")
-    Call<ResponseBody> forgotPassword(@FieldMap HashMap<String,String> map);
+    Call<ResponseBody> forgotPassword(@FieldMap HashMap<String, String> map);
 
     @FormUrlEncoded
     @POST("reset-password")
-    Call<ResponseBody> reset(@FieldMap HashMap<String,String> map);
+    Call<ResponseBody> reset(@FieldMap HashMap<String, String> map);
 
     @FormUrlEncoded
     @POST("refresh")

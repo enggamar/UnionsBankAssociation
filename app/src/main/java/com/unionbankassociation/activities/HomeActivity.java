@@ -11,19 +11,33 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.google.gson.Gson;
 import com.unionbankassociation.R;
 import com.unionbankassociation.adapters.NotificationAdapter;
 import com.unionbankassociation.databinding.ActivityHomeBinding;
-import com.unionbankassociation.models.NotificationResponse;
+import com.unionbankassociation.interfaces.NetworkListener;
+import com.unionbankassociation.models.NoticData;
+import com.unionbankassociation.models.NoticModel;
+import com.unionbankassociation.network.ApiCall;
+import com.unionbankassociation.network.ApiInterface;
+import com.unionbankassociation.network.RestApi;
+import com.unionbankassociation.utils.AppConstant;
+import com.unionbankassociation.utils.AppSharedPreference;
+import com.unionbankassociation.utils.AppUtils;
+
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class HomeActivity extends BaseActivity implements View.OnClickListener {
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+
+public class HomeActivity extends BaseActivity implements View.OnClickListener, NetworkListener {
     private DrawerLayout mDrawerLayout;
     private ImageView ivMenu, ivServiceConditionSubmenu;
     private LinearLayout mSubMenuServiceConditions, llServiceCondition, llAboutus;
     private ActivityHomeBinding mBinding;
-    private ArrayList<NotificationResponse> mNotificationList;
+    private ArrayList<NoticData> mNotificationList;
     private NotificationAdapter adapter;
     private AppCompatTextView tvGlance, tvClearicalDeploymentCondition;
     private AppCompatTextView tvPensionScheme;
@@ -71,6 +85,15 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
         tvClearicalDeploymentCondition = (AppCompatTextView) findViewById(R.id.tv_clearical_deployment_condition);
         tvPensionScheme = (AppCompatTextView) findViewById(R.id.tv_pansion_scheme);
         tvDispliniary = (AppCompatTextView) findViewById(R.id.tv_disciplinary_action);
+        hitNewsListing();
+
+    }
+
+    private void hitNewsListing() {
+        mBinding.progressBar.setVisibility(View.VISIBLE);
+        ApiInterface apiInterface = RestApi.getConnection(ApiInterface.class, AppConstant.BASE_URL);
+        Call<ResponseBody> call = apiInterface.getNotice(AppSharedPreference.getInstance().getString(this, AppSharedPreference.ACCESS_TOKEN), "1", 1);
+        ApiCall.getInstance().hitService(HomeActivity.this, call, this, 1);
 
     }
 
@@ -140,6 +163,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
                 }
                 break;
             case R.id.rl_logout:
+                AppSharedPreference.getInstance().clearAllPrefs(this);
                 Intent intent = new Intent(HomeActivity.this, LogInActivity.class);
                 startActivity(intent);
                 finish();
@@ -160,5 +184,33 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
         Intent intent = new Intent(HomeActivity.this, CommonActivityForFragment.class);
         intent.putExtra("FRAGMENT", type);
         startActivity(intent);
+    }
+
+    @Override
+    public void onSuccess(int responseCode, String response, int requestCode) {
+        mBinding.progressBar.setVisibility(View.GONE);
+        String token = null, refreshToken = null;
+        try {
+            JSONObject object = new JSONObject(response);
+            AppUtils.showToast(HomeActivity.this, object.getString(AppConstant.message));
+            NoticModel bean = new Gson().fromJson(response, NoticModel.class);
+            int code = object.getInt(AppConstant.code);
+            mNotificationList.addAll(bean.getmNotice().getNoticeDetails());
+            adapter.notifyDataSetChanged();
+        } catch (Exception e) {
+        }
+
+    }
+
+
+    @Override
+    public void onError(String response, int requestCode) {
+        mBinding.progressBar.setVisibility(View.GONE);
+
+    }
+
+    @Override
+    public void onFailure() {
+        mBinding.progressBar.setVisibility(View.GONE);
     }
 }

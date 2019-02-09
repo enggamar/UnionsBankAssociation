@@ -66,7 +66,6 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/poppins_regular_0"
                         android:paddingTop="@dimen/_10sdp"
-                        android:paddingBottom="@dimen/_5sdp"
                         android:textColor="@color/Black"
                         android:textSize="@dimen/_10sdp" />
                 </LinearLayout>
@@ -86,7 +85,9 @@
                 <android.support.v7.widget.AppCompatTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
                     android:fontFamily="@font/poppins_semi_bold_0"
+
                     android:text="@string/description"
                     android:textColor="@color/Black"
                     android:textSize="@dimen/_13sdp" />
@@ -95,7 +96,7 @@
                     android:id="@+id/tv_description"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_6sdp"
                     android:fontFamily="@font/poppins_regular_0"
                     android:textColor="@color/Black"
                     android:textSize="@dimen/_13sdp" />

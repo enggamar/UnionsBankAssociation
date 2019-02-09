@@ -90,11 +90,14 @@ public class CommonFragment extends Fragment implements NetworkListener {
             case 1:
                 titleType = getString(R.string.news);
                 break;
-            case 2:
+            case 3:
                 titleType = getString(R.string.achivments);
                 break;
-            case 3:
+            case 2:
                 titleType = getString(R.string.bank_wise_sttlement);
+                break;
+            case 4:
+                titleType = getString(R.string.our_activities);
                 break;
         }
         return titleType;
@@ -119,13 +122,11 @@ public class CommonFragment extends Fragment implements NetworkListener {
                     int visibleItemCount = layoutManager.getChildCount();
                     int totalItems = layoutManager.getItemCount();
                     int firstVisibleItemPosition = layoutManager.findFirstVisibleItemPosition();
-
                     if (isLoading) {
                         if ((visibleItemCount + firstVisibleItemPosition) >= totalItems
                                 && firstVisibleItemPosition >= 0) {
                             isLoading = false;
                             hitNewsListing(currentPageNumber++);
-
                         }
                     }
                 }
@@ -163,6 +164,13 @@ public class CommonFragment extends Fragment implements NetworkListener {
             }
 
             mNotificationList.addAll(bean.getmNotice().getNoticeDetails());
+            if (mNotificationList.size() > 0) {
+                mBinding.rvNotification.setVisibility(View.VISIBLE);
+                mBinding.noData.setVisibility(View.GONE);
+            } else {
+                mBinding.rvNotification.setVisibility(View.GONE);
+                mBinding.noData.setVisibility(View.VISIBLE);
+            }
             adapter.notifyDataSetChanged();
         } catch (Exception e) {
         }
@@ -176,6 +184,13 @@ public class CommonFragment extends Fragment implements NetworkListener {
         if (mBinding.swipe != null) {
             mBinding.swipe.setRefreshing(false);
         }
+        if (mNotificationList.size() > 0) {
+            mBinding.rvNotification.setVisibility(View.VISIBLE);
+            mBinding.noData.setVisibility(View.GONE);
+        } else {
+            mBinding.rvNotification.setVisibility(View.GONE);
+            mBinding.noData.setVisibility(View.VISIBLE);
+        }
     }
 
     @Override
@@ -183,6 +198,13 @@ public class CommonFragment extends Fragment implements NetworkListener {
         mBinding.progressBar.setVisibility(View.GONE);
         if (mBinding.swipe != null) {
             mBinding.swipe.setRefreshing(false);
+        }
+        if (mNotificationList.size() > 0) {
+            mBinding.rvNotification.setVisibility(View.VISIBLE);
+            mBinding.noData.setVisibility(View.GONE);
+        } else {
+            mBinding.rvNotification.setVisibility(View.GONE);
+            mBinding.noData.setVisibility(View.VISIBLE);
         }
     }
 

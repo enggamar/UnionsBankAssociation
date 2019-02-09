@@ -1000,4 +1000,5 @@ Page 7 of 9</string>
     <string name="subject">Subject: -</string>
     <string name="description">Description :-</string>
     <string name="created_at">Created At:-</string>
+    <string name="our_activities">Our Activities</string>
 </resources>

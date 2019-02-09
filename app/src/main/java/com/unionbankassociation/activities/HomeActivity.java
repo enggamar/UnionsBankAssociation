@@ -50,6 +50,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
     private int currentPageNumber = 1;
     private boolean isLoading;
     private RelativeLayout rlLogOut;
+    private LinearLayout llActivities;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -107,6 +108,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
         tvNews.setOnClickListener(this);
         tvBankWiseSettleMent.setOnClickListener(this);
         rlLogOut.setOnClickListener(this);
+        llActivities.setOnClickListener(this);
     }
 
     /*
@@ -127,6 +129,8 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
         tvBankWiseSettleMent = (LinearLayout) findViewById(R.id.ll_bank_wise_settlement);
         tvAchievment = (LinearLayout) findViewById(R.id.ll_achievements);
         rlLogOut = (RelativeLayout) findViewById(R.id.rl_logout);
+        llActivities = (LinearLayout) findViewById(R.id.ll_activities);
+        mBinding.toolbar.title.setText(getString(R.string.news));
         hitNewsListing(1);
         mBinding.swipe.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
@@ -172,12 +176,13 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
                 openActivityForFragments(1);
                 break;
             case R.id.ll_achievements:
-                openActivityForFragments(7);
+                openActivityForFragments(8);
                 break;
             case R.id.ll_activities:
+                openActivityForFragments(9);
                 break;
             case R.id.ll_bank_wise_settlement:
-                openActivityForFragments(8);
+                openActivityForFragments(7);
                 break;
             case R.id.ll_contact_us:
                 break;
@@ -261,6 +266,14 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
                 isLoading = false;
             }
             mNotificationList.addAll(bean.getmNotice().getNoticeDetails());
+            if (mNotificationList.size() > 0) {
+                mBinding.rvNotification.setVisibility(View.VISIBLE);
+                mBinding.noData.setVisibility(View.GONE);
+            } else {
+                mBinding.rvNotification.setVisibility(View.GONE);
+                mBinding.noData.setVisibility(View.VISIBLE);
+            }
+
             adapter.notifyDataSetChanged();
         } catch (Exception e) {
         }

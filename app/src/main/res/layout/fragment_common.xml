@@ -23,6 +23,17 @@
                 android:padding="@dimen/_5sdp" />
         </android.support.v4.widget.SwipeRefreshLayout>
 
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/no_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/poppins_semi_bold_0"
+            android:text="Currently, There is no notice."
+            android:textColor="@color/Gray"
+            android:textSize="@dimen/_12sdp"
+            android:visibility="gone" />
+
         <ProgressBar
             android:id="@+id/progress_bar"
             android:layout_width="wrap_content"

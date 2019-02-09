@@ -258,7 +258,8 @@
                                 android:layout_height="@dimen/_20sdp"
                                 android:layout_gravity="center_vertical"
                                 android:layout_marginEnd="@dimen/_15sdp"
-                                android:src="@drawable/ic_down" />
+                                android:src="@drawable/ic_down"
+                                android:visibility="gone" />
 
                         </LinearLayout>
 

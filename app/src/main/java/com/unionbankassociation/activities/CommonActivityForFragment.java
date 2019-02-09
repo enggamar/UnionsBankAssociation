@@ -56,6 +56,13 @@ public class CommonActivityForFragment extends BaseActivity {
                 fragment2.setArguments(bundle2);
                 addFragmentWithBackstack(R.id.container, fragment2, CommonFragment.class.getSimpleName());
                 break;
+            case 9:
+                Bundle bundle3 = new Bundle();
+                bundle3.putInt("TYPE", 4);
+                CommonFragment fragment3 = new CommonFragment();
+                fragment3.setArguments(bundle3);
+                addFragmentWithBackstack(R.id.container, fragment3, CommonFragment.class.getSimpleName());
+                break;
 
         }
     }

@@ -17,9 +17,11 @@
             android:orientation="horizontal">
 
             <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/iv_notice"
                 android:layout_width="@dimen/_96sdp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_vertical"
+                android:scaleType="fitXY"
                 android:src="@drawable/ic_logo" />
 
             <LinearLayout
@@ -35,7 +37,9 @@
                     android:layout_marginTop="@dimen/_8sdp"
                     android:layout_marginEnd="@dimen/_5sdp"
                     android:layout_weight="1"
+                    android:ellipsize="end"
                     android:fontFamily="@font/poppins_medium_0"
+                    android:maxLines="2"
                     android:textColor="@color/Black"
                     android:textSize="@dimen/_12sdp" />
 

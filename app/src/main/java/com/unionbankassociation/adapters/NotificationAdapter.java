@@ -11,6 +11,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.unionbankassociation.R;
 import com.unionbankassociation.activities.NoticeDetailActivity;
 import com.unionbankassociation.models.NoticData;
@@ -51,14 +53,16 @@ public class NotificationAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
     private class NotificationViewHolder extends RecyclerView.ViewHolder {
         private AppCompatTextView title, tvTime;
         private CardView mainCard;
+        AppCompatImageView imageView, ivNotice;
 
         public NotificationViewHolder(View view) {
             super(view);
 
-            AppCompatImageView imageView = view.findViewById(R.id.iv_share);
+            imageView = view.findViewById(R.id.iv_share);
             title = view.findViewById(R.id.title);
             tvTime = view.findViewById(R.id.time);
-            mainCard=view.findViewById(R.id.main_card);
+            mainCard = view.findViewById(R.id.main_card);
+            ivNotice = view.findViewById(R.id.iv_notice);
             imageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -79,6 +83,8 @@ public class NotificationAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
         public void bind(NoticData noticData) {
             title.setText(noticData.getTitle());
             tvTime.setText(noticData.getCreatedDateTime());
+            Glide.with(context).asBitmap().load(noticData.getImage()).apply(RequestOptions.placeholderOf(R.drawable.ic_logo)).into(ivNotice);
+
         }
     }
 }

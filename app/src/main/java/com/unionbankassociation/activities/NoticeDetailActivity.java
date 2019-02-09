@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.unionbankassociation.R;
 import com.unionbankassociation.databinding.ActivityDetailViewBinding;
 import com.unionbankassociation.models.NoticData;
@@ -36,6 +38,8 @@ public class NoticeDetailActivity extends BaseActivity {
         mBinding.tvDescription.setText(mData.getDescription());
         mBinding.tvTime.setText(mData.getCreatedDateTime());
         mBinding.header.title.setText(getNoticeType(mData.getNoticeType()));
+        Glide.with(this).asBitmap().load(mData.getImage()).apply(RequestOptions.placeholderOf(R.drawable.ic_logo)).into(mBinding.ivNotice);
+
     }
 
     private String getNoticeType(int noticeType) {

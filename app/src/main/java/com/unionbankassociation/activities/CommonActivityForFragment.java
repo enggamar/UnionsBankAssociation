@@ -7,6 +7,7 @@ import com.unionbankassociation.R;
 import com.unionbankassociation.fragments.AboutUsFragment;
 import com.unionbankassociation.fragments.CommonFragment;
 import com.unionbankassociation.fragments.DisciplinaryActionFragment;
+import com.unionbankassociation.fragments.NewMedicalScheme;
 import com.unionbankassociation.fragments.NonSunOrdinatorFragment;
 import com.unionbankassociation.fragments.PensionFragment;
 import com.unionbankassociation.fragments.ServiceConditionbpsFragment;
@@ -62,6 +63,9 @@ public class CommonActivityForFragment extends BaseActivity {
                 CommonFragment fragment3 = new CommonFragment();
                 fragment3.setArguments(bundle3);
                 addFragmentWithBackstack(R.id.container, fragment3, CommonFragment.class.getSimpleName());
+                break;
+            case 10:
+                addFragmentWithBackstack(R.id.container, new NewMedicalScheme(), NewMedicalScheme.class.getSimpleName());
                 break;
 
         }

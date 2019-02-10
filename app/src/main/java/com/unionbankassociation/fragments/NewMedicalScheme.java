@@ -20,7 +20,7 @@ public class NewMedicalScheme extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.layout_deployment_of_non_subordinate_staff, container, false);
+        View view = inflater.inflate(R.layout.layout_new_medical_scheme, container, false);
         initView(view);
         return view;
     }

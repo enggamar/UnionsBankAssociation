@@ -78,7 +78,7 @@
                                 android:layout_marginStart="@dimen/_10sdp"
                                 android:fontFamily="@font/poppins_regular_0"
                                 android:padding="@dimen/_6sdp"
-                                android:text="About UBSAUP"
+                                android:text="@string/about_ubsaup"
 
                                 android:textColor="@color/Black"
                                 android:textSize="@dimen/_13sdp" />
@@ -105,7 +105,7 @@
                                 android:fontFamily="@font/poppins_regular_0"
                                 android:padding="@dimen/_6sdp"
 
-                                android:text="News"
+                                android:text="@string/news"
                                 android:textColor="@color/Black"
                                 android:textSize="@dimen/_13sdp" />
                         </LinearLayout>
@@ -130,7 +130,7 @@
                                 android:layout_marginStart="@dimen/_10sdp"
                                 android:fontFamily="@font/poppins_regular_0"
                                 android:padding="@dimen/_6sdp"
-                                android:text="Achievements"
+                                android:text="@string/achievements"
                                 android:textColor="@color/Black"
                                 android:textSize="@dimen/_13sdp" />
                         </LinearLayout>
@@ -156,7 +156,7 @@
                                 android:layout_weight="1"
                                 android:fontFamily="@font/poppins_regular_0"
                                 android:padding="@dimen/_6sdp"
-                                android:text="Bank wise settlement"
+                                android:text="@string/aiubea_settlement"
                                 android:textColor="@color/Black"
                                 android:textSize="@dimen/_13sdp" />
 
@@ -190,7 +190,7 @@
                                 android:layout_marginStart="@dimen/_10sdp"
                                 android:fontFamily="@font/poppins_regular_0"
                                 android:padding="@dimen/_6sdp"
-                                android:text="Photo Gallery"
+                                android:text="@string/photo_gallery"
                                 android:textColor="@color/Black"
                                 android:textSize="@dimen/_13sdp" />
                         </LinearLayout>
@@ -249,7 +249,7 @@
                                 android:layout_weight="1"
                                 android:fontFamily="@font/poppins_regular_0"
                                 android:padding="@dimen/_6sdp"
-                                android:text="Our Activities"
+                                android:text="@string/our_activities"
                                 android:textColor="@color/Black"
                                 android:textSize="@dimen/_13sdp" />
 
@@ -285,7 +285,7 @@
                                 android:layout_weight="1"
                                 android:fontFamily="@font/poppins_regular_0"
                                 android:padding="@dimen/_6sdp"
-                                android:text="Service Condition"
+                                android:text="@string/service_condition"
                                 android:textColor="@color/Black"
                                 android:textSize="@dimen/_13sdp" />
 

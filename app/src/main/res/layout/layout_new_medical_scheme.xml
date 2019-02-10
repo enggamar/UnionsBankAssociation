@@ -1,7 +1,484 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/actionbarlayout" />
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_15sdp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium_0"
+                        android:text="NEW MEDICAL INSURANCE SCHEME:\n\n
+The scheme covers expenses of the officers / employees and dependent in cases he/she  shall contract any disease or suffer from any illness (hereinafter called DISEASE) or sustain any bodily injury through accident (hereinafter called INJURY) and if such disease or injury shall require any such insured Person, upon the advice of a duly qualified Physician/Medical Specialist/Medical practitioner (hereinafter called MEDICAL PRACTITIONER) or of a duly qualified Surgeon (hereinafter called SURGEON) to incur hospitalization/domiciliary hospitalization and domiciliary treatment expenses as defined in the Scheme, for medical/surgical treatment at any Nursing Home/Hospital / Clinic (for domiciliary treatment)/ Day care Centre  which are registered with the local bodies, in India as herein defined (hereinafter called HOSPITAL) as an inpatient or otherwise as specified as per the scheme, to the extent of the sum insured + Corporate buffer.\n\n
+1.1.The Scheme Covers Employee + Spouse + Dependent Children + 2 dependent Parents /parents-inlaw.\n\n
+• No age limit for dependent children. (including step children and legally adopted children ) A child would be considered dependent if their monthly income does not exceed Rs. 10,000/- per month; which is at present, or revised by Indian Banks’ Association in due course. Widowed Daughter and dependant divorced / separated daughters, sisters including unmarried / divorced / abandoned or separated from husband/ widowed sisters and Crippled Child shall be considered as dependent for the purpose of this policy. Physically challenged Brother / Sister with 40% or more disability.
+\n\n
+• No Age Limits for Dependent Parents. Either Dependent Parents or parents-In-law will be covered. Parents would be considered dependent if their monthly income does not exceed Rs. 10,000/- per month, which is at present, or revised by Indian Banks’ Association in due course, and wholly dependent on the employee as defined in this scheme. 
+\n\n
+ (The definition of family shall undergo a change as decided in due course in the negotiations)
+\n\n
+1.2.1 All New Officers / employees to be covered from the date of joining as per their appointment letter. For additions /deletions during policy period, premium to be charged /refunded on pro rata basis.
+\n\n
+1.2.2 Continuity benefits coverage to officers / employees on retirement and also to the Retired Officers / employees, who may be inducted in the Scheme.
+\n\n
+1.3 Sum Insured: Hospitalization and Domiciliary Treatment coverage as defined in the scheme per annum
+\n\n
+Clerical Staff :  Rs.300000
+\n
+Sub Staff       : Rs.300000
+\n\n
+Change in sum insured after commencement of policy to be considered in case of promotion of the employee or vice versa.
+\n\n
+1.4 Corporate Buffer: Rs. 100,00,00,000/- Corporate buffer may be appropriated as per the premium of the bank. If the Corporate buffer of one bank is exhausted, the remaining amount can be claimed from the unutilized corporate buffer of the other banks. Corporate Buffer can be authorized by the Management, through an Authorized person / Committee as decided by IBA / Bank, and informed directly to the THIRD PARTY ADMINISTRATOR by keeping the insurance company in the loop.
+\n\n
+1.5 In the event of any claim becoming admissible under this scheme, the company will pay through Third Party Administrator to the Hospital / Nursing Home or insured the amount of such expenses as would fall under different heads mentioned below and as are reasonably and medically necessary incurred thereof by or on behalf of such insured but not exceeding the Sum Insured in aggregate mentioned in the schedule hereto.
+\n\n
+A. Room and Boarding expenses as provided by the Hospital/Nursing Home not exceeding   Rs. 5000 per day or the actual amount whichever is less.   B. Intensive Care Unit (ICU) expenses not exceeding Rs. 7500 per day or actual amount whichever is less.
+\n\n
+C. Surgeon, team of surgeons, Assistant surgeon, Anesthetist, Medical Practitioner, Consultants, Specialists Fees.
+\n\n
+D. Nursing Charges , Service Charges, IV Administration Charges, Nebulization Charges, RMO charges, Anaesthetic, Blood, Oxygen, Operation Theatre Charges, surgical appliances, OT consumables, Medicines and Drugs, Dialysis, Chemotherapy, Radiotherapy, Cost of Artificial Limbs, cost of prosthetic devices implanted during surgical procedure like pacemaker, Defibrillator, Ventilator,  orthopaedic implants, Cochlear Implant, any other implant, IntraOccular Lenses, ,  infra cardiac valve replacements, vascular stents, any other valve replacement, laboratory/diagnostic tests, X-ray CT Scan, MRI, any other scan, scopies  and such similar expenses that are medically necessary, or incurred during  hospitalization as per the advice of the attending doctor.
+"
+                        android:textColor="@color/Black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium_0"
+                        android:text="\n\n
+E. Hospitalization expenses (excluding cost of organ) incurred on donor in respect of organ transplant to the insured.
+\n\n
+1.6 Pre and Post Hospitalization expenses payable in respect of each hospitalization shall be the actual expenses incurred subject to 30 days prior to hospitalization and 90 days after discharge.
+\n\n
+2. DEFINITIONS:
+\n\n
+2.1 ACCIDENT:  An accident is a sudden, unforeseen and involuntary event caused resulting in injury -    \n\n2.2 A.     “Acute condition” – Acute condition is a disease, illness or injury that is likely to respond quickly to treatment which aims to return the person to his or her state of health immediately before suffering the disease/illness/injury which leads to full recovery. B.     “Chronic condition” – A chronic condition is defined as a disease, illness, or injury that has one or more of the following characteristics – i. It needs ongoing or long-term monitoring through consultations, examinations, checkups and/or tests – ii. It needs ongoing or long-term control or relief of symptoms iii. It requires your rehabilitation or for you to be specially trained to cope with it iv. It continues indefinitely v. It comes back or is likely to come back.
+\n\n
+2.3 ALTERNATIVE TREATMENTS:  Alternative Treatments are forms of treatment other than treatment “Allopathy” or “modern medicine and includes Ayurveda, unani, siddha homeopathy and Naturopathy in the Indian Context, for Hospitalisation only and Domiciliary for treatment only under ailments mentioned under clause number 3.1
+\n\n
+2.4 ANY ONE ILLNESS:   Any one illness will be deemed to mean continuous period of illness and it includes relapse within 45 days from the date of last consultation with the Hospital / Nursing Home where treatment has been taken. Occurrence of the same illness after a lapse of 45 days as stated above will be considered as fresh illness for the purpose of this policy.
+\n\n
+2.5 CASHLESS FACILITY:
+\n\n
+Cashless facility “means a facility extended by the insurer to the insured where the payments, of the cost of treatment undergone by the employee and the dependent family members of the insured in accordance with the policy terms and conditions, or directly made to the network provider by the insurer to the extent pre-authorization approved.
+\n\n
+2.6 CONGENITAL ANOMALY:
+\n\n
+Congenital Anomaly refers to a condition(s) which is present since birth, and which is abnormal with reference to form, structure or position.
+\n\n
+a. Internal Congenital Anomaly which is not in the visible and accessible parts of the body
+\n\n
+b. External Congenital Anomaly which is in the visible and accessible parts of the body
+\n\n
+2.7 CONDITION PRECEDENT:
+\n\n
+ Condition Precedent shall mean a policy term or condition upon which the Insurer’s liability under the policy is conditional upon.
+\n\n
+2.8 CONTRIBUTION:
+\n\n
+ The Officers / employees will not share the cost of an indemnity claim on a ratable proportion from their personal Insurance Policies.
+\n\n
+2.9 DAYCARE CENTRE:
+\n\n
+A day care centre means any institution established for day care treatment of illness and/ or injuries or a medical setup within a hospital and which has been registered with the local authorities, wherever applicable, and is under the supervision of a registered and qualified medical practitioner AND must comply with all minimum criteria as under;-
+\n\n
+ -  has qualified nursing staff under its employment  -  has all qualified medical practitioner(s) in charge   -  has a fully equipped operation theatre of its own where surgical procedures are carried out.
+\n\n
+ - maintains daily records of patients and will make these accessible to the insurance companies authorised personnel.
+\n\n
+2.10   DAY CARE TREATMENT:    Day care Treatment refers to medical treatment and or surgical procedure which is
+\n\n
+iii. undertaken under general or local anesthesia in a hospital/day care Centre in less than a day because of technological advancement, and
+\n\n
+iv. Which would have otherwise required a hospitalisation of more than a day.
+\n\n
+    Treatment normally taken on an out patient basis is not included in the scope of this definition.
+\n\n
+2.11 DOMICILIARY HOSPITALIZATION:
+\n\n
+ Domiciliary Hospitalization means medical treatment for an illness/disease/injury which in the   normal course would require care and treatment at a hospital but is actually taken while confined at home under any of the following circumstances:
+\n\n
+c) The condition of the patient is such that he/she is not in a condition to be removed to a hospital or
+\n\n
+d) The patient takes treatment at home on account of non-availability of room in a hospital.
+\n\n
+2.12 DOMICILIARY TREATMENT
+\n\n
+  Treatment taken for specified diseases which may or may not require hospitalization as mentioned in the Scheme under clause Number 3.1
+\n\n
+ 2.13   HOSPITAL / NURSING HOME:
+\n\n
+A Hospital means any institution established for in-patient care and day care treatment of illness and/or injuries and which has been registered as a Hospital with the local authorities under the Clinical establishments (Registration and Regulation) Act, 2010 or under the enactments specified under the Schedule of Section 56(1) of the said Act OR complies with all minimum criteria as under
+\n\n
+- Has qualified nursing staff under its employment round the clock.
+\n\n
+- Has at least 10 in-patient beds in towns having a population of less than 10 lacs and at least 15 in-patient beds in all other places;
+\n\n
+- Has qualified medical practitioner(s) in charge round the clock;
+\n\n
+- Has a fully equipped Operation Theatre of its own where surgical procedures are carried out;
+\n\n
+- Maintains daily records of patients and makes these accessible to the insurance company’s authorized personnel.
+\n\n
+The term   Hospital / Nursing Home   shall not include an establishment which is a place of rest,     a place for the aged, a place for drug-addicts or place for alcoholics, a hotel or a similar place.
+\n\n
+This clause will however be relaxed in areas where it is difficult to find such hospitals.
+\n\n
+2.14 HOSPITALIZATION:
+\n\n
+ Hospitalization means admission in a Hospital/Nursing Home for a minimum period of 24 consecutive hours of inpatient care except for specified procedures/treatments, where such admission could be for a period of less than a day, as mentioned in clauses 2.9 and 2.10
+\n\n
+2.15   ID CARD:
+\n\n
+ ID Card means the identity card issued to the insured person by the THIRD PARTY ADMINISTRATOR to avail cashless facility in network hospitals.
+\n\n
+2.16 ILLNESS:
+\n\n
+ Illness means a sickness or a disease or pathological condition leading to the impairment of normal physiological function which manifests itself during the policy period and requires medical treatment.
+\n\n
+2.17 INJURY:
+\n\n
+Injury means accidental physical bodily harm excluding illness or disease which is verified and certified by a medical practitioner.
+\n\n
+However all types of Hospitalization is covered under the Scheme.
+\n\n
+"
+                        android:textColor="@color/Black"
+                        android:textSize="@dimen/_12sdp" />
+
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium_0"
+                        android:text="\n\n2.18   IN PATIENT CARE:
+\n\n
+In Patient Care means treatment for which the insured person has to stay in a hospital for more than a day for a covered event.
+\n\n
+2.19 INTENSIVE CARE UNIT:
+\n\n
+Intensive Care Unit means an identified section, ward or wing of a Hospital which is under the constant supervision of a dedicated medical practitioner(s) and which is specially equipped for the continuous monitoring and treatment of patients who are in a critical condition, or require life support facilities and where the level of care and supervision is considerably more sophisticated and intensive than in the ordinary and other wards.
+\n\n
+2.20 MATERNITY EXPENSES:
+\n\n
+  Maternity expenses/treatment shall include:
+\n\n
+a) Medical treatment expenses traceable to childbirth (including complicated deliveries and   caesarean sections incurred during hospitalization).
+\n\n
+b) Expenses towards medical termination of pregnancy during the policy period.
+\n\n
+C) Complications on Maternity would be covered up to the Sum Insured plus the Corporate Buffer.
+\n\n
+2.21 MEDICAL ADVICE:
+\n\n
+ Any consultation or advice from a medical practitioner/doctor including the issue of any prescription or repeat prescription.
+\n\n
+2.22 MEDICAL EXPENSES:
+\n\n
+ Medical Expenses means those expenses that an insured person has necessarily and actually incurred for medical treatment on account of illness or accident on the advice of a medical practitioner, as long as these are no more than would have been payable if the insured person had not been insured.
+\n\n
+2.23 MEDICALLY NECESSARY:  Medically necessary treatment is defined as any treatment, test, medication or stay in hospital or part of a stay in a hospital which
+\n\n
+- is required for the medical management of the illness or injury suffered by the insured;
+\n\n
+- must not exceed the level of care necessary to provide safe, adequate and appropriate medical care in scope, duration or intensity;
+\n\n
+- must have been prescribed by a medical practitioner;
+\n\n
+- must confirm to the  professional standards widely accepted in  international medical practice or by the medical community in India.
+\n\n
+2.24 MEDICAL PRACTITIONER:
+\n\n
+ Medical Practitioner is a person who holds a valid registration from the Medical Council of any State or Medical Council of India or Council for Indian Medicine or the homeopathy set up by the Government of India or a State Government and is thereby entitled to practice medicine within its jurisdiction; and is acting within the scope and jurisdiction of his license. The term medical practitioner would include physician, specialist and surgeon.
+\n\n
+(The Registered practitioner should not be the insured or close family members such as parents, parentsin-law, spouse and children.)
+\n\n
+2.25 NETWORK PROVIDER:
+\n\n
+ Network Provider means hospitals or health care providers enlisted by an insurer or by a Third Party Administrator and insurer together to provide medical services to an insured on payment by a cashless facility.
+\n\n
+The list of network hospitals is maintained by and available with the THIRD PARTY ADMINISTRATOR and the same is subject to amendment from time to time.
+\n\n
+2.26 NEW BORN BABY:
+\n\n
+A new born baby means baby born during the Policy Period aged between one day and 90 days, both days inclusive.
+\n\n
+2.27 NON NETWORK :
+\n\n
+ Any hospital, day care Centre or other provider that is not part of the network.
+\n\n
+2.28 NOTIFICATION OF CLAIM
+\n\n
+Notification of claim is the process of notifying a claim to the Bank, insurer or Third Party Administrator as well as the address/telephone number to which it should be notified.
+\n\n
+2.29 OPD TREATMENT:    OPD Treatment is one in which the insured visits a clinic/hospital or associated facility like a consultation room for diagnosis and treatment based on the advice of medical a practitioner. The insured is not admitted as a day care or in-patient.
+\n\n
+"
+                        android:textColor="@color/Black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium_0"
+                        android:text="\n\n2.30 PRE-EXISTING DISEASE:
+\n\n
+ Pre Existing Disease is any condition, ailment or injury or related condition(s) for which you had signs or symptoms, and/or were diagnosed, and/or received medical advice/treatment, prior to the first policy issued by the insurer.
+\n\n
+2.31 PRE – HOSPITALISATION MEDICAL EXPENSES:
+\n\n
+Medical expenses incurred immediately 30 days before the insured person is hospitalized will be considered as part of a claim as mentioned under Item 1.2 above provided that;
+\n\n
+i. such medical expenses are incurred for the same condition for which the insured person’s hospitalization was required and
+\n\n
+ii. the inpatient hospitalization claim for such hospitalization is admissible by the insurance company.
+\n\n
+2.32 POST HOSPITALISATION MEDICAL EXPENSES:
+\n\n
+Relevant medical expenses incurred immediately 90 days after the Insured person is discharged from the hospital provided that;
+\n\n
+a. Such Medical expenses are incurred for the same condition for which the Insured Person’s Hospitalization was required; and
+\n\n
+b. The In-patient Hospitalization claim for such Hospitalization is admissible by the Insurance Company.
+\n\n
+2.33 QUALIFIED NURSE:
+\n\n
+Qualified Nurse is a person who holds a valid registration from the Nursing Council of India or the Nursing Council of any state in India and/or who is employed on recommendation of the attending medical practitioner.
+\n\n
+2.34 REASONABLE AND CUSTOMARY CHARGES:
+\n\n
+Reasonable Charges means the charges for services or supplies, which are the standard charges for the specific provider and consistent with the prevailing charges in the geographical area for identical or similar services, taking into account the nature of the illness/injury involved.
+\n\n
+2.35 ROOM RENT:
+\n\n
+Room Rent shall mean the amount charged by the hospital for the occupancy of a bed on per day basis.
+\n\n
+2.36   SUBROGATION:  Subrogation shall mean the right of the insurer to assume the rights of the insured person to   recover expenses paid out under the policy that may be recovered from any other source. It shall exclude the medical / accident policies obtained by the insured person separately.
+\n\n
+2.37 SURGERY:
+\n\n
+Surgery or surgical procedure means manual and/or operative procedure(s) required for treatment of an illness or injury, correction of deformities and defects, diagnosis and cure of diseases, relief of suffering or prolongation of life, performed in a hospital or day care Centre by a medical practitioner.
+\n\n
+2.38   Third Party Administrator
+\n\n
+Third Party Administrator means a Third Party Administrator who holds a valid License from Insurance Regulatory and Development Authority to act as a THIRD PARTY ADMINISTRATOR    and is engaged by the Company for the provision of health services as specified in the agreement between the Company and Third Party Administrator.
+\n\n
+2.39 UNPROVEN/EXPERIMENTAL TREATMENT:
+\n
+    Unproven/Experimental treatment is treatment, including drug Experimental therapy, which is not based on established medical practice in India.
+\n\n
+3.  COVERAGES:
+\n\n
+3.1   Domiciliary Hospitalization / Domiciliary Treatment : Medical expenses incurred in case of the following diseases which need Domiciliary Hospitalization /domiciliary treatment as may be certified by the attending medical practitioner and / or bank s ’medical officer shall be deemed as hospitalization expenses and reimbursed to the extent of 100%
+\n\n
+Cancer , Leukemia, Thalassemia, Tuberculosis, Paralysis, Cardiac Ailments , Pleurisy , Leprosy, Kidney Ailment , All Seizure disorders, Parkinson’s diseases, Psychiatric disorder including schizophrenia and psychotherapy , Diabetes and its complications, hypertension, Hepatitis –B , Hepatitis - C, Hemophilia, Myasthenia gravis, Wilson’s disease, Ulcerative Colitis , Epidermolysis bullosa, Venous Thrombosis(not caused by smoking) Aplastic Anaemia, Psoriasis, Third Degree burns, Arthritis , Hypothyroidism , Hyperthyroidism expenses incurred on radiotherapy and chemotherapy in the treatment of cancer and leukemia, Glaucoma, Tumor, Diptheria, Malaria,  Non-Alcoholic Cirrhosis of Liver, Purpura, Typhoid, Accidents of Serious Nature , Cerebral Palsy, , Polio, All Strokes Leading to Paralysis, Haemorrhages caused by accidents, All animal/reptile/insect bite or sting , chronic pancreatitis, Immuno suppressants, multiple sclerosis / motorneuron disease, status asthamaticus,  sequalea of meningitis, osteoporosis, muscular dystrophies, sleep apnea  syndrome(not related to obesity), any organ related (chronic) condition, sickle cell disease, systemic lupus erythematous (SLE),  any connective  tissue  disorder,  varicose  veins,   thrombo  embolism venous thrombosis/venous thrombo embolism (VTE)],  growth disorders, Graves’ disease, Chronic obstructive Pulmonary Disease, Chronic Bronchitis, Asthma, Physiotherapy and swine flu shall be considered for reimbursement under domiciliary treatment.
+\n\n
+The cost of Medicines, Investigations, and consultations, etc.in respect of domiciliary treatment shall be reimbursed for the period stated by the specialist and / or the attending doctor and / or the bank’s medical officer, in Prescription. If no period stated, the prescription for the purpose of reimbursement shall be valid for a period not exceeding 90 days.
+\n\n
+3.2 Critical Illness :  To be provided to the employee only subject to a sum insured of Rs. 1,00,000/- . Cover starts on inception of the policy. In case an employee contracts a Critical Illness as listed below, the total sum insured of Rs.1,00,000/- is paid, as a benefit. This benefit is provided on first detection/diagnosis of the Critical Illness.
+\n\n
+• Cancer  including  Leukemia
+\n\n
+• Stroke
+\n\n
+• Paralysis
+\n\n
+• By Pass Surgery
+\n\n
+• Major Organ Transplant
+\n\n
+• End Stage Liver Disease
+\n\n
+• Heart Attack
+\n\n
+• Kidney Failure
+\n\n
+• Heart Valve Replacement Surgery
+\n\n
+Hospitalization is not required to claim this benefit. Further the Employee can claim the cost of hospitalization on the same from the Group Mediclaim Policy as cashless / reimbursement of expenses for the treatment taken by him.
+\n\n
+3.3 Expenses on Hospitalization for minimum period of a day are admissible.  However, this time limit is not applied to specific treatments, such as
+\n
+\n\nAdenoidectomy
+\n\nHaemo dialysis
+\n\nAppendectomy
+\n\nFissurectomy / Fistulectomy
+\n\nAscitic / Plueral tapping
+\n\nMastoidectomy
+\n\nAuroplasty  not Cosmetic in nature
+\n\nHydrocele
+\n\nCoronary angiography /Renal
+\n\nHysterectomy
+\n\nCoronary angioplasty
+\n\nInguinal/ ventral/ umbilica/ femoral hernia
+\n\nDental surgery
+\n\nParenteral chemotherapy
+\n\nDandC
+\n\nPolypectomy
+\n\nExcision of cyst/ granuloma/lump/tumor
+\n\nEye surgery
+\n\nSeptoplasty
+\n\nFracture including hairline fracture /dislocation
+\n\nPiles/ fistula
+\n\nRadiotherapy
+\n\nProstate surgeries
+\n\nChemotherapy including parental chemotherapy
+\n\nSinusitis surgeries
+\n\nLithotripsy
+\n\nTonsillectomy
+\n\nIncision and drainage of abscess
+\n\nLiver aspiration
+\n\nVaricocelectomy
+\n\nSclerotherapy
+\n\nWound suturing
+\n\nVaricose Vein Ligation
+\n\nFESS
+\n\nAll scopies along with biopsies
+\n\nOperations/Micro surgical operations on the nose, middle ear/internal ear, tongue, mouth, face, tonsils and adenoids, salivary glands and salivary ducts, breast, skin and subcutaneous tissues, digestive tract, female/male sexual organs.
+\n\nLumbar puncture
+\nThis condition will also not apply in case of stay in hospital of less than a day provided –
+\n\n
+ \na. The treatment is undertaken under General or Local Anesthesia in a hospital / day care Centre in less than a day because of technological advancement and
+\n\n
+b.Which would have otherwise required hospitalization of more than a day.
+\n\n
+3.4 Alternative Therapy :  Reimbursement of Expenses for hospitalization or domiciliary treatment (under clause 3.1) under the recognized system of medicines , viz, Ayurvedic ,Unani, Sidha, Homeopathy ,Naturopathy , if such treatment is taken in a clinic /hospital registered, by the central and state government .\n
+"
+                        android:textColor="@color/Black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium_0"
+                        android:text="\n\n3.5 MATERNITY EXPENSES BENEFIT EXTENSION
+\n\n
+The hospitalization expenses in respect of the new born child can be covered within the Mother’s Maternity expenses. The maximum benefit allowable under this clause will be up to Rs. 50000/- for Normal Delivery and Rs. 75,000/- for Caesarean Section. 
+\n\n
+Special conditions applicable to Maternity expenses Benefit Extension:
+\n\n
+I. 9 months waiting period under maternity benefit will be waived from the policy.
+\n\n
+II. Pre-natal and post natal charges in respect of maternity benefit are covered under the policy up to 30 days and 60 days only, unless the same requires hospitalization. 
+\n\n
+III. Missed Abortions , Miscarriage or abortions induced by accidents are covered under the limit of Maternity IV. Complications in Maternity including operations for extra uterine pregnancy ectopic pregnancy would be covered in the up to the Sum Insured + Corporate Buffer V. Expenses incurred for Medical Termination of Pregnancy VI. Claim in respect of delivery to be given irrespective of the number of children  
+\n\n
+3.6 Baby Day one Cover: New born baby is covered from day one. All expenses incurred on the new born baby during maternity will be covered in addition to the maternity limit up to Rs, 20000/-.  However if the baby contacts any illness the same shall be considered in the Sum Insured + Corporate buffer. Baby to be taken as an additional member within the normal family floater. 
+\n\n
+3.7 Ambulance Charges: Ambulance charges are payable up to Rs 2500/- per trip to hospital and / or transfer to another hospital or transfer from hospital to home if medically advised. Taxi and Auto expenses in actual maximum up to Rs750/- per trip. Ambulance charges actually incurred on transfer from one center to another center due to Non availability of medical services/ medical complication shall be payable in full. 
+\n\n
+3.8 Pre- Existing Diseases / Ailments: Pre-existing diseases are covered under the scheme.  
+\n\n
+3.9 Congenital Anomalies: Expenses for Treatment of Congenital Internal / External diseases, defects anomalies are covered under the policy 
+\n\n
+3.10  Psychiatric diseases: Expenses for treatment of psychiatric and psychosomatic diseases be payable with or without hospitalization. 
+\n\n
+3.11 Advanced Medical Treatment: All new kinds of approved advanced medical procedures for e.g. laser surgery, stem cell therapy for treatment of a disease is payable on hospitalization /day care surgery. 
+\n\n
+3.12 Treatment taken for Accidents can be payable even on OPD basis in Hospital up to Sum Insured.  
+\n\n
+3.13 Taxes and other Charges : All Taxes , Surcharges , Service Charges , Registration charges , Admission Charges , Nursing ,  and Administration charges to be payable.
+\n\n
+Charges for diapers and sanitary pads are payable if necessary as part of the treatment  Charges for Hiring a nurse / attendant during hospitalization will be payable only in case of recommendation from the treating doctor in case ICU / CCU, Neo natal nursing care or any other case where the patient is critical and requiring special care. 
+\n\n
+3.14 Treatment for Genetic Disorder and stem cell therapy is covered under the scheme. 
+\n\n
+3.15  Treatment for Age related Macular Degeneration (ARMD), treatment such as Rotational Field Quantum magnetic Resonance (RFQMR), Enhanced External Counter Pulsation (EECP), etc. are covered under the scheme. Treatment for all neurological/ macular degenerative disorders shall be covered under the scheme.  
+\n\n
+3.16  Rental Charges for External and or durable Medical equipment of any kind used for diagnosis and or treatment including CPAP, CAPD, Bi-PAP, Infusion pump etc. will be covered under the scheme. However purchase of the above equipment to be subsequently used at home in exceptional cases on medical advice shall be covered. 
+\n\n
+3.17  Ambulatory devices i.e., walker, crutches, Belts, Collars, Caps, Splints, Slings, Braces, Stockings, elastocrepe bandages, external orthopaedic pads, sub cutaneous insulin pump,  Diabetic foot wear, Glucometer (including Glucose Test Strips)/ Nebulizer/ prosthetic devise/  Thermometer, alpha / water bed and similar related items etc., will be covered under the scheme. 
+\n\n
+3.18 Physiotherapy charges: Physiotherapy charges shall be covered for the period specified by the Medical Practitioner even if taken at home.
+\n\n
+All claims admitted in respect of any/all insured person/s during the period of insurance shall not exceed the Sum Insured stated in the schedule and Corporate Buffer if allocated.
+\n\n
+4.  EXCLUSIONS: 
+\n\n
+The company shall not be liable to make any payment under this policy in respect of any expenses whatsoever incurred by any Insured Person in connection with or in respect of:
+\n\n
+4.1 Injury / disease directly or indirectly caused by or arising from or attributable to War, invasion, Act of Foreign enemy, War like operations (whether war be declared or not).
+\n\n
+4.2   a. Circumcision unless necessary for treatment of a disease not excluded hereunder or as may be necessitated due to an accident. 
+\n\n
+b. Vaccination or inoculation.
+\n\n
+c. Change of life or cosmetic or aesthetic treatment of any description is not covered.
+\n\n
+d. Plastic surgery other than as may be necessitated due to an accident or as part of any   illness.
+\n\n
+4.3 Cost of spectacles and contact lenses, hearing aids. Other than Intra-Ocular Lenses and Cochlear Implant. 
+\n\n
+4.4 Dental treatment or surgery of any kind which are done in a dental clinic and those that are cosmetic in nature.
+\n\n
+4.5 Convalescence, rest cure, Obesity treatment and its complications including morbid obesity, treatment relating disorders, Venereal disease, intentional self-injury and use of intoxication drugs / alcohol.
+\n\n
+4.6 All expenses arising out of any condition directly or indirectly caused to or associated with Human TCell Lymphotropic Virus Type III (HTLB - III) or lymphadinopathy Associated Virus (LAV) or the Mutants Derivative or Variation Deficiency Syndrome or any syndrome or condition of a similar kind commonly referred to as AIDS. 
+\n\n
+4.7 Charges incurred at Hospital or Nursing Home primarily for diagnosis x-ray or Laboratory examinations or other diagnostic studies not consistent with or incidental to the diagnosis and treatment of positive existence of presence of any ailment, sickness or injury, for which confinement is required at a Hospital / Nursing Home, unless recommended by the attending doctor. 
+\n\n
+4.8 Expenses on vitamins and tonics unless forming part of treatment for injury or diseases as certified by the attending physician  
+\n\n
+4.9 Injury or Disease directly or indirectly caused by or contributed to by nuclear weapon / materials.
+\n\n
+4.10    All non-medical expenses including convenience items for personal comfort such as charges for telephone, television, /barber or beauty services, died t  charges, baby food, cosmetics, tissue paper, diapers, sanitary pads, toiletry items and similar incidental expenses, unless and otherwise they are necessitated during the course of treatment.  
+\n\n
+5. CONDITIONS:
+\n\n
+5.1 Contract: the proposal form, declaration, and the policy issued shall constitute the complete contract of insurance.
+\n\n
+5.2 Every notice or communication regarding hospitalization or claim to be given or made under this Policy shall be communicated to the office of the Bank, dealing with Medical Claims, and/or the THIRD PARTY ADMINISTRATOR office as shown in the Schedule. Other matters relating to the policy may be communicated to the policy issuing office.
+\n\n
+5.3 The premium payable under this Policy shall be paid in advance.  No receipt for Premium shall be valid except on the official form of the company signed by a duly authorized official of the company.  The due payment of premium and the observance and fulfillment of the terms, provisions, conditions and endorsements of this Policy by the Insured Person in so far as they relate to anything to be done or complied with by the Insured Person shall be a condition precedent to any liability of the Company to make any payment under this Policy.  No waiver of any terms, provisions, conditions and endorsements of this policy shall be valid unless made in writing and signed by an authorised official of the Company.
+\n\n
+5.4 Notice of Communication: Upon the happening of any event which may give rise to a claim under this Policy notice with full particulars shall be sent to the Bank or  Regional Office or THIRD PARTY ADMINISTRATOR named in the schedule at the earliest in case of emergency hospitalization within 7 days from the time of Hospitalisation/Domiciliary Hospitalisation . 
+\n\n
+5.5 All supporting documents relating to the claim must be filed with the office of the Bank dealing with the claims or THIRD PARTY ADMINISTRATOR within 30 days from the date of discharge from the hospital.  In case of post-hospitalisation, treatment (limited to 90 days), (as mentioned in para 2.32) all claim documents should be submitted within 30 days after completion of such treatment.
+\n\n
+Note: Waiver of these Conditions 5.4 and 5.5 may be considered in extreme cases of hardship where it is proved to the satisfaction of the Bank that under the circumstances in which the insured was placed it was not possible for him or any other person to give such notice or deliberate or file claim within the prescribed time-limit. The same would be waived by the TPA without reference to the Insurance Company.
+\n\n
+5.5.1 The Insured Person shall obtain and furnish to the office of the Bank dealing with the claims    /  THIRD PARTY ADMINISTRATOR with all original bills, receipts and other documents upon which a claim is based and shall also give such additional information and assistance as the Bank through the THIRD PARTY ADMINISTRATOR/Company may require in dealing with the claim.
+\n\n
+5.5.2  Any medical practitioner authorised by the Bank / Third Party Administrator / shall be allowed to examine the Insured Person in case of any alleged injury or disease leading to Hospitalisation, if so required.
+\n\n
+5.6 The Company shall not be liable to make any payment under this policy in respect of any claim if such claim be in any manner fraudulent or supported by any fraudulent means or device whether by the Insured Person or by any other person acting on his behalf.
+\n\n
+5.7 DISCLOSURE TO INFORMATION NORM
+\n\n
+The claim shall rejected in the event of misrepresentation, mis-description or non-disclosure of any material fact.
+\n\n
+5.8 Claims will be managed through the same Office of the Bank from where it is managed at present. The Insurance Companies third party administrator will be setting up a help desk at that office and supporting the bank in clearing all the claims on real time basis. 
+\n\n
+5.9 In case of rejection of claims it would go through a Committee set up of the Bank, Third Party Administrator and United India Insurance Co Ltd. unless rejected by the committee in real time the claim should not be rejected.
+\n\n
+5.10 There would be a continuity of this Scheme / benefits to the Retiring Officers / employees and their family and also to the Retired Officers / employees and their family.
+"
+                        android:textColor="@color/Black"
+
+                        android:textSize="@dimen/_12sdp" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </android.support.v4.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

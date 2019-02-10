@@ -51,6 +51,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
     private boolean isLoading;
     private RelativeLayout rlLogOut;
     private LinearLayout llActivities;
+    private AppCompatTextView tvMedicalScheme;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -118,6 +119,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
         ivMenu = (ImageView) findViewById(R.id.iv_menu);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         llServiceCondition = (LinearLayout) findViewById(R.id.ll_service_condition);
+        llServiceCondition.setSelected(false);
         ivServiceConditionSubmenu = (ImageView) findViewById(R.id.iv_service_condition_submenu);
         mSubMenuServiceConditions = (LinearLayout) findViewById(R.id.ll_service_condition_submenu);
         llAboutus = (LinearLayout) findViewById(R.id.ll_about_us);
@@ -130,7 +132,9 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
         tvAchievment = (LinearLayout) findViewById(R.id.ll_achievements);
         rlLogOut = (RelativeLayout) findViewById(R.id.rl_logout);
         llActivities = (LinearLayout) findViewById(R.id.ll_activities);
+        tvMedicalScheme = (AppCompatTextView) findViewById(R.id.tv_new_medical_scheme);
         mBinding.toolbar.title.setText(getString(R.string.news));
+        tvMedicalScheme.setOnClickListener(this);
         hitNewsListing(1);
         mBinding.swipe.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
@@ -208,15 +212,16 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
 
                 break;
             case R.id.tv_new_medical_scheme:
+                openActivityForFragments(10);
                 break;
             case R.id.tv_pansion_scheme:
                 openActivityForFragments(4);
                 break;
             case R.id.ll_service_condition:
-                if (ivServiceConditionSubmenu.isSelected()) {
-                    setSubMenuServiceCondition(false, View.VISIBLE);
+                if (llServiceCondition.isSelected()) {
+                    setSubMenuServiceCondition(false, View.GONE);
                 } else {
-                    setSubMenuServiceCondition(true, View.GONE);
+                    setSubMenuServiceCondition(true, View.VISIBLE);
                 }
                 break;
             case R.id.rl_logout:
@@ -229,9 +234,9 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
     }
 
     private void setSubMenuServiceCondition(boolean selection, int visible) {
-        ivServiceConditionSubmenu.setSelected(selection);
+        llServiceCondition.setSelected(selection);
         mSubMenuServiceConditions.setVisibility(visible);
-        if (!selection)
+        if (selection)
             ivServiceConditionSubmenu.setImageDrawable(getResources().getDrawable(R.drawable.ic_up_arrow));
         else
             ivServiceConditionSubmenu.setImageDrawable(getResources().getDrawable(R.drawable.ic_down));

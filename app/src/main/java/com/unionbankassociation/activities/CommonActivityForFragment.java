@@ -6,10 +6,14 @@ import android.support.annotation.Nullable;
 import com.unionbankassociation.R;
 import com.unionbankassociation.fragments.AboutUsFragment;
 import com.unionbankassociation.fragments.CommonFragment;
+import com.unionbankassociation.fragments.ContactUsFrgament;
 import com.unionbankassociation.fragments.DisciplinaryActionFragment;
 import com.unionbankassociation.fragments.NewMedicalScheme;
 import com.unionbankassociation.fragments.NonSunOrdinatorFragment;
+import com.unionbankassociation.fragments.PartTimeEmployeeFragment;
 import com.unionbankassociation.fragments.PensionFragment;
+import com.unionbankassociation.fragments.PhotoGalleryFragment;
+import com.unionbankassociation.fragments.ServiceConditionFragment;
 import com.unionbankassociation.fragments.ServiceConditionbpsFragment;
 
 public class CommonActivityForFragment extends BaseActivity {
@@ -66,6 +70,18 @@ public class CommonActivityForFragment extends BaseActivity {
                 break;
             case 10:
                 addFragmentWithBackstack(R.id.container, new NewMedicalScheme(), NewMedicalScheme.class.getSimpleName());
+                break;
+            case 11:
+                addFragmentWithBackstack(R.id.container, new ServiceConditionFragment(), ServiceConditionFragment.class.getSimpleName());
+                break;
+            case 12:
+                addFragmentWithBackstack(R.id.container, new PartTimeEmployeeFragment(), PartTimeEmployeeFragment.class.getSimpleName());
+                break;
+            case 13:
+                addFragmentWithBackstack(R.id.container, new PhotoGalleryFragment(), PhotoGalleryFragment.class.getSimpleName());
+                break;
+            case 14:
+                addFragmentWithBackstack(R.id.container, new ContactUsFrgament(), ContactUsFrgament.class.getSimpleName());
                 break;
 
         }

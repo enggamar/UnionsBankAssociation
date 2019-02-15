@@ -59,4 +59,8 @@ public interface ApiInterface {
     Call<ResponseBody> refreshToken(@QueryMap HashMap<String, String> map);
 
 
+    @GET("banners")
+    Call<ResponseBody> getPhotoGallery(@Header("access_token") String accessToken, @Query("page_no") int pageNumber);
+
+
 }

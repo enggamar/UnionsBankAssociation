@@ -45,13 +45,15 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
     private NotificationAdapter adapter;
     private AppCompatTextView tvGlance, tvClearicalDeploymentCondition;
     private AppCompatTextView tvPensionScheme;
-    private AppCompatTextView tvDispliniary;
+    private AppCompatTextView tvDispliniary, tvServiceCondition;
     private LinearLayout tvNews, tvAchievment, tvBankWiseSettleMent;
     private int currentPageNumber = 1;
     private boolean isLoading;
     private RelativeLayout rlLogOut;
     private LinearLayout llActivities;
     private AppCompatTextView tvMedicalScheme;
+    private LinearLayout llPhotoGallery;
+    private LinearLayout llContactUs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,7 +88,8 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
                         if ((visibleItemCount + firstVisibleItemPosition) >= totalItems
                                 && firstVisibleItemPosition >= 0) {
                             isLoading = false;
-                            hitNewsListing(currentPageNumber++);
+                            currentPageNumber++;
+                            hitNewsListing(currentPageNumber);
 
                         }
                     }
@@ -110,6 +113,8 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
         tvBankWiseSettleMent.setOnClickListener(this);
         rlLogOut.setOnClickListener(this);
         llActivities.setOnClickListener(this);
+        tvServiceCondition.setOnClickListener(this);
+
     }
 
     /*
@@ -133,20 +138,34 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
         rlLogOut = (RelativeLayout) findViewById(R.id.rl_logout);
         llActivities = (LinearLayout) findViewById(R.id.ll_activities);
         tvMedicalScheme = (AppCompatTextView) findViewById(R.id.tv_new_medical_scheme);
+        llPhotoGallery = (LinearLayout) findViewById(R.id.ll_photo_gallery);
+        llContactUs = (LinearLayout) findViewById(R.id.ll_contact_us);
+        llPhotoGallery.setOnClickListener(this);
+        llContactUs.setOnClickListener(this);
         mBinding.toolbar.title.setText(getString(R.string.news));
+        tvServiceCondition = (AppCompatTextView) findViewById(R.id.tv_sub_service_condition);
         tvMedicalScheme.setOnClickListener(this);
-        hitNewsListing(1);
+        if (AppUtils.isInternetAvailable(this))
+            hitNewsListing(currentPageNumber);
+        else
+            AppUtils.showToast(this, getString(R.string.no_internet));
         mBinding.swipe.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                hitNewsListing(1);
+                currentPageNumber = 1;
+                if (AppUtils.isInternetAvailable(HomeActivity.this))
+                    hitNewsListing(1);
+                else
+                    AppUtils.showToast(HomeActivity.this, getString(R.string.no_internet));
+
+
             }
         });
 
     }
 
     private void hitNewsListing(int currentPage) {
-        if (!mBinding.swipe.isRefreshing())
+        if (mBinding.swipe != null && !mBinding.swipe.isRefreshing())
             mBinding.progressBar.setVisibility(View.VISIBLE);
         ApiInterface apiInterface = RestApi.getConnection(ApiInterface.class, AppConstant.BASE_URL);
         Call<ResponseBody> call = apiInterface.getNotice(AppSharedPreference.getInstance().getString(this, AppSharedPreference.ACCESS_TOKEN), "1", currentPage);
@@ -189,11 +208,13 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
                 openActivityForFragments(7);
                 break;
             case R.id.ll_contact_us:
+                openActivityForFragments(14);
                 break;
             case R.id.ll_news:
                 openActivityForFragments(6);
                 break;
             case R.id.ll_photo_gallery:
+                openActivityForFragments(13);
                 break;
             case R.id.ll_service_condition_submenu:
                 break;
@@ -209,7 +230,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
             case R.id.tv_discription:
                 break;
             case R.id.tv_sub_service_condition:
-
+                openActivityForFragments(11);
                 break;
             case R.id.tv_new_medical_scheme:
                 openActivityForFragments(10);
@@ -254,18 +275,21 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
     @Override
     public void onSuccess(int responseCode, String response, int requestCode) {
         mBinding.progressBar.setVisibility(View.GONE);
-        if (mBinding.swipe != null) {
-            mBinding.swipe.setRefreshing(false);
-            mNotificationList.clear();
-        }
+
         String token = null, refreshToken = null;
         try {
+            if (mBinding.swipe.isRefreshing()) {
+                mNotificationList.clear();
+            }
+            if (mBinding.swipe != null) {
+                mBinding.swipe.setRefreshing(false);
+            }
             JSONObject object = new JSONObject(response);
             AppUtils.showToast(HomeActivity.this, object.getString(AppConstant.message));
             NoticModel bean = new Gson().fromJson(response, NoticModel.class);
             int code = object.getInt(AppConstant.code);
 
-            if (bean.getNextpage() > 0) {
+            if (bean.getmNotice().getNextpage() > currentPageNumber) {
                 isLoading = true;
             } else {
                 isLoading = false;

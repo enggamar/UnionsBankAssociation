@@ -1425,4 +1425,45 @@ Note:     Waiver of these Conditions 5.4 and 5.5 may be considered in extreme ca
     <string name="aiubea_settlement">AIUBEA settlement</string>
     <string name="photo_gallery">Photo Gallery</string>
     <string name="service_condition">Service Condition</string>
+
+    <string name="part_time_employee_data_">Part Time Employees :\n\n From 1-5-2010 :\n
+
+Fixation of wages of part-time employees\n\n
+More than 6 hours upto 13 hours per week - 1/3
+\n\n
+More than 13 hours upto 19 hours per week -	1/2
+\n\n
+More than 19 hours upto 29 hours per week -	3/4
+\n\n
+Beyond 29 hours per week - Full
+\n\n
+SERVICE CONDITIONS OF PART TIME EMPLOYEES ( 1/3 and above) :\n\n
+a. Eligible for leave, medical aid and uniform at par with full time substaff
+\n
+b. Eligible for PF from 1-9-1978.
+\n
+c. Eligible for Gratuity under Act or BPS whichever is higher.
+\n
+d. Eligible for Pension ( for those joined before 1-4-2010 and opted for pension)
+\n
+e. Eligible for LFC and Leave encashment on pro-rata.
+\n
+f. Eligible for stagnation increments.
+\n
+g. Eligible for encashment of PL on superannuation
+\n
+h. Eligible for hospitalisation expenses reimbursement on pro-rata
+\n
+i. Eligible for New pension Scheme for those joined on or after 1-4-2010
+\n
+j. Eligible to count actual total service for pension ( not pro-rata) (10th BPS)
+</string>
+    <string name="part_time">Part Time Employees</string>
+    <string name="select_place">Select Place</string>
+    <string name="portfolio">Portfolio : -</string>
+    <string name="name">Name :-</string>
+    <string name="place">Place :-</string>
+    <string name="mobile">Mobile :-</string>
+    <string name="email_">Email :-</string>
+    <string name="contact_us">Contact Us</string>
 </resources>

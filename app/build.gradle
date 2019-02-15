@@ -57,6 +57,9 @@ dependencies {
 
     // MultiDex
     implementation 'com.android.support:multidex:1.0.3'
+    //Image Full Screen
+    implementation 'com.commit451:PhotoView:1.2.4'
+
 
 }
 apply plugin: 'com.google.gms.google-services'

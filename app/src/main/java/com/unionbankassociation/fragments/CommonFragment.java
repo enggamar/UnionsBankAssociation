@@ -55,7 +55,7 @@ public class CommonFragment extends Fragment implements NetworkListener {
         mBinding = FragmentCommonBinding.inflate(inflater, container, false);
         initView(mBinding);
         setUpView();
-        hitNewsListing(1);
+        hitNewsListing(currentPageNumber);
         return mBinding.getRoot();
     }
 
@@ -78,7 +78,11 @@ public class CommonFragment extends Fragment implements NetworkListener {
         mBinding.swipe.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                hitNewsListing(1);
+                currentPageNumber = 1;
+                if (AppUtils.isInternetAvailable(getActivity()))
+                    hitNewsListing(1);
+                else
+                    AppUtils.showToast(getActivity(), getString(R.string.no_internet));
             }
         });
 
@@ -122,11 +126,17 @@ public class CommonFragment extends Fragment implements NetworkListener {
                     int visibleItemCount = layoutManager.getChildCount();
                     int totalItems = layoutManager.getItemCount();
                     int firstVisibleItemPosition = layoutManager.findFirstVisibleItemPosition();
+
                     if (isLoading) {
                         if ((visibleItemCount + firstVisibleItemPosition) >= totalItems
                                 && firstVisibleItemPosition >= 0) {
                             isLoading = false;
-                            hitNewsListing(currentPageNumber++);
+                            currentPageNumber++;
+                            if (AppUtils.isInternetAvailable(getActivity()))
+                                hitNewsListing(currentPageNumber);
+                            else
+                                AppUtils.showToast(getActivity(), getString(R.string.no_internet));
+
                         }
                     }
                 }
@@ -136,7 +146,8 @@ public class CommonFragment extends Fragment implements NetworkListener {
     }
 
     private void hitNewsListing(int currentPage) {
-        mBinding.progressBar.setVisibility(View.VISIBLE);
+        if (mBinding.swipe != null && !mBinding.swipe.isRefreshing())
+            mBinding.progressBar.setVisibility(View.VISIBLE);
         ApiInterface apiInterface = RestApi.getConnection(ApiInterface.class, AppConstant.BASE_URL);
         Call<ResponseBody> call = apiInterface.getNotice(AppSharedPreference.getInstance().getString(getContext(), AppSharedPreference.ACCESS_TOKEN), String.valueOf(Type), currentPage);
         ApiCall.getInstance().hitService(getContext(), call, this, 1);
@@ -146,18 +157,20 @@ public class CommonFragment extends Fragment implements NetworkListener {
     @Override
     public void onSuccess(int responseCode, String response, int requestCode) {
         mBinding.progressBar.setVisibility(View.GONE);
-        if (mBinding.swipe != null) {
-            mBinding.swipe.setRefreshing(false);
-            mNotificationList.clear();
-        }
-        String token = null, refreshToken = null;
+               String token = null, refreshToken = null;
         try {
+            if (mBinding.swipe.isRefreshing()) {
+                mNotificationList.clear();
+            }
+            if (mBinding.swipe != null) {
+                mBinding.swipe.setRefreshing(false);
+            }
             JSONObject object = new JSONObject(response);
             AppUtils.showToast(getActivity(), object.getString(AppConstant.message));
             NoticModel bean = new Gson().fromJson(response, NoticModel.class);
             int code = object.getInt(AppConstant.code);
 
-            if (bean.getNextpage() > 0) {
+            if (bean.getmNotice().getNextpage() > currentPageNumber) {
                 isLoading = true;
             } else {
                 isLoading = false;

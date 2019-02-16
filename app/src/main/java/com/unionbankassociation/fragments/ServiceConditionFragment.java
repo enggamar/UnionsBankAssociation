@@ -99,7 +99,7 @@ public class ServiceConditionFragment extends Fragment implements View.OnClickLi
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.card_sub_staff_salary:
-                openCommonActivity(15);
+                openCommonActivity(19);
                 break;
             case R.id.card_clerical_staff_salary:
                 openCommonActivity(15);

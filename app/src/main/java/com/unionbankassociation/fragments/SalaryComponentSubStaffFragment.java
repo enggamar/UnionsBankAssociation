@@ -12,14 +12,15 @@ import android.view.ViewGroup;
 import com.unionbankassociation.R;
 import com.unionbankassociation.activities.CommonActivityForFragment;
 import com.unionbankassociation.databinding.LayoutSalaryComponentBinding;
+import com.unionbankassociation.databinding.LayoutSubSalaryComponentBinding;
 
 public class SalaryComponentSubStaffFragment extends Fragment implements View.OnClickListener {
-    private LayoutSalaryComponentBinding mBinding;
+    private LayoutSubSalaryComponentBinding mBinding;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        mBinding = LayoutSalaryComponentBinding.inflate(inflater, container, false);
+        mBinding = LayoutSubSalaryComponentBinding.inflate(inflater, container, false);
         initView();
         return mBinding.getRoot();
     }

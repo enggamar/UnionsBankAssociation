@@ -80,7 +80,7 @@ public class SalaryComponentSubStaffFragment extends Fragment implements View.On
 
                 break;
             case R.id.card_special_pay:
-                openCommonActivity(16, getString(R.string.special_pay_), getString(R.string.special_pay_data), getString(R.string.special_pay_));
+                openCommonActivity(16, getString(R.string.special_pay_), getString(R.string.special_pay_sub_staff), getString(R.string.special_pay_));
 
                 break;
 //            case R.id.card_stagnation:

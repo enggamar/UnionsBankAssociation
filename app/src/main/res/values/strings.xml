@@ -41,20 +41,7 @@
     <string name="all_india_bank_employees_association">यूनियन बैंक स्टाफ एसोसिएशन यू. पी.</string>
     <string name="about_us_text">Association is the oldest and largest national trade union Centre of bank employees in India, was founded in 1946 on the 20th of April in Kolkata. They were being paid paltry wages with no regulated service conditions at all. It was a rule of hire and fire. Bank empgroaning but did not have the necessary courage to form unions. They saw the workers in the factories fighting and making some progress in terms of wages and betterment in service conditions. Bank employees also gathered some courage here and there and started to organize themselves into unions in a sporadic way. Some protest actions and strikes were undertaken but the disputes were referred to tribunals and employees did not get justice or satisfaction. Hence unrest and dissatisfaction amongst the employees were brewing and many Unions were formed during the period. With the advent of AIBEA on the scene, this gave a fillip to the formation of unions in different banks. With the formation of the Unions, there were innumerable agitations, struggles and strikes in the banks. Banking was a State subject at that time and hence there were number of Tribunals and Awards. The growing discontentment amongst the bank employees was sensed by the management and the authorities and banking was made a central subject.</string>
     <string name="basic_increment_stages">BASIC-INCREMENT-STAGES</string>
-    <string name="clerical_payscale">CLERICAL PAYSCALE</string>
-    <string name="clerical_payscale_data">BASIC-INCREMENT-STAGES\n
-11765-0655-3\n
 
-13730-0815-3\n
-
-16175-0980-4\n
-
-20095-1145-7\n
-
-28110-2120-1\n
-
-30230-1310-1\n
-</string>
     <string name="substaff_payscale">SUBSTAFF PAYSCALE</string>
     <string name="substaff_payscale_data">BASIC-INCREMENT-STAGES
 09560-325-4\n
@@ -219,6 +206,8 @@ Note: (1) Where quarters are provided, HRA shall not be payable and the rent to 
 \n
 Project Area HRA: Group “A” Centres – 10% and Group “B” Centres – 9%
 </string>
+    <string name="special_allowance">SPECIAL ALLOWANCE</string>
+
     <string name="special_allowance_special_allowance">Special allowance-SPECIAL ALLOWANCE</string>
     <string name="_7_75_on_basic_pay_including_stagnation_increment_not_counted_for_super_annulation_benefits">7.75 % on Basic pay including Stagnation Increment.(not counted for super annulation benefits)</string>
     <string name="tarnsport_allowance_transport_allowance">TARNSPORT ALLOWANCE-TRANSPORT ALLOWANCE</string>
@@ -1726,6 +1715,551 @@ v) Distribution of duties amongst the subordinate staff
 
 \n\n10)LIFTMAN DUTIES:
 \n\nPersons required to operate the lifts on regular assignment.
+
+</string>
+    <string name="privilege_leave">Privilege Leave</string>
+    <string name="maternity_leave">Maternity Leave</string>
+    <string name="paternity_leave">Paternity Leave</string>
+    <string name="casual_leave">Casual Leave</string>
+    <string name="sick_leave">Sick Leave</string>
+    <string name="special_sick_leave">Special Sick Leave</string>
+    <string name="extraordinary_leave">Extraordinary Leave</string>
+    <string name="joining_time_leave">Joining Time Leave</string>
+    <string name="leave_fare_concession">Leave Fare Concession</string>
+    <string name="special_leave">Special Leave</string>
+    <string name="privilage_leave_data">\n
+1 month for every 11 months service ( 1 day for every 11 days service)
+\n
+Privilege Leave can be availed upto 4 times in a calendar year.( as against 3 occasions under 9th BPS).
+\n
+Where however, the reasons for the request by an employee for leave on more than four occasions in a year are adequate and genuine and it is not administratively inconvenient, such leave may be granted.
+\n
+Privilege Leave can be applied upto not less than 15 days before the proposed date of commencement of such leave.
+\n
+Privilege Leave shall be allowed to be accumulated up to a maximum of 270 days. But encashment would be allowed upto 240 days at the time of retirement.
+
+    </string>
+    <string name="maternity_leave_data">\n
+(a)Maternity leave, which shall be on substantive pay, shall be granted to a female employee for a period not exceeding 6 months on any one occasion and 12 months during the entire period of her service.
+\n
+(b)Within the overall period of 12 months, leave may also be granted in case of miscarriage/abortion/MTP.
+\n
+(c)Within the overall period of 12 months, leave may also be granted in case of hysterectomy upto a maximum of 60 days.
+\n
+(d)Leave may also be granted once during service to a childless female employee for legally adopting a child who is below one year of age, for a maximum period of six months, subject to the following terms and conditions:
+\n
+(i)Leave will be granted for adoption of only one child.
+\n
+(ii)The adoption of a child should be through a proper legal process and the employee should produce the adoption-deed to the Bank for sanctioning such leave.
+\n
+(iii)The permanent part-time employees are also eligible for grant of leave for adoption of a child.
+\n
+(iv)The leave shall also be available to biological mother in cases where the child is born through surrogacy.
+\n
+(v)The leave shall be availed within overall entitlement of 12 months during the entire period of service.
+
+</string>
+    <string name="paternity_leave_data">\n
+Male employee with less than two surviving children shall be eligible for 15 days Paternity Leave during his wife’s confinement.\nThis leave may be combined with any other kind of leave except Casual Leave.\nThe leave may be availed upto 15 days before or upto 6 months from the date of delivery of the child.</string>
+    <string name="casual_leave_data">\n
+12 days per year
+\n
+An employee shall be entitled to Casual Leave upto not more than 4 days continuously but holidays and weekly offs prefixing/suffixing or falling within the period of Casual Leave will not be treated as part of Casual Leave
+\n\n
+UNAVAILED CASUAL LEAVE\n\n
+Casual leave not availed during a calendar year can be availed later as Sick Leave with full pay.
+\n
+Casual Leave converted into Sick Leave ( UCL) may be availed without production of medical certificate for 4 days at a time once in a year or two days at a time twice a year (in addition to availing for one day without medical certificate)
+
+</string>
+    <string name="sick_leave_data">\n
+1 month for each year of service ( max. 18 months)
+\n
+Additional 1 month per year beyond 24 years service.( max. 3 months)
+\n
+Sick Leave is on half pay but can be availed with full pay by double debit in sick leave account
+</string>
+    <string name="special_sick_leave_data">\n
+Special Sick Leave upto 30 days (full salary and over and above normal entitlement ) will be allowed once during his/her entire period of service for donation of kidney/ any other organ.
+
+</string>
+    <string name="extraordinary_data">EXTRAORDINARY LEAVE
+Extra ordinary leave on loss of pay – 3 months at a time and 24 months in the entire service
+</string>
+    <string name="joining_time_leave_data">\n
+Joining time of six days allowable under Para 511 of Sastry Award may be granted either immediately after relieving or within three months after joining the new place of posting.
+\n
+(1) Joining time shall be granted to an employee to enable him:
+\n
+(a) to join a new post to which he is appointed while on duty in his old post; or
+\n
+(b) to join a new post on return from leave.
+\n
+(2) An employee in respect of joining time shall be entitled to the pay and allowances of the old or the new post whichever are less.
+\n
+(3) Joining time which shall be allowed to an employee shall not exceed six days, exclusive of the number of days spent on travelling.
+\n
+(4) In calculating joining time admissible to an employee, the day on which he is relieved from his old post shall be excluded but public holidays following the day of his relief shall be included in the joining time.
+\n
+(5) An employee who does not join his post within the joining time allowed to him shall be deemed to have committed a breach of discipline.
+</string>
+    <string name="leave_fare_concession_data">\n
+Employees are eligible to avail Leave Fare Concession facility to visit their place of domicile or visit any place in India upto eligible distance.
+\n\n
+CLERK:
+\n
+Once in 2 years - 2000 KM
+\n
+Once in 4 years - 4000 KM
+\n
+ELIGIBILITY - AC 2 TIER
+\n\n
+SUBSTAFF
+\n
+Once in 2 years - 2500 KM
+\n
+Once in 4 years - 5000 KM
+\n
+ELIGIBILITY - AC 3 TIER
+\n
+Note: The above mentioned distance limit is only for one way travel and reimbursement will be for both onward and return journey.
+\n
+• Permanent employees with 11 months service eligible for LFC.
+\n
+• Employees have to give their option to avail LFC either in 2 year block or 4 year block
+\n
+• Clerical employees can undertake travel by air ; reimbursement will be restricted to the entitled train fare as per the admissible distance.
+\n
+• Employees can undertake the travel by any means of surface transport including taxi or own car within the eligible entitled fare.
+\n
+• By giving option, employees can encash the LFC and cash will be paid upto 100% of the entitled train fare of that block.
+\n
+• While encashing LFC, no leave need to be taken
+\n
+• While availing LFC/encashing LFC, employees under 2 year block can encash Privilege leave upto either 15 days in each block or 30 days in one block. Employees under 4 year block can encash upto 30 days.
+\n
+• Part time employees eligible for LFC on pro-rata distance.
+\n
+• Part time employees also eligible for encashment of LFC and encashment of leave.
+\n
+• Employees can avail LFC with their family
+\n
+• Employee and family can travel together or avail LFC by separate travel within the block
+\n
+• Employees can travel by steamer while on LFC and for clerks entitled class would be I Class Cabin and for substaff II class cabin
+\n
+For the purpose of LFC / Medical facilities)
+\n
+1. Spouse
+\n
+2. Wholly dependent unmarried children (including step children and legally adopted children)
+\n
+3. Parents ordinarily residing with and wholly dependent on the employee.
+\n
+4. A married female employee may include her natural parents or parents-in-law under the definition of family (but not both) provided that the parents/parents-in-law are ordinarily residing with and wholly dependent on her.
+\n\n
+Under 9th BPS
+\n\n
+• Employees’ wife/husband\n
+• Unmarried children including step children/ legally adopted children
+\n
+• Physically handicapped brother/ sister
+\n
+• Parents ordinarily residing with the employee
+\n\n
+Under 10th BPS
+\n
+• Employees’ wife/husband
+\n
+• Unmarried children including step children and legally adopted children
+\n
+• physically and mentally challenged brother/ sister
+\n
+• widowed daughters and divorced/ separated daughters, sisters including unmarried/ divorced/ abandoned or separated from husband/ widowed sisters,
+\n
+• parents
+\n
+Wholly dependent family member shall mean such member of the family having a monthly income not exceeding Rs.3500/- p.m
+\n
+Wholly dependent family member shall mean such member of the family having a monthly income not exceeding Rs.10,000/- p.m
+\n
+For LFC , a married female employee may include her parents or parents- in-law under the definition of family, but not both, provided that
+\n
+the parents/parents-in-law are wholly dependent on her.\nFor the purpose of medical expenses reimbursement scheme, for all employees, any two of the dependent parents/ parents-in-law shall be covered.
+</string>
+    <string name="special_leave_data">\nOffice Bearer of AIBEA 21 days per year
+\n
+CC Member of AIBEA 17 days per year
+\n
+Office Bearer of the State Federation 7 days per year
+\n
+In case of injuries sustained while on duty the entire period of absence for treatment will be sanctioned as Special Leave.
+</string>
+    <string name="swo_a">SWO A</string>
+    <string name="swo_b">SWO B</string>
+    <string name="head_cashier">Head Cashier</string>
+    <string name="special_assistant">Special Assistant</string>
+    <string name="duties_of_swo">DUTIES OF SWO A</string>
+    <string name="swo_a_data">\n
+All members of the clerical staff who do not get any special pay as on 30th April 2010 on regular basis shall be designated as Single Window Operator A. The following duties shall inter alia form part of their normal duties:
+\n
+(i) Acknowledgements of inward mail received.
+\n
+(ii) Receipt of cheques, drafts, dividend warrants, pay orders and other like instruments other than bills and giving acknowledgements in the counterfoil.
+\n
+(iii) Delivery of cheque books subject to authorisation by competent authority.
+\n
+(iv) Issue of cash receipts.
+\n
+(v) Issue of E.S.I. stamps wherever applicable or may become applicable.
+\n
+(vi) Recounting of currency notes by cash department staff.
+\n
+(vii) Ensuring the proper contents in covers and envelopes including registered ones before dispatch.
+\n
+All clerks shall also perform all duties and functions of their cadre, either online or manually, which does not involve any passing or supervisory function of an officer of the bank. He will, wherever and whenever required, function as a single window operator where he will also receive and pay cash. In addition, his duties will include
+\n
+a. Passing and cash payment of all cheques/withdrawal forms/bankers’ cheques/gift cheques, etc. upto and including Rs.10,000/-
+\n
+b. Passing independently clearing and transfer cheques, vouchers, etc. (whether credits or debits) upto and including Rs.15,000/-
+\n
+c. Receipts of cash and issuance of pre-signed drafts / gift cheques / travellers’ cheques / pay orders / bank orders, etc. upto and including Rs.15,000/-
+</string>
+    <string name="duties_of_swo_b">DUTIES OF SWO B</string>
+    <string name="swo_b_data">\n
+(i) Passing and cash payment of all cheques/withdrawal forms/bankers’ cheques/gift cheques, etc. upto and including Rs.20,000/-
+\n
+(ii) Passing independently clearing and transfer cheques, vouchers, etc. (whether credits or debits) upto and including Rs.25,000/-
+\n
+(iii) Receipts of cash and issuance of pre-signed drafts / gift cheques / travellers’ cheques / pay orders / bank orders, etc. upto and including Rs.25,000/-
+\n
+(iv) Acknowledgements of inward mail received.
+\n
+(v) Receipt of cheques, drafts, dividend warrants, pay orders and other like instruments other than bills and giving acknowledgements in the counterfoil.
+\n
+(vi) Delivery of cheque books subject to authorisation by competent authority.
+\n
+(vii) Issue of cash receipts.
+\n
+(viii) Issue of E.S.I. stamps wherever applicable or may become applicable.
+\n
+(ix) Recounting of currency notes by cash department staff.
+\n
+(x) Ensuring the proper contents in covers and envelopes including registered ones before dispatch.
+\n
+Note:\n
+(i) In respect of the above special pay carrying posts in clerical cadre
+\n
+a) Countersigning would mean signing in a manner whereby the primary responsibility for ensuring that all the formalities are complete rests with the other signatory.
+\n
+b) Checking/verifying would mean verifying that the instrument / material checked is in order in all respects and also includes verification of signature irrespective of the amount of the instrument and authenticating the same on the instrument / material, initialing the relative entries in the respective books of accounts, manually and/or on line.
+\n
+c) Passing includes verification of signatures and scrutiny as to the correctness of endorsement on and other particulars of such instruments. It will also include checking and authenticating the relative entries in the respective books of accounts / ledgers / computer sheets and/or on line.
+\n
+(ii) Henceforth, selection of staff for being entrusted with special pay carrying posts shall be on the basis of their suitability for the specialised function, norms for which shall be decided at the bank level.
+</string>
+    <string name="duties_of_head_cashier">DUTIES OF HEAD CASHIER II</string>
+    <string name="head_cashier_data">\n
+Holding the bank’s cash, key and/or other valuables in safe custody jointly with an officer and being accountable for them and being responsible for the running of the cash department.
+\n
+(i)Opinion compilation
+\n
+(ii)Verification of vernacular signatures/ endorsements
+\n
+(iii)Countersigning cheques and/or drafts (on selves or correspondents), payment orders, deposit receipts, etc.
+\n
+(iv)Attending to Government Treasury work
+\n
+(v)Discharging/endorsing bills, cheques, etc.
+\n
+(vi)Being in charge of clearing and godown departments, etc.
+\n
+(vii)Passing independently clearing and transfer cheques, vouchers, etc. (whether credits or debits) upto and including Rs.50,000/- and cash vouchers upto Rs.50,000/- jointly with an authorized person
+\n
+Note:\n
+(i) In respect of the above special pay carrying posts in clerical cadre
+\n
+a) Countersigning would mean signing in a manner whereby the primary responsibility for ensuring that all the formalities are complete rests with the other signatory.
+\n
+b) Checking/verifying would mean verifying that the instrument / material checked is in order in all respects and also includes verification of signature irrespective of the amount of the instrument and authenticating the same on the instrument / material, initialing the relative entries in the respective books of accounts, manually and/or on line.
+\n
+c) Passing includes verification of signatures and scrutiny as to the correctness of endorsement on and other particulars of such instruments. It will also include checking and authenticating the relative entries in the respective books of accounts / ledgers / computer sheets and/or on line.
+\n
+(ii) Henceforth, selection of staff for being entrusted with special pay carrying posts shall be on the basis of their suitability for the specialised function, norms for which shall be decided at the bank level.
+
+</string>
+    <string name="duties_of_special_assistant">DUTIES OF SPECIAL ASSISTANT</string>
+    <string name="special_assistant_data">\n
+Special Assistants will be accountable and responsible for running of the department/section under them and their duties will involve looking after and checking the work of other clerk or clerks and sub-staff and will include :
+\n
+1) Passing independently, manually or online, cash instruments upto Rs.35,000/- and clearing and transfer cheques vouchers etc., (whether credits or debits) upto and including Rs.1,50,000/-. Passing will include verification of signatures and scrutiny as to the correctness of endorsements on and other particulars of such instruments. There shall be no limits for verification of signatures, passing of authenticated credit vouchers/entries and for verifying authenticated vouchers in the ledgers, books, computer print-outs etc.
+\n
+2) Accept, verify and post cash / transfer / clearing cheques and other instruments, as the case may be, in appropriate books of accounts / ledgers, either manually or online, and give due acknowledgements.
+\n
+3) Signing vouchers, cheques, drafts, mail transfers, pay orders, advices such as non payment advices, inter branch fate calling advices, bill schedules, demand notices, statements certificates etc.,
+\n
+4) Checking all vouchers, advices, statements, cheques, drafts etc., bills and books of accounts including current savings and other ledgers, cash, postal and revenue stamps, franking machine balances, exchange, discount, brokerage calculations and initialing by way of authenticating them for accuracy/correctness;
+\n
+5) Checking, manually or online, current, savings and other accounts,
+\n
+6) Checking the coding and decoding of telegrams (excluding check symbols or cyphers).
+\n
+7) Discharging, endorsing cheques, bills, etc.,
+\n
+8) Perform, when required in a computerised set up, system control functions, either jointly with an officer or independently, upon specific authorisation in this regard;
+\n
+9) Briefly explain, the features of Bank’s various products and services to customers, to reply their queries and to refer interested customers to appropriate personnel;
+\n
+10) Inspecting godown (only in banks where such work is already being done by workmen).
+\n
+For the purpose of efficient and effective functioning of the section or department the special assistant shall ensure that all acts, things and steps necessary therefore are taken by himself of by the clerks placed under him and shall ensure that, wherever necessary :
+\n
+a) Reminders are sent on time and followed up
+\n
+b) Pass sheets/books are filled up and issued promptly
+\n
+c) Deposits are renewed on due dates or reminders sent to the parties
+\n
+d) Standing instructions are complied with
+\n
+e) Bills are accepted and due dates diarised/advised and followed up
+\n
+f) Interest, commissions and service charges are collected
+\n
+g) Proceeds of bills are received or remitted promptly;
+\n
+h) Confirmation of balance of accounts of the customers and its follow up.
+\n
+i) All securities relating to the department/section of which the special assistant is in charge are secured and/or kept in proper custody and properly handed to the authorized person at the close of the day.
+\n
+j) Balances promptly taken, tallied and reported and followed up and also returns submitted.
+\n
+K) Advices and/or duplicate advices /summaries are issued /responded promptly,whenever called for;
+\n
+l) Checking the proper recording of entries and all relevant particulars in regard to accounts opened under due authorisation.
+\n
+Note:\n
+(i) In respect of the above special pay carrying posts in clerical cadre
+\n
+a) Countersigning would mean signing in a manner whereby the primary responsibility for ensuring that all the formalities are complete rests with the other signatory.
+\n
+b) Checking/verifying would mean verifying that the instrument / material checked is in order in all respects and also includes verification of signature irrespective of the amount of the instrument and authenticating the same on the instrument / material, initialing the relative entries in the respective books of accounts, manually and/or on line.
+\n
+c) Passing includes verification of signatures and scrutiny as to the correctness of endorsement on and other particulars of such instruments. It will also include checking and authenticating the relative entries in the respective books of accounts / ledgers / computer sheets and/or on line.
+\n
+(ii) Henceforth, selection of staff for being entrusted with special pay carrying posts shall be on the basis of their suitability for the specialised function, norms for which shall be decided at the bank level.
+</string>
+    <string name="clerical_payscale">CLERICAL PAYSCALE</string>
+    <string name="clerical_payscale_data">
+\nBASIC-INCREMENT-STAGES\n\n
+11765-0655-3\n\n
+
+13730-0815-3\n\n
+
+16175-0980-4\n\n
+
+20095-1145-7\n\n
+
+28110-2120-1\n\n
+
+30230-1310-1\n\n
+
+STAGNATION INCREMENT\n\n
+31540-1310-8\n\n
+
+NOTE: Stagnation Increment 5 once in 3 year and 3 once in 2 year Interval
+
+</string>
+    <string name="dearnes_allowance_title">DEARNESS ALLOWANCE</string>
+    <string name="dearness_allowance_data_">\n
+w.e.f 1-11-2012, DA shall be payable at 0.10% of PAY for every slab of 4 points rise or fall over 4440 points in the quarterly average of the All India Working Class Consumer Price Index (General) Base 1960 = 100.
+\n\n
+Note: DA is payable on Special Allowance ( New Allowance) also.
+\n\n
+Quarter -- 10TH BPS
+\n\n
+Nov 2012 - Jan 2013 -- 10.90%
+\n\n
+Feb 2013 - Apr 2013 -- 13.40 %
+\n\n
+May 2013 - Jul 2013 -- 16.00 %
+\n\n
+Aug 2013 - Oct 2013 -- 19.20 %
+\n\n
+Nov 2013 - Jan 2014 -- 24.00 %
+\n\n
+Feb 2014- Apr 2014 -- 26.50 %
+\n\n
+May 2014 – Jul 2014 -- 24.90 %
+\n\n
+Aug 2014 – Oct 2014 -- 28.20 %
+\n\n
+Nov 2014 - Jan 2015 -- 33.10 %
+\n\n
+Feb 2015 - Apr 2015 -- 33.30 %
+\n\n
+May 2015 – Jul 2015 --33.70 %
+\n\n
+Definition of Pay for DA : Basic Pay, Stagnation increments, PQP, Special Pay, Offg. Pay, SPECIAL ALLOWANCE. Definition of Pay for HRA Basic Pay, Stagnation increments, PQP, Special Pay, Offg. Pay. Definition of Pay for Superannuation benefits: Basic Pay, Stagnation increments , PQP, Special Pay, Offg. Pay, Increment portion of FPP
+\n
+(a) It is clarified that there shall be no ceiling on Dearness Allowance.
+\n
+(b) Dearness Allowance shall be calculated and paid on Basic Pay, Special Pay,Graduation Pay, Professional Qualification Pay and Officiating Pay, if any,payable under this settlement in respect of both clerical and subordinate staff.
+\n
+(c) All other existing provisions relating to Dearness Allowance Scheme shall remain unchanged.
+
+</string>
+    <string name="housing_rent">HOUSING RENT ALLOWANCE</string>
+    <string name="hra_data">\n
+(i) Places with population of more than 45 lakhs and Project Area Centres in Group ‘A’
+\n
+10.00%
+\n(ii) Places with population of 12 lakhs and above including State of Goa and Project Area Centres in Group ‘B’
+\n
+09.00%
+\n(iii) Other places not covered in (i) and (ii) above
+\n
+07.50%
+\nNote:\n(1) Where quarters are provided, HRA shall not be payable and the rent to be recovered shall be 0.3% of the first stage of the Scales of Pay.
+\n
+Project Area HRA: Group “A” Centres – 10% and Group “B” Centres – 9%
+</string>
+    <string name="special_allowanc_data_">
+7.75 % on Basic pay including Stagnation Increment.(not counted for super annulation benefits)
+</string>
+    <string name="tarnsport_allowance">TARNSPORT ALLOWANCE</string>
+    <string name="transport_data">\n
+Upto 15th stage of the scale of Pay - Rs.425/- per month
+\n\n
+16th stage &amp; Above of the scale of Pay - Rs.470/- per month
+\n\n
+Provided that a sub-staff drawing transport allowance at Rs.470/- per month, on being promoted to clerical cadre is fitted at a stage lower than 16th stage, he shall continue to be paid the same Transport Allowance of Rs.470/- per month.
+\n\n
+i) All permanent part time employees including those on probation and drawing scale wages shall be paid transport allowance on pro rata basis as under:
+\n
+Upto 15 years of service - Pro rata @Rs.425/- per month
+\n
+Above 15 years of service - Pro rata @Rs.470/- per month
+\n
+(ii) This provision by itself will not preclude the payment of any existing allowance of this nature paid as a result of Government guidelines/bank level settlements.
+
+</string>
+    <string name="special_pay_">SPECIAL PAY</string>
+    <string name="special_pay_data_">\n
+1.SWO-B:820+DA
+\n\n
+2.HEADCASHIER II:1280+DA
+\n\n
+3.SPECIAL ASSISTANT:1930+DA
+</string>
+    <string name="officiating_allowance">OFFICIATING ALLOWANCE</string>
+    <string name="officating_allowance_data_">\n
+ABH:\n\n
+15% of the Basic Pay divided by No of Days of that Month gives Officiating pay for a day
+\n\n
+Head Cashier II:\n\n
+Special Pay of Head cashier divided by No of Days of that month gives Officiating pay for a day
+</string>
+    <string name="professional_qualification">Professional Qualification Pay/ Graduation Pay: PQP</string>
+    <string name="professional_pay">\n
+Rs.410/- p.m. after they complete 1 year
+\n
+Rs.800/- p.m. after they complete 2 years
+\n
+Rs.1210/-p.m. after they complete 3 years
+\n
+Rs.1620/-p.m. after they complete 4 years
+\n
+Rs.2010/-p.m. after they complete 5 years.
+\n
+(1)Those who pass Graduation or CAIIB II when they are in 19th stage will be given one increment and one PQP from the date of passing and balance 4 installments of PQP in one year intervals thereafter.
+\n
+(2)Those who pass Graduation/JAIIB/CAIIB after reaching 20th stage will be given 1st PQP from date of passing and balance 4 installments of PQP in one year intervals thereafter.
+\n
+(3)Direct Graduation/Post graduation will be treated as Graduation and given 2 increments.
+\n\n
+Fixed Personal Pay:\n\n
+CLERICAL – Increment portion 1310 ,SUBSTSAFF – Increment portion 655
+\n\n
+FPP – where Quarters are provided ,CLERICAL – Increment portion 1450 ,SUBSTSAFF – Increment portion 725
+\n\n
+CLERK: Total FPP as per area of posting
+\n\n
+(i)	Places with population of more than 45 lakhs - 1585
+\n
+(ii)	Places with population of 12 lakhs and above including State of Goa - 1570
+\n
+(iii)	Places with population of 5 lakhs and above, Capitals of States, UTs - 1550
+\n
+(iv)	Other places not covered in above - 1550
+\n\n
+SUBSTAFF:
+\n\n
+(i)	Places with population of more than 45 lakhs - 790
+\n
+(ii)Places with population of 12 lakhs and above including State of Goa - 790
+\n
+(iii)Places with population of 5 lakhs and above, Capitals of States, UTs - 780
+
+</string>
+    <string name="medical_aid_title">MEDICAL AID</string>
+    <string name="medical_aid_data_">\n
+• On declaration basis : Rs.2200 per year\n\n
+
+• Part Time employees ( 1/3 &amp; above) are eligible for full medical aid.
+
+</string>
+    <string name="stafnation_data">\n
+NOTE: Stagnation Increment 5 once in 3 year and 3 once in 2 year Interval
+\n\n
+NEW PROVISION: IMPORTANT
+\nIn case where the non-subordinate employee as on the date of this Settlement, has already acquired JAIIB (Part-I) or CAIIB (Part-II)/ Graduation after reaching maximum of the scale of Pay (in case of JAIIB/ CAIIB/ Graduation) or after reaching 19th stage of scale of Pay (in case of CAIIB/Graduation), and has not earned increment(s), otherwise entitled on account of acquiring such qualification, when there were no increments to provide in the scale of pay of those employees, the stagnation increment in such cases may be advanced by one year or two years as the case may be.
+\n
+Additional Increment for Educational/Professional Qualification:
+\nGraduation / N D Com : 2 additional increments
+\n
+JAIIB: 1 additional increment\n
+
+CAIIB: 2 additional increments\n
+
+</string>
+    <string name="stagnation_data">STAGNATION INCREMENT</string>
+
+    <string name="special_pay_sub_staff">\n
+1.Armed Guard:390+DA\n\n
+
+2.Bill Collector:390+DA\n\n
+
+3.Daftary:560+DA\n\n
+
+4.Head Peon:740+DA\n\n
+
+5.Electrician:2040+DA\n\n
+
+6.AC Plant Operator:2040+DA\n\n
+
+7.Driver:2370+DA\n\n
+
+8.Head Messenger in IOB:1630+DA
+
+</string>
+    <string name="substaff_pay">SUBSTAFF PAYSCALE</string>
+    <string name="basic_pay_sub_staff">\n\n
+BASIC-INCREMENT-STAGES\n\n
+09560-325-4\n
+
+10860-410-5\n
+
+12910-490-4\n
+
+14870-570-3\n
+
+16580-655-3\n
+\n
+STAGNATION INCREMENT
+\n18545-655-8
+\n
+NOTE: Stagnation Increment @ 2 years Interval
 
 </string>
 </resources>

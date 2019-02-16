@@ -5,16 +5,19 @@ import android.support.annotation.Nullable;
 
 import com.unionbankassociation.R;
 import com.unionbankassociation.fragments.AboutUsFragment;
+import com.unionbankassociation.fragments.ClericalStaffFragment;
 import com.unionbankassociation.fragments.CommonFragment;
 import com.unionbankassociation.fragments.CommonServiceConditionFragment;
 import com.unionbankassociation.fragments.ContactUsFrgament;
 import com.unionbankassociation.fragments.DisciplinaryActionFragment;
+import com.unionbankassociation.fragments.LeavePolicyFragment;
 import com.unionbankassociation.fragments.NewMedicalScheme;
 import com.unionbankassociation.fragments.NonSunOrdinatorFragment;
 import com.unionbankassociation.fragments.PartTimeEmployeeFragment;
 import com.unionbankassociation.fragments.PensionFragment;
 import com.unionbankassociation.fragments.PhotoGalleryFragment;
 import com.unionbankassociation.fragments.SalaryComponentFragment;
+import com.unionbankassociation.fragments.SalaryComponentSubStaffFragment;
 import com.unionbankassociation.fragments.ServiceConditionFragment;
 import com.unionbankassociation.fragments.ServiceConditionbpsFragment;
 
@@ -108,6 +111,15 @@ public class CommonActivityForFragment extends BaseActivity {
                 CommonServiceConditionFragment fragment4 = new CommonServiceConditionFragment();
                 fragment4.setArguments(bundle4);
                 addFragmentWithBackstack(R.id.container, fragment4, CommonServiceConditionFragment.class.getSimpleName());
+                break;
+            case 17:
+                addFragmentWithBackstack(R.id.container, new LeavePolicyFragment(), LeavePolicyFragment.class.getSimpleName());
+                break;
+            case 18:
+                addFragmentWithBackstack(R.id.container, new ClericalStaffFragment(), ClericalStaffFragment.class.getSimpleName());
+                break;
+            case 19:
+                addFragmentWithBackstack(R.id.container, new SalaryComponentSubStaffFragment(), SalaryComponentSubStaffFragment.class.getSimpleName());
                 break;
 
         }

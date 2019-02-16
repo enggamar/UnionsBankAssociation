@@ -98,14 +98,23 @@ public class ServiceConditionFragment extends Fragment implements View.OnClickLi
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.card_sub_staff_salary:
+                openCommonActivity(15);
+                break;
             case R.id.card_clerical_staff_salary:
                 openCommonActivity(15);
 //                openCommonActivity(getString(R.string.basic_pay), getString(R.string.basic_pay_service_condition), getString(R.string.basic_pay));
                 break;
             case R.id.card_clerical_staff_job_profile:
-//                openCommonActivity(getString(R.string.basic_pay), getString(R.string.basic_pay_service_condition), getString(R.string.basic_pay));
-
+                openCommonActivity(18);
                 break;
+            case R.id.card_sub_staff_leave_policy:
+            case R.id.card_clerical_staff_leave_policy:
+                openCommonActivity(17);
+                break;
+            case R.id.card_leave_policy:
+                break;
+            case R.id.card_sub_staff_job_profile:
             case R.id.card_substaff_job_profile:
                 openCommonActivity(16, getString(R.string.duties_of_substaff), getString(R.string.job_profile_substaff), getString(R.string.job_profile));
                 break;

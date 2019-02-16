@@ -13,7 +13,7 @@ import com.unionbankassociation.R;
 import com.unionbankassociation.activities.CommonActivityForFragment;
 import com.unionbankassociation.databinding.LayoutSalaryComponentBinding;
 
-public class SalaryComponentFragment extends Fragment implements View.OnClickListener {
+public class SalaryComponentSubStaffFragment extends Fragment implements View.OnClickListener {
     private LayoutSalaryComponentBinding mBinding;
 
     @Nullable
@@ -39,11 +39,11 @@ public class SalaryComponentFragment extends Fragment implements View.OnClickLis
         mBinding.cardDearnessAllowance.setOnClickListener(this);
         mBinding.cardHra.setOnClickListener(this);
         mBinding.cardMedicalAid.setOnClickListener(this);
-        mBinding.cardOfficating.setOnClickListener(this);
-        mBinding.cardPopFpp.setOnClickListener(this);
+        mBinding.cardOfficating.setVisibility(View.GONE);
+        mBinding.cardPopFpp.setVisibility(View.GONE);
         mBinding.cardSpecialAllownace.setOnClickListener(this);
         mBinding.cardSpecialPay.setOnClickListener(this);
-        mBinding.cardStagnation.setOnClickListener(this);
+        mBinding.cardStagnation.setVisibility(View.GONE);
         mBinding.cardTransportAllowance.setOnClickListener(this);
     }
 
@@ -51,7 +51,7 @@ public class SalaryComponentFragment extends Fragment implements View.OnClickLis
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.card_basic_pay:
-                openCommonActivity(16, getString(R.string.basic_pay), getString(R.string.basic_pay_service_condition), getString(R.string.basic_pay));
+                openCommonActivity(16, getString(R.string.substaff_pay), getString(R.string.basic_pay_sub_staff), getString(R.string.substaff_pay));
 
                 break;
             case R.id.card_dearness_allowance:
@@ -66,29 +66,28 @@ public class SalaryComponentFragment extends Fragment implements View.OnClickLis
                 openCommonActivity(16, getString(R.string.medical_aid_title), getString(R.string.medical_aid_data_), getString(R.string.medical_aid_title));
 
                 break;
-            case R.id.card_pop_fpp:
-                openCommonActivity(16, getString(R.string.professional_qualification), getString(R.string.professional_pay), getString(R.string.professional_qualification));
-
-                break;
-            case R.id.card_officating:
-                openCommonActivity(16, getString(R.string.officiating_allowance), getString(R.string.officating_allowance_data_), getString(R.string.officiating_allowance));
-
-                break;
+//            case R.id.card_pop_fpp:
+//                openCommonActivity(16, getString(R.string.professional_qualification), getString(R.string.professional_pay), getString(R.string.professional_qualification));
+//
+//                break;
+//            case R.id.card_officating:
+//                openCommonActivity(16, getString(R.string.officiating_allowance), getString(R.string.officating_allowance_data_), getString(R.string.officiating_allowance));
+//
+//                break;
             case R.id.card_special_allownace:
                 openCommonActivity(16, getString(R.string.special_allowance), getString(R.string.special_allowanc_data_), getString(R.string.special_allowance));
 
                 break;
             case R.id.card_special_pay:
-                openCommonActivity(16, getString(R.string.special_pay_), getString(R.string.special_pay_sub_staff), getString(R.string.special_pay_));
+                openCommonActivity(16, getString(R.string.special_pay_), getString(R.string.special_pay_data), getString(R.string.special_pay_));
 
                 break;
-            case R.id.card_stagnation:
-                openCommonActivity(16, getString(R.string.stagnation_increment), getString(R.string.stafnation_data), getString(R.string.stagnation_increment));
-
-                break;
+//            case R.id.card_stagnation:
+//                openCommonActivity(16, getString(R.string.stagnation_increment), getString(R.string.stafnation_data), getString(R.string.stagnation_increment));
+//
+//                break;
             case R.id.card_Transport_allowance:
                 openCommonActivity(16, getString(R.string.tarnsport_allowance), getString(R.string.transport_data), getString(R.string.tarnsport_allowance));
-
                 break;
             case R.id.iv_menu:
                 ((CommonActivityForFragment) getActivity()).finish();

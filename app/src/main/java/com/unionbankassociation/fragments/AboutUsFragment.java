@@ -44,6 +44,13 @@ public class AboutUsFragment extends Fragment {
             }
         });
         webView = (WebView) view.findViewById(R.id.webview);
+        webView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                return true;
+            }
+        });
+        webView.setLongClickable(false);
         progressBar = (ProgressBar) view.findViewById(R.id.progress_bar);
         setWebView("http://52.2.121.230/pages/about-us");
     }
@@ -70,6 +77,7 @@ public class AboutUsFragment extends Fragment {
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
             try {
                 view.loadUrl(url);
+                view.setLongClickable(false);
             } catch (Exception e) {
                 e.printStackTrace();
             }

@@ -32,6 +32,7 @@ import com.unionbankassociation.utils.AppUtils;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -246,12 +247,23 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
                 }
                 break;
             case R.id.rl_logout:
-                AppSharedPreference.getInstance().clearAllPrefs(this);
-                Intent intent = new Intent(HomeActivity.this, LogInActivity.class);
-                startActivity(intent);
-                finish();
+                if (AppUtils.isInternetAvailable(this))
+                    hitLogOut();
+                else
+                    AppUtils.showToast(this, getString(R.string.no_internet));
+
                 break;
         }
+    }
+
+    private void hitLogOut() {
+        HashMap<String, String> parms = new HashMap<>();
+        parms.put("language ", "1");
+        mBinding.progressBar.setVisibility(View.VISIBLE);
+        ApiInterface apiInterface = RestApi.getConnection(ApiInterface.class, AppConstant.BASE_URL);
+        Call<ResponseBody> call = apiInterface.logout(AppSharedPreference.getInstance().getString(this, AppSharedPreference.ACCESS_TOKEN), parms);
+        ApiCall.getInstance().hitService(HomeActivity.this, call, this, 2);
+
     }
 
     private void setSubMenuServiceCondition(boolean selection, int visible) {
@@ -275,38 +287,46 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
     @Override
     public void onSuccess(int responseCode, String response, int requestCode) {
         mBinding.progressBar.setVisibility(View.GONE);
+        if (requestCode == 1) {
+            String token = null, refreshToken = null;
+            try {
+                if (mBinding.swipe.isRefreshing()) {
+                    mNotificationList.clear();
+                }
+                if (mBinding.swipe != null) {
+                    mBinding.swipe.setRefreshing(false);
+                }
+                JSONObject object = new JSONObject(response);
+                AppUtils.showToast(HomeActivity.this, object.getString(AppConstant.message));
+                NoticModel bean = new Gson().fromJson(response, NoticModel.class);
+                int code = object.getInt(AppConstant.code);
 
-        String token = null, refreshToken = null;
-        try {
-            if (mBinding.swipe.isRefreshing()) {
-                mNotificationList.clear();
-            }
-            if (mBinding.swipe != null) {
-                mBinding.swipe.setRefreshing(false);
-            }
-            JSONObject object = new JSONObject(response);
-            AppUtils.showToast(HomeActivity.this, object.getString(AppConstant.message));
-            NoticModel bean = new Gson().fromJson(response, NoticModel.class);
-            int code = object.getInt(AppConstant.code);
+                if (bean.getmNotice().getNextpage() > currentPageNumber) {
+                    isLoading = true;
+                } else {
+                    isLoading = false;
+                }try {
+                    mNotificationList.addAll(bean.getmNotice().getNoticeDetails());
+                }catch (Exception e){
+                    
+                }
+                if (mNotificationList.size() > 0) {
+                    mBinding.rvNotification.setVisibility(View.VISIBLE);
+                    mBinding.noData.setVisibility(View.GONE);
+                } else {
+                    mBinding.rvNotification.setVisibility(View.GONE);
+                    mBinding.noData.setVisibility(View.VISIBLE);
+                }
 
-            if (bean.getmNotice().getNextpage() > currentPageNumber) {
-                isLoading = true;
-            } else {
-                isLoading = false;
+                adapter.notifyDataSetChanged();
+            } catch (Exception e) {
             }
-            mNotificationList.addAll(bean.getmNotice().getNoticeDetails());
-            if (mNotificationList.size() > 0) {
-                mBinding.rvNotification.setVisibility(View.VISIBLE);
-                mBinding.noData.setVisibility(View.GONE);
-            } else {
-                mBinding.rvNotification.setVisibility(View.GONE);
-                mBinding.noData.setVisibility(View.VISIBLE);
-            }
-
-            adapter.notifyDataSetChanged();
-        } catch (Exception e) {
+        } else if (requestCode == 2) {
+            AppSharedPreference.getInstance().clearAllPrefs(this);
+            Intent intent = new Intent(HomeActivity.this, LogInActivity.class);
+            startActivity(intent);
+            finish();
         }
-
     }
 
 

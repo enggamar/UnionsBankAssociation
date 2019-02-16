@@ -154,7 +154,11 @@ public class PhotoGalleryFragment extends Fragment implements NetworkListener, S
             } else {
                 isLoading = false;
             }
-            mPhotoList.addAll(bean.getmNotice().getNoticeDetails());
+            try {
+                mPhotoList.addAll(bean.getmNotice().getNoticeDetails());
+            } catch (Exception e) {
+
+            }
             if (mPhotoList.size() > 0) {
                 mBinding.rvPhotoGallery.setVisibility(View.VISIBLE);
                 mBinding.tvNoData.setVisibility(View.GONE);

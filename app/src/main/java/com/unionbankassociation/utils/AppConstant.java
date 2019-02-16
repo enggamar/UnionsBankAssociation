@@ -12,6 +12,7 @@ public class AppConstant {
     public static String accessToken = "token";
     public static String refreshToken = "refresh_token";
     public static String nextPage = "NEXT_PAGE";
-    public static String BASE_URL = "http://52.2.121.230/api/";
+//    public static String BASE_URL = "http://52.2.121.230/api/";
+    public static String BASE_URL = "http://www.ubsaup.com/api/";
 
 }

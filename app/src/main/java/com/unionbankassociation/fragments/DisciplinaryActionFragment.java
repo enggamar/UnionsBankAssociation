@@ -52,7 +52,7 @@ public class DisciplinaryActionFragment extends Fragment {
         tvTitle = view.findViewById(R.id.title);
         ivBack = view.findViewById(R.id.iv_menu);
         ivBack.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.ic_back));
-        tvTitle.setText(getString(R.string.pension_scheme));
+        tvTitle.setText(getString(R.string.disciplinary_action));
         ivBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

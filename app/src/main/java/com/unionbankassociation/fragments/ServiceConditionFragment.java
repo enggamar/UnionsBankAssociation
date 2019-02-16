@@ -15,7 +15,7 @@ import com.unionbankassociation.R;
 import com.unionbankassociation.activities.CommonActivityForFragment;
 import com.unionbankassociation.databinding.LayoutServiceConditionTypeBinding;
 
-public class ServiceConditionFragment extends Fragment {
+public class ServiceConditionFragment extends Fragment implements View.OnClickListener {
 
     private AppCompatTextView tvTitle;
     private AppCompatImageView ivBack;
@@ -76,13 +76,67 @@ public class ServiceConditionFragment extends Fragment {
                 openActivityForFragments(12);
             }
         });
-
+        mBinding.cardClericalStaffSalary.setOnClickListener(this);
+        mBinding.cardClericalStaffJobProfile.setOnClickListener(this);
+        mBinding.cardClericalStaffLeavePolicy.setOnClickListener(this);
+        mBinding.cardClericalStaffOthersAllowance.setOnClickListener(this);
+        mBinding.cardClericalStaffWorkingHours.setOnClickListener(this);
+        mBinding.cardSubStaffSalary.setOnClickListener(this);
+        mBinding.cardSubStaffJobProfile.setOnClickListener(this);
+        mBinding.cardSubStaffLeavePolicy.setOnClickListener(this);
+        mBinding.cardSubStaffOthersAllowance.setOnClickListener(this);
+        mBinding.cardSubStaffWorkingHours.setOnClickListener(this);
     }
 
     private void openActivityForFragments(int type) {
 
         Intent intent = new Intent(getActivity(), CommonActivityForFragment.class);
         intent.putExtra("FRAGMENT", type);
+        startActivity(intent);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.card_clerical_staff_salary:
+                openCommonActivity(15);
+//                openCommonActivity(getString(R.string.basic_pay), getString(R.string.basic_pay_service_condition), getString(R.string.basic_pay));
+                break;
+            case R.id.card_clerical_staff_job_profile:
+//                openCommonActivity(getString(R.string.basic_pay), getString(R.string.basic_pay_service_condition), getString(R.string.basic_pay));
+
+                break;
+            case R.id.card_substaff_job_profile:
+                openCommonActivity(16, getString(R.string.duties_of_substaff), getString(R.string.job_profile_substaff), getString(R.string.job_profile));
+                break;
+            case R.id.card_clerical_staff_others_allowance:
+                openCommonActivity(16, getString(R.string.other_allowance_serverice), getString(R.string.other_allowance_service_condition), getString(R.string.other_allowances));
+                break;
+            case R.id.card_clerical_staff_working_hours:
+                openCommonActivity(16, getString(R.string.working_hours), getString(R.string.working_hours_service_condition), getString(R.string.working_hours));
+                break;
+
+            case R.id.card_sub_staff_others_allowance:
+                openCommonActivity(16, getString(R.string.other_allowance_serverice), getString(R.string.other_allowance_service_condition), getString(R.string.other_allowances));
+                break;
+            case R.id.card_sub_staff_working_hours:
+                openCommonActivity(16, getString(R.string.working_hours), getString(R.string.working_hours_service_condition), getString(R.string.working_hours));
+                break;
+        }
+    }
+
+    private void openCommonActivity(int type) {
+        Intent intent = new Intent(getActivity(), CommonActivityForFragment.class);
+        intent.putExtra("FRAGMENT", type);
+        startActivity(intent);
+    }
+
+    private void openCommonActivity(int type, String title, String description, String headerTitle) {
+        Intent intent = new Intent(getActivity(), CommonActivityForFragment.class);
+        intent.putExtra("FRAGMENT", type);
+        intent.putExtra("TITLE", title);
+        intent.putExtra("DESCRIPTION", description);
+        intent.putExtra("HEADER_TTILE", headerTitle);
         startActivity(intent);
     }
 }

@@ -65,6 +65,7 @@
                             android:id="@+id/et_email"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:singleLine="true"
                             android:textColorHint="#d1dfe9"
                             android:textSize="@dimen/_13ssp" />
                     </android.support.design.widget.TextInputLayout>
@@ -87,6 +88,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="textPassword"
+                            android:singleLine="true"
                             android:textSize="@dimen/_13ssp" />
                     </android.support.design.widget.TextInputLayout>
 
@@ -146,7 +148,7 @@
             android:id="@+id/progress_bar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:layout_centerInParent="true" />
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
     </RelativeLayout>
 </layout>

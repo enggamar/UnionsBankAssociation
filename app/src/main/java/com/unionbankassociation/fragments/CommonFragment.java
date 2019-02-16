@@ -98,7 +98,7 @@ public class CommonFragment extends Fragment implements NetworkListener {
                 titleType = getString(R.string.achivments);
                 break;
             case 2:
-                titleType = getString(R.string.bank_wise_sttlement);
+                titleType = getString(R.string.aiubea_settlement);
                 break;
             case 4:
                 titleType = getString(R.string.our_activities);
@@ -176,7 +176,11 @@ public class CommonFragment extends Fragment implements NetworkListener {
                 isLoading = false;
             }
 
-            mNotificationList.addAll(bean.getmNotice().getNoticeDetails());
+            try {
+                mNotificationList.addAll(bean.getmNotice().getNoticeDetails());
+            }catch (Exception e){
+
+            }
             if (mNotificationList.size() > 0) {
                 mBinding.rvNotification.setVisibility(View.VISIBLE);
                 mBinding.noData.setVisibility(View.GONE);

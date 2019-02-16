@@ -13,6 +13,7 @@ import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
 import retrofit2.http.Part;
 import retrofit2.http.PartMap;
 import retrofit2.http.Query;
@@ -62,5 +63,8 @@ public interface ApiInterface {
     @GET("banners")
     Call<ResponseBody> getPhotoGallery(@Header("access_token") String accessToken, @Query("page_no") int pageNumber);
 
+    @FormUrlEncoded
+    @PUT("logout")
+    Call<ResponseBody> logout(@Header("access_token") String accessToken,@FieldMap HashMap<String, String> map);
 
 }

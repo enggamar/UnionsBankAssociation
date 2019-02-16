@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import com.unionbankassociation.R;
 import com.unionbankassociation.fragments.AboutUsFragment;
 import com.unionbankassociation.fragments.CommonFragment;
+import com.unionbankassociation.fragments.CommonServiceConditionFragment;
 import com.unionbankassociation.fragments.ContactUsFrgament;
 import com.unionbankassociation.fragments.DisciplinaryActionFragment;
 import com.unionbankassociation.fragments.NewMedicalScheme;
@@ -13,11 +14,15 @@ import com.unionbankassociation.fragments.NonSunOrdinatorFragment;
 import com.unionbankassociation.fragments.PartTimeEmployeeFragment;
 import com.unionbankassociation.fragments.PensionFragment;
 import com.unionbankassociation.fragments.PhotoGalleryFragment;
+import com.unionbankassociation.fragments.SalaryComponentFragment;
 import com.unionbankassociation.fragments.ServiceConditionFragment;
 import com.unionbankassociation.fragments.ServiceConditionbpsFragment;
 
 public class CommonActivityForFragment extends BaseActivity {
     int fragmentType;
+    private String title = "";
+    private String description = "";
+    private String headerTitle = "";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -84,11 +89,35 @@ public class CommonActivityForFragment extends BaseActivity {
                 addFragmentWithBackstack(R.id.container, new ContactUsFrgament(), ContactUsFrgament.class.getSimpleName());
                 break;
 
+            case 15:
+//                Bundle bundle4 = new Bundle();
+//                bundle4.putString("TITLE", title);
+//                bundle4.putString("DESCRIPTION", description);
+//                bundle4.putString("HEADER_TTILE", getString(R.string.basic_pay));
+//                CommonFragment fragment4 = new CommonFragment();
+//                fragment4.setArguments(bundle4);
+//                getIntentData();
+                addFragmentWithBackstack(R.id.container, new SalaryComponentFragment(), SalaryComponentFragment.class.getSimpleName());
+                break;
+            case 16:
+                getIntentData();
+                Bundle bundle4 = new Bundle();
+                bundle4.putString("TITLE", title);
+                bundle4.putString("DESCRIPTION", description);
+                bundle4.putString("HEADER_TTILE", headerTitle);
+                CommonServiceConditionFragment fragment4 = new CommonServiceConditionFragment();
+                fragment4.setArguments(bundle4);
+                addFragmentWithBackstack(R.id.container, fragment4, CommonServiceConditionFragment.class.getSimpleName());
+                break;
+
         }
     }
 
     private void getIntentData() {
         fragmentType = getIntent().getExtras().getInt("FRAGMENT");
+        title = getIntent().getExtras().getString("TITLE", "");
+        headerTitle = getIntent().getExtras().getString("HEADER_TTILE", "");
+        description = getIntent().getExtras().getString("DESCRIPTION", "");
     }
 
     @Override

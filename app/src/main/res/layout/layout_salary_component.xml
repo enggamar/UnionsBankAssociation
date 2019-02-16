@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -16,41 +17,18 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="vertical">
-
-                <android.support.v7.widget.CardView
-                    android:id="@+id/card_clerical_staff"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/_50sdp"
-                    android:layout_margin="@dimen/_5sdp"
-                    app:cardUseCompatPadding="true">
-
-                    <android.support.v7.widget.AppCompatTextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:drawableEnd="@android:drawable/arrow_down_float"
-                        android:drawableTint="@color/Black"
-                        android:fontFamily="@font/poppins_medium_0"
-                        android:paddingStart="@dimen/_15sdp"
-                        android:paddingEnd="@dimen/_10sdp"
-                        android:text="@string/clerical_staff"
-                        android:textColor="@color/Black"
-                        android:textSize="@dimen/_14sdp" />
-
-                </android.support.v7.widget.CardView>
 
                 <LinearLayout
                     android:id="@+id/ll_clerical_staff_subMenu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/_10sdp"
                     android:orientation="vertical"
                     android:visibility="visible">
 
                     <android.support.v7.widget.CardView
-                        android:id="@+id/card_clerical_staff_salary"
+                        android:id="@+id/card_basic_pay"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_50sdp"
                         android:layout_margin="@dimen/_5sdp"
@@ -60,38 +38,19 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
-                            android:fontFamily="@font/poppins_medium_0"
-                            android:paddingStart="@dimen/_15sdp"
-                            android:paddingEnd="@dimen/_10sdp"
-                            android:text="@string/salary_components"
-                            android:textColor="@color/Black"
-                            android:textSize="@dimen/_14sdp" />
-
-                    </android.support.v7.widget.CardView>
-
-                    <android.support.v7.widget.CardView
-                        android:id="@+id/card_clerical_staff_job_profile"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_50sdp"
-                        android:layout_margin="@dimen/_5sdp"
-                        app:cardUseCompatPadding="true">
-
-                        <android.support.v7.widget.AppCompatTextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
+                            android:drawableEnd="@android:drawable/arrow_down_float"
                             android:drawableTint="@color/Black"
                             android:fontFamily="@font/poppins_medium_0"
                             android:paddingStart="@dimen/_15sdp"
                             android:paddingEnd="@dimen/_10sdp"
-                            android:text="@string/job_profile"
+                            android:text="@string/basic_pay"
                             android:textColor="@color/Black"
                             android:textSize="@dimen/_14sdp" />
 
                     </android.support.v7.widget.CardView>
 
                     <android.support.v7.widget.CardView
-                        android:id="@+id/card_clerical_staff_leave_policy"
+                        android:id="@+id/card_dearness_allowance"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_50sdp"
                         android:layout_margin="@dimen/_5sdp"
@@ -101,17 +60,19 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
+                            android:drawableEnd="@android:drawable/arrow_down_float"
+                            android:drawableTint="@color/Black"
                             android:fontFamily="@font/poppins_medium_0"
                             android:paddingStart="@dimen/_15sdp"
                             android:paddingEnd="@dimen/_10sdp"
-                            android:text="@string/leave_policy"
+                            android:text="Dearness Allowance"
                             android:textColor="@color/Black"
                             android:textSize="@dimen/_14sdp" />
 
                     </android.support.v7.widget.CardView>
 
                     <android.support.v7.widget.CardView
-                        android:id="@+id/card_clerical_staff_working_hours"
+                        android:id="@+id/card_hra"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_50sdp"
                         android:layout_margin="@dimen/_5sdp"
@@ -121,17 +82,19 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
+                            android:drawableEnd="@android:drawable/arrow_down_float"
+                            android:drawableTint="@color/Black"
                             android:fontFamily="@font/poppins_medium_0"
                             android:paddingStart="@dimen/_15sdp"
                             android:paddingEnd="@dimen/_10sdp"
-                            android:text="@string/working_hours"
+                            android:text="HRA"
                             android:textColor="@color/Black"
                             android:textSize="@dimen/_14sdp" />
 
                     </android.support.v7.widget.CardView>
 
                     <android.support.v7.widget.CardView
-                        android:id="@+id/card_clerical_staff_others_allowance"
+                        android:id="@+id/card_special_allownace"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_50sdp"
                         android:layout_margin="@dimen/_5sdp"
@@ -141,171 +104,150 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
+                            android:drawableEnd="@android:drawable/arrow_down_float"
+                            android:drawableTint="@color/Black"
                             android:fontFamily="@font/poppins_medium_0"
                             android:paddingStart="@dimen/_15sdp"
                             android:paddingEnd="@dimen/_10sdp"
-                            android:text="@string/other_allowances"
+                            android:text="Special Allowance"
+                            android:textColor="@color/Black"
+                            android:textSize="@dimen/_14sdp" />
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/card_Transport_allowance"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_margin="@dimen/_5sdp"
+                        app:cardUseCompatPadding="true">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:drawableEnd="@android:drawable/arrow_down_float"
+                            android:drawableTint="@color/Black"
+                            android:fontFamily="@font/poppins_medium_0"
+                            android:paddingStart="@dimen/_15sdp"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:text="Transport Allowance"
+                            android:textColor="@color/Black"
+                            android:textSize="@dimen/_14sdp" />
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/card_special_pay"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_margin="@dimen/_5sdp"
+                        app:cardUseCompatPadding="true">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:drawableEnd="@android:drawable/arrow_down_float"
+                            android:drawableTint="@color/Black"
+                            android:fontFamily="@font/poppins_medium_0"
+                            android:paddingStart="@dimen/_15sdp"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:text="Special Pay"
+                            android:textColor="@color/Black"
+                            android:textSize="@dimen/_14sdp" />
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/card_officating"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_margin="@dimen/_5sdp"
+                        app:cardUseCompatPadding="true">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:drawableEnd="@android:drawable/arrow_down_float"
+                            android:drawableTint="@color/Black"
+                            android:fontFamily="@font/poppins_medium_0"
+                            android:paddingStart="@dimen/_15sdp"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:text="Officiating"
+                            android:textColor="@color/Black"
+                            android:textSize="@dimen/_14sdp" />
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/card_pop_fpp"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_margin="@dimen/_5sdp"
+                        app:cardUseCompatPadding="true">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:drawableEnd="@android:drawable/arrow_down_float"
+                            android:drawableTint="@color/Black"
+                            android:fontFamily="@font/poppins_medium_0"
+                            android:paddingStart="@dimen/_15sdp"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:text="PQP &amp; FPR"
+                            android:textColor="@color/Black"
+                            android:textSize="@dimen/_14sdp" />
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/card_medical_aid"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_margin="@dimen/_5sdp"
+                        app:cardUseCompatPadding="true">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:drawableEnd="@android:drawable/arrow_down_float"
+                            android:drawableTint="@color/Black"
+                            android:fontFamily="@font/poppins_medium_0"
+                            android:paddingStart="@dimen/_15sdp"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:text="Medical AID"
+                            android:textColor="@color/Black"
+                            android:textSize="@dimen/_14sdp" />
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/card_stagnation"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_margin="@dimen/_5sdp"
+                        app:cardUseCompatPadding="true">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:drawableEnd="@android:drawable/arrow_down_float"
+                            android:drawableTint="@color/Black"
+                            android:fontFamily="@font/poppins_medium_0"
+                            android:paddingStart="@dimen/_15sdp"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:text="Stagnation &amp; Additional Increments"
                             android:textColor="@color/Black"
                             android:textSize="@dimen/_14sdp" />
 
                     </android.support.v7.widget.CardView>
 
                 </LinearLayout>
-
-                <android.support.v7.widget.CardView
-                    android:id="@+id/card_substaff"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/_50sdp"
-                    android:layout_margin="@dimen/_5sdp"
-                    app:cardUseCompatPadding="true">
-
-                    <android.support.v7.widget.AppCompatTextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:drawableEnd="@android:drawable/arrow_down_float"
-                        android:drawableTint="@color/Black"
-                        android:fontFamily="@font/poppins_medium_0"
-                        android:paddingStart="@dimen/_15sdp"
-                        android:paddingEnd="@dimen/_10sdp"
-                        android:text="@string/substaff"
-                        android:textColor="@color/Black"
-                        android:textIsSelectable="false"
-                        android:textSize="@dimen/_14sdp" />
-                </android.support.v7.widget.CardView>
-
-                <LinearLayout
-                    android:id="@+id/ll_sub_staff_subMenu"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/_10sdp"
-                    android:orientation="vertical"
-                    android:visibility="gone">
-
-                    <android.support.v7.widget.CardView
-                        android:id="@+id/card_sub_staff_salary"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_50sdp"
-                        android:layout_margin="@dimen/_5sdp"
-                        app:cardUseCompatPadding="true">
-
-                        <android.support.v7.widget.AppCompatTextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:fontFamily="@font/poppins_medium_0"
-                            android:paddingStart="@dimen/_15sdp"
-                            android:paddingEnd="@dimen/_10sdp"
-                            android:text="@string/salary_components"
-                            android:textColor="@color/Black"
-                            android:textSize="@dimen/_14sdp" />
-
-                    </android.support.v7.widget.CardView>
-
-                    <android.support.v7.widget.CardView
-                        android:id="@+id/card_sub_staff_job_profile"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_50sdp"
-                        android:layout_margin="@dimen/_5sdp"
-                        app:cardUseCompatPadding="true">
-
-                        <android.support.v7.widget.AppCompatTextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:drawableTint="@color/Black"
-                            android:fontFamily="@font/poppins_medium_0"
-                            android:paddingStart="@dimen/_15sdp"
-                            android:paddingEnd="@dimen/_10sdp"
-                            android:text="@string/job_profile"
-                            android:textColor="@color/Black"
-                            android:textSize="@dimen/_14sdp" />
-
-                    </android.support.v7.widget.CardView>
-
-                    <android.support.v7.widget.CardView
-                        android:id="@+id/card_sub_staff_leave_policy"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_50sdp"
-                        android:layout_margin="@dimen/_5sdp"
-                        app:cardUseCompatPadding="true">
-
-                        <android.support.v7.widget.AppCompatTextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:fontFamily="@font/poppins_medium_0"
-                            android:paddingStart="@dimen/_15sdp"
-                            android:paddingEnd="@dimen/_10sdp"
-                            android:text="@string/leave_policy"
-                            android:textColor="@color/Black"
-                            android:textSize="@dimen/_14sdp" />
-
-                    </android.support.v7.widget.CardView>
-
-                    <android.support.v7.widget.CardView
-                        android:id="@+id/card_sub_staff_working_hours"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_50sdp"
-                        android:layout_margin="@dimen/_5sdp"
-                        app:cardUseCompatPadding="true">
-
-                        <android.support.v7.widget.AppCompatTextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:fontFamily="@font/poppins_medium_0"
-                            android:paddingStart="@dimen/_15sdp"
-                            android:paddingEnd="@dimen/_10sdp"
-                            android:text="@string/working_hours"
-                            android:textColor="@color/Black"
-                            android:textSize="@dimen/_14sdp" />
-
-                    </android.support.v7.widget.CardView>
-
-                    <android.support.v7.widget.CardView
-                        android:id="@+id/card_sub_staff_others_allowance"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_50sdp"
-                        android:layout_margin="@dimen/_5sdp"
-                        app:cardUseCompatPadding="true">
-
-                        <android.support.v7.widget.AppCompatTextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:fontFamily="@font/poppins_medium_0"
-                            android:paddingStart="@dimen/_15sdp"
-                            android:paddingEnd="@dimen/_10sdp"
-                            android:text="@string/other_allowances"
-                            android:textColor="@color/Black"
-                            android:textSize="@dimen/_14sdp" />
-
-                    </android.support.v7.widget.CardView>
-
-                </LinearLayout>
-
-                <android.support.v7.widget.CardView
-                    android:id="@+id/card_part_time"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/_50sdp"
-                    android:layout_margin="@dimen/_5sdp"
-                    app:cardUseCompatPadding="true">
-
-                    <android.support.v7.widget.AppCompatTextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:fontFamily="@font/poppins_medium_0"
-                        android:paddingStart="@dimen/_15sdp"
-                        android:paddingEnd="@dimen/_10sdp"
-                        android:text="@string/part_time_employees"
-                        android:textColor="@color/Black"
-                        android:textIsSelectable="false"
-                        android:textSize="@dimen/_14sdp" />
-                </android.support.v7.widget.CardView>
-
-
             </LinearLayout>
         </android.support.v4.widget.NestedScrollView>
     </LinearLayout>

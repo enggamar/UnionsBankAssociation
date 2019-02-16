@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">यूनियन बैंक स्टाफ एसोसिएशन यू. पी.</string>
-    <!--<string name="app_name">U.P. Bank Employees Union</string>-->
+    <!--<string name="app_name">यूनियन बैंक स्टाफ एसोसिएशन यू. पी.</string>-->
+    <string name="app_name">U.P. Bank Employeec s Union</string>
     <string name="no_internet">No internet connection...!</string>
     <string name="retry">Retry</string>
     <string name="crash_toast_text">Oops ! App crashed, but a report has been sent to  developers to help fix the issue !</string>
@@ -1466,4 +1466,266 @@ j. Eligible to count actual total service for pension ( not pro-rata) (10th BPS)
     <string name="mobile">Mobile :-</string>
     <string name="email_">Email :-</string>
     <string name="contact_us">Contact Us</string>
+    <string name="basic_pay">Basic Pay</string>
+    <string name="basic_pay_clerical">CLERICAL PAYSCALE</string>
+    <string name="basic_pay_service_condition">
+BASIC-INCREMENT-STAGES\n\n
+11765-0655-3\n
+
+13730-0815-3\n
+
+16175-0980-4\n
+
+20095-1145-7\n
+
+28110-2120-1\n
+
+30230-1310-1\n
+
+STAGNATION INCREMENT\n
+31540-1310-8\n
+\n
+NOTE: Stagnation Increment 5 once in 3 year and 3 once in 2 year Interval
+
+</string>
+
+    <string name="dearness_allownace_service_condition">
+w.e.f 1-11-2012, DA shall be payable at 0.10% of PAY for every slab of 4 points rise or fall over 4440 points in the quarterly average of the All India Working Class Consumer Price Index (General) Base 1960 = 100.
+\n\n
+Note: DA is payable on Special Allowance ( New Allowance) also.
+\n\n
+Quarter -- 10TH BPS
+\n
+Nov 2012 - Jan 2013 -- 10.90%
+\n
+Feb 2013 - Apr 2013 -- 13.40 %
+\n
+May 2013 - Jul 2013 -- 16.00 %
+\n
+Aug 2013 - Oct 2013 -- 19.20 %
+\n
+Nov 2013 - Jan 2014 -- 24.00 %
+\n
+Feb 2014- Apr 2014 -- 26.50 %
+\n
+May 2014 – Jul 2014 -- 24.90 %
+\n
+Aug 2014 – Oct 2014 -- 28.20 %
+\n
+Nov 2014 - Jan 2015 -- 33.10 %
+\n
+Feb 2015 - Apr 2015 -- 33.30 %
+\n
+May 2015 – Jul 2015 --33.70 %
+\n
+Definition of Pay for DA : Basic Pay, Stagnation increments, PQP, Special Pay, Offg. Pay, SPECIAL ALLOWANCE. Definition of Pay for HRA Basic Pay, Stagnation increments, PQP, Special Pay, Offg. Pay. Definition of Pay for Superannuation benefits: Basic Pay, Stagnation increments , PQP, Special Pay, Offg. Pay, Increment portion of FPP
+\n
+(a) It is clarified that there shall be no ceiling on Dearness Allowance.
+\n
+(b) Dearness Allowance shall be calculated and paid on Basic Pay, Special Pay,Graduation Pay, Professional Qualification Pay and Officiating Pay, if any,payable under this settlement in respect of both clerical and subordinate staff.
+\n
+(c) All other existing provisions relating to Dearness Allowance Scheme shall remain unchanged.</string>
+
+
+    <string name="working_hours_service_condition">
+Clerks - 6 ½ hours\n\n
+Substaff other than Drivers and Watch and Ward - 7 hours\n\n
+
+Drivers - 7 ½ hours\n\n
+
+Watch and Ward - 8 hours\n\n
+
+</string>
+    <string name="other_allowance_serverice">Compensation on Transfer:</string>
+    <string name="other_allowance_service_condition">
+An employee on transfer shall be paid the cost actually incurred for transporting his personal effects, as under:
+\n\n
+By Train:
+\n\
+Non Sub-staff : a. For married persons 3000 kg. b. For unmarried persons 2000 kg..
+\n
+Sub-staff a. For married persons 2000 kg. b. For unmarried persons 1150 kg.
+\n
+By Road:   An employee on transfer from one station to another can transport his/her personal effects by rail/road upto the stipulated weights by an IBA approved Transport Operator.
+\n
+Compensation for losses due to breakage or damage to goods on Transfer:
+a. Where an employee produces receipts or a statement of loss in respect of breakages subject to a maximum of:
+\n\n
+Clerical Staff  :  Rs.1,500/-
+\n\n
+Subordinate Staff :  Rs.1,000/-
+\n\n
+b. Where no receipts/statement of loss are produced, a lumpsum payment of:
+\n\n
+Clerical Staff  :  Rs.1,000/-
+\n\n
+Subordinate Staff :  Rs.750/-
+\n\n
+Halting Allowance:\n\n
+Places with population of 12 lakhs and above and States of Goa :
+\n
+Clerical Staff Rs.700/- per diem
+\n
+Subordinate Staff Rs.500/- per diem
+\n
+Places with population of 5 lakhs and above :
+\n
+Clerical Staff Rs.600/- per diem
+\n
+Subordinate Staff Rs.400/- per diem
+\n\n
+Other Places :
+\n\n
+Clerical Staff Rs.450/- per diem
+\n
+Subordinate Staff Rs.250/- per diem
+\n\n
+Washing Allowance:
+\n\nRs.150/- p.m.
+
+\nCycle Allowance:
+\nRs.100/-p.m.
+\n
+\nSplit Duty Allowance:
+\nRs.150/- p.m.
+\n
+\n\nProject Area Compensatory Allowance:
+\n\nProject Area Group ‘A’
+
+\nClerical Staff  – Rs.250/-p.m.
+\n
+Sub-Staff - Rs.200/- p.m.
+\n
+Project Area Group ‘B’
+\n
+Clerical Staff –  Rs.200/- p.m.
+\n
+Sub-Staff  -   Rs.175/- p.m.
+\n
+ \n\nSpecial Area Allowance:
+\n\nCategory A
+\n
+Pay below Rs. 24000 - 0320	Pay above Rs. 24000 - 400
+\n\n
+Category B
+\n\n
+Pay below Rs. 24000 - 1200	Pay above Rs. 24000 - 1500
+\n\n
+Category C
+\n\n
+Pay below Rs. 24000 - 1600	Pay above Rs. 24000 - 2100
+\n\n
+Category D
+\n\n
+Pay below Rs. 24000 - 2000	Pay above Rs. 24000 - 2600
+\n\n
+Reimbursement of expenses on Road Travel:
+\nRs.6/- per k.m.
+\n\n
+PARADIP PORT ALLOWANCE:
+\n\n5% of the Basic Pay ( 7th BPS- 27-3-2000)
+\n
+\nHILL AND FUEL ALLOWANCE:\n\n
+a)	At places situated at a height of 3000 metres and above - 8% of pay (Max. Rs.1500/-p.m.)
+\n\n
+b)	At places situated at a height of and over 1500 metres but below 3000 metres - 4% of pay (Max. Rs.600/-p.m.)
+\n\n
+c)	At places situated at a height of over 1000 metres but less than 1500 metres and Mercara Town - 3% of pay (Max. Rs.500/-p.m.)
+\n\n
+TRAVEL ON DUTY – ENTITLEMENT:
+\n\nFor clerks: AC 2 Tier and for Substaff AC 3 Tier
+\n
+UNIFORM AND LIVERIES:
+\nWatch man, Armed Guard, Electricians, A/C Plant helper and Drivers will be supplied with a pair of shoes once in two years.
+
+\nAll substaff including part time employees shall be supplied with three sets of terry khadhi/cotton uniform once in two years and one set of woolen uniform once in three years.
+
+</string>
+
+    <string name="duties_of_substaff">DUTIES OF SUBSTAFF</string>
+    <string name="job_profile_substaff">
+All the normal and routine duties of the subordinate staff cadre and for performance of which no special pay shall be payable. In addition they shall also be required to perform the following duties.
+\n\n
+1) To take money orders, to buy stamps etc., which involves carrying of cash not exceeding Rs.5,000/- and to carry insured letters., etc. to post office
+\n\n
+2) To stitch currency note bundles;
+\n\n
+3) To stitch and seal parcels and packets containing currency notes;
+\n\n
+4) To transit cash from the bank to an office outside or vice versa, if unaccompanied by a watchman / Armed Guard.
+\n\n
+SPECIAL PAY DUTIES:
+\n\n1)CASH PEON DUTIES:
+\n\n1) To take money orders, to buy stamps etc.,which involves carrying of cash not exceeding Rs.5,000/- and to carry insured letters., etc. to post office
+\n\n
+2) To stitch currency note bundles
+\n\n
+3) To stitch and seal parcels and packets containing currency notes;
+\n\n
+4) To transit cash from the bank to an office outside or vice versa, if unaccompanied by a watchman / Armed Guard.
+\n\n
+2)DUFTARY DUTIES:
+\n\n1) Obtaining acceptance of bills of exchange, hundies etc., drawn on local parties or banks and / or collecting payments thereof.
+\n\n
+2) Collecting payments for cheques or postal order etc., from banks or post office counters. They may also be required to collect cash not exceeding Rs.5,000/- at a time against various instruments.
+\n\n
+3) Simple binding of books and registers;
+\n\n
+4) Press copying;
+\n\n
+5) Filing independently letters and other papers in respect files as per indications marked thereon;
+\n\n
+6) Assisting in issuing stationery;
+\n\n
+7) Stacking under guidance old records in orderly manner and assisting in giving them out when required; and
+\n\n
+8) Undertaking the whole process of sorting, arranging, numbering, tallying the total number or stitching the vouchers.
+\n\n
+3)WATCHMAN DUTIES:
+\n\nPersons other than “Armed Guards” who are required to perform watch and ward duties i.e. to watch or look after the premises or a department, for the purposes of its safety, security and guard against infiltration and against removal of the bank’s property by any unauthorised person AND/OR to watch and guard as above, the movement of cash from one place to another inside the bank premises or outside where an Armed Guard is not employed at the Branch / Office.
+
+\n\n4)ARMED GUARD DUTIES:
+\n\nPersons required to perform watch and ward duties i.e. to watch or look after the premises or department for the purposes of its safety, security and guard against attack or assault or infiltration and against removal of the bank’s property by any unauthorized persons AND/OR to watch and guard as above the movement of cash from one place to another whether inside or outside the Bank, for which purpose they are required by the bank to carry any of the following weapons:
+
+\n\ni) Gun, Pistol or any other fire arm; or
+
+\n\nii) Dagger, sword, khukri or spear; or
+
+\n\niii) any other licensed weapon
+
+\n\nNote: ‘Retainers’ Peons (other than watchmen) whose names are registered in the Bank’s license as Retainers will, when they perform “Armed Guard” duties, be entitled to special pay for “Armed Guards” pro rata.
+
+\n\n5)BILL COLLECTOR DUTIES:
+\n\n1) Obtaining acceptance of bills of exchange, hundies etc., drawn on local parties or banks and / or collecting payments thereof.
+
+\n\n2) Collecting payments for cheques of postal order etc. from banks or post office counters.
+
+\n\n3)They may also be required to collect cash not exceeding Rs.4000/- at a time against various instruments.
+\n\n
+\n\n6)HEAD PEON DUTIES:
+Persons required to assist in supervision of various matters pertaining to subordinate staff like:\n\n
+
+i) Cleanliness of the office premises;\n\n
+
+ii) Cleanliness of uniforms;\n\n
+
+iii) Leave arrangements;\n\n
+
+iv) Arrangements for safekeeping of keys; and
+\n\n
+v) Distribution of duties amongst the subordinate staff
+\n\n
+7)ELECTRICIAN DUTIES:
+\n\nTheir work involves carrying out semi-skilled electrical work like routine maintenance of electrical equipments, effecting minor repairs to electrical fixtures and appliances.
+
+\n\n8)DRIVER DUTIES:
+\n\nPersons required to drive, maintain and effect minor repairs (not requiring a technician’s skill) to motor cars, motor vans, station wagons, scooters, motor cycles or other motor vehicles.
+
+\n\n9)AC PLANT HELPER DUTIES:
+\n\nSemi skilled persons who under the supervision of the technician attend to routine maintenance of and minor repairs to air conditioning plants.
+
+\n\n10)LIFTMAN DUTIES:
+\n\nPersons required to operate the lifts on regular assignment.
+
+</string>
 </resources>

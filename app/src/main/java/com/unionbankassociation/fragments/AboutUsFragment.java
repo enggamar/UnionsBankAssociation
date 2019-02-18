@@ -52,7 +52,7 @@ public class AboutUsFragment extends Fragment {
         });
         webView.setLongClickable(false);
         progressBar = (ProgressBar) view.findViewById(R.id.progress_bar);
-        setWebView("http://52.2.121.230/pages/about-us");
+        setWebView("http://www.ubsaup.com/pages/about-us");
     }
 
     private void setWebView(String url) {

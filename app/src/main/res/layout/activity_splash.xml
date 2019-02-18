@@ -19,8 +19,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="@dimen/_20sdp"
         android:fontFamily="@font/poppins_bold_0"
-
         android:text="@string/u_p_bank_employees_union"
         android:textColor="@color/White"
-        android:textSize="@dimen/_9sdp" />
+        android:textSize="@dimen/_14sdp" />
 </RelativeLayout>

@@ -18,11 +18,12 @@ import com.unionbankassociation.interfaces.DialogCallBack;
 import com.unionbankassociation.models.ContactUSListBean;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class CustomIPlaceDialog extends Dialog {
 
     private Context context;
-    private ArrayList<ContactUSListBean> mList;
+    private ArrayList<ContactUSListBean> mList, newList;
     private DialogSelectPlaceBinding mbinding;
     private DialogCallBack dialogCallBack;
 
@@ -45,9 +46,10 @@ public class CustomIPlaceDialog extends Dialog {
     }
 
     private void setUpList() {
+        setList(mList);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(context);
         mbinding.rvSelectPlace.setLayoutManager(linearLayoutManager);
-        CustomPlaceAdapter adapter = new CustomPlaceAdapter(context, mList, new View.OnClickListener() {
+        CustomPlaceAdapter adapter = new CustomPlaceAdapter(context, newList, new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String title = (String) v.getTag();
@@ -56,5 +58,14 @@ public class CustomIPlaceDialog extends Dialog {
             }
         });
         mbinding.rvSelectPlace.setAdapter(adapter);
+    }
+
+    private void setList(ArrayList<ContactUSListBean> mList) {
+        newList = new ArrayList<>();
+        HashMap<String, ContactUSListBean> mNewList = new HashMap<>();
+        for (int i = 0; i < mList.size(); i++) {
+            mNewList.put(mList.get(i).getPlace(), mList.get(i));
+        }
+        newList.addAll(mNewList.values());
     }
 }

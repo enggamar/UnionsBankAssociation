@@ -1,5 +1,7 @@
 package com.unionbankassociation.models;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 
 /*
@@ -8,10 +10,16 @@ import java.io.Serializable;
  *
  * */
 public class ContactUSListBean implements Serializable {
+
+    @SerializedName("portfolio")
     String Portfolio;
+    @SerializedName("name")
     String Name;
+    @SerializedName("place")
     String Place;
+    @SerializedName("phone_numbers")
     String Mobile;
+    @SerializedName("email")
     String Email;
 
     public String getPortfolio() {

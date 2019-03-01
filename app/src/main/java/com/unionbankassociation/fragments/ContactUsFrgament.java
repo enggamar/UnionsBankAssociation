@@ -4,18 +4,28 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.gson.Gson;
 import com.unionbankassociation.R;
 import com.unionbankassociation.activities.CommonActivityForFragment;
 import com.unionbankassociation.adapters.ContactUsAdapter;
 import com.unionbankassociation.custom_dialogs.CustomIPlaceDialog;
 import com.unionbankassociation.databinding.LayoutContactUsBinding;
 import com.unionbankassociation.interfaces.DialogCallBack;
+import com.unionbankassociation.interfaces.NetworkListener;
 import com.unionbankassociation.models.ContactUSListBean;
+import com.unionbankassociation.models.ContactUsBean;
+import com.unionbankassociation.network.ApiCall;
+import com.unionbankassociation.network.ApiInterface;
+import com.unionbankassociation.network.RestApi;
+import com.unionbankassociation.utils.AppConstant;
+import com.unionbankassociation.utils.AppSharedPreference;
+import com.unionbankassociation.utils.AppUtils;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -25,7 +35,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 
-public class ContactUsFrgament extends Fragment implements View.OnClickListener {
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+
+public class ContactUsFrgament extends Fragment implements View.OnClickListener, NetworkListener, SwipeRefreshLayout.OnRefreshListener {
 
     private LayoutContactUsBinding mBinding;
     private ArrayList<ContactUSListBean> mList;
@@ -38,7 +51,17 @@ public class ContactUsFrgament extends Fragment implements View.OnClickListener 
         mBinding = LayoutContactUsBinding.inflate(inflater, container, false);
         initView();
         setUpList(mList);
+        callApi();
         return mBinding.getRoot();
+    }
+
+    private void hitApi() {
+        if (mBinding.swipe != null && !mBinding.swipe.isRefreshing())
+            mBinding.progressBar.setVisibility(View.VISIBLE);
+        ApiInterface apiInterface = RestApi.getConnection(ApiInterface.class, AppConstant.BASE_URL);
+        Call<ResponseBody> call = apiInterface.getContactList(AppSharedPreference.getInstance().getString(getContext(), AppSharedPreference.ACCESS_TOKEN), "1");
+        ApiCall.getInstance().hitService(getContext(), call, this, 1);
+
     }
 
     private void setUpList(ArrayList<ContactUSListBean> mList) {
@@ -48,7 +71,7 @@ public class ContactUsFrgament extends Fragment implements View.OnClickListener 
     }
 
     private void initView() {
-        mList = loadJSONFromAsset();
+        mList = new ArrayList<>();
         mBinding.etSelectPlace.setOnClickListener(this);
         mBinding.header.ivMenu.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.ic_back));
         mBinding.header.title.setText(getString(R.string.contact_us));
@@ -58,6 +81,7 @@ public class ContactUsFrgament extends Fragment implements View.OnClickListener 
                 ((CommonActivityForFragment) getActivity()).finish();
             }
         });
+        mBinding.swipe.setOnRefreshListener(this);
     }
 
     public ArrayList<ContactUSListBean> loadJSONFromAsset() {
@@ -112,6 +136,55 @@ public class ContactUsFrgament extends Fragment implements View.OnClickListener 
                     }
                 }).show();
                 break;
+        }
+    }
+
+    @Override
+    public void onSuccess(int responseCode, String response, int requestCode) {
+        mBinding.progressBar.setVisibility(View.GONE);
+        stopReferesing();
+        if (responseCode == 200) {
+            ContactUsBean bean = new Gson().fromJson(response, ContactUsBean.class);
+            if (mList != null)
+                mList.clear();
+            mList.addAll(bean.getContactUsData().getmContactList());
+            if (mList.size() > 0) {
+                adapter.notifyDataSetChanged();
+            }
+        }
+
+    }
+
+    private void stopReferesing() {
+        if (mBinding.swipe != null) {
+            mBinding.swipe.setRefreshing(false);
+        }
+    }
+
+    @Override
+    public void onError(String response, int requestCode) {
+        mBinding.progressBar.setVisibility(View.GONE);
+        stopReferesing();
+
+    }
+
+    @Override
+    public void onFailure() {
+        stopReferesing();
+        mBinding.progressBar.setVisibility(View.GONE);
+
+    }
+
+    @Override
+    public void onRefresh() {
+        callApi();
+    }
+
+    private void callApi() {
+        if (AppUtils.isInternetAvailable(getActivity())) {
+            hitApi();
+        } else {
+            AppUtils.showToast(getActivity(), getString(R.string.no_internet));
         }
     }
 }

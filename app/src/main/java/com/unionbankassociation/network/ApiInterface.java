@@ -65,6 +65,9 @@ public interface ApiInterface {
 
     @FormUrlEncoded
     @PUT("logout")
-    Call<ResponseBody> logout(@Header("access_token") String accessToken,@FieldMap HashMap<String, String> map);
+    Call<ResponseBody> logout(@Header("access_token") String accessToken, @FieldMap HashMap<String, String> map);
+
+    @GET("contacts")
+    Call<ResponseBody> getContactList(@Header("access_token") String accessToken, @Query("page_no") String pageNumber);
 
 }

@@ -6,4 +6,12 @@ package com.unionbankassociation.models;
 public class BaseResponseBean {
     public int CODE;
     public String MESSAGE;
+
+    public int getCODE() {
+        return CODE;
+    }
+
+    public void setCODE(int CODE) {
+        this.CODE = CODE;
+    }
 }

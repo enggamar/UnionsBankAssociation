@@ -70,4 +70,6 @@ public interface ApiInterface {
     @GET("contacts")
     Call<ResponseBody> getContactList(@Header("access_token") String accessToken, @Query("page_no") String pageNumber);
 
+    @GET("notice-details")
+    Call<ResponseBody> getNoticeDetails(@Header("access_token") String accessToken, @Query("notice_id") String noticeId);
 }

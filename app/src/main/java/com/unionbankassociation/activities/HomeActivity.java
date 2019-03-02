@@ -55,12 +55,14 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
     private AppCompatTextView tvMedicalScheme;
     private LinearLayout llPhotoGallery;
     private LinearLayout llContactUs;
+    private String noticeId = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_home);
         initView();
+        getIntentData();
         setLisner();
         setUpView();
     }
@@ -122,6 +124,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
      * Initialize all views Ids
      * */
     private void initView() {
+
         ivMenu = (ImageView) findViewById(R.id.iv_menu);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         llServiceCondition = (LinearLayout) findViewById(R.id.ll_service_condition);
@@ -163,6 +166,18 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
             }
         });
 
+
+    }
+
+    private void getIntentData() {
+        if (getIntent() != null && getIntent().getExtras() != null) {
+            noticeId = getIntent().getExtras().getString("notice_id");
+            if (noticeId.length() > 0) {
+                Intent intent = new Intent(this, NoticeDetailActivity.class);
+                intent.putExtra("notice_id", noticeId);
+                startActivity(intent);
+            }
+        }
     }
 
     private void hitNewsListing(int currentPage) {
@@ -305,10 +320,11 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
                     isLoading = true;
                 } else {
                     isLoading = false;
-                }try {
+                }
+                try {
                     mNotificationList.addAll(bean.getmNotice().getNoticeDetails());
-                }catch (Exception e){
-                    
+                } catch (Exception e) {
+
                 }
                 if (mNotificationList.size() > 0) {
                     mBinding.rvNotification.setVisibility(View.VISIBLE);

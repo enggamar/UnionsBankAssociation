@@ -7,16 +7,14 @@ import android.app.PendingIntent;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.media.RingtoneManager;
+import android.net.Uri;
 import android.os.Build;
-import android.preference.PreferenceManager;
 import android.support.v4.app.NotificationCompat;
-import android.support.v4.content.ContextCompat;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 import com.unionbankassociation.R;
-import com.unionbankassociation.activities.HomeActivity;
-import com.unionbankassociation.utils.AppSharedPreference;
+import com.unionbankassociation.activities.SplashActivity;
 
 import java.util.Map;
 
@@ -31,6 +29,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
      * This variable is used to set the title of the notification
      */
     private String mTitle;
+    private String mNoticeId;
 
     @Override
     public void onNewToken(String s) {
@@ -54,67 +53,64 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     private void sendNotification(Map<String, String> data) {
         mUniqueId = 0;
         try {
-            //Generating unique id
             generateUniqueId();
-            Intent intent = new Intent(this, HomeActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-//            intent.putExtra(AppConstants.NOTIFICATION_TYPE, data.get("type"));
-            //Set title by getting from the push notification
-            if (data.get("alert") != null)
-                mTitle = data.get("alert");
-
-            PendingIntent pendingIntent = PendingIntent.getActivity(this, mUniqueId, intent, PendingIntent.FLAG_ONE_SHOT);
-
+            Intent intent = new Intent(this, SplashActivity.class);
+            if (data.get("title") != null)
+                mTitle = data.get("title");
+            if (data.get("notice_id") != null) {
+                mNoticeId = data.get("notice_id");
+           }
+            intent.putExtra("notice_id", mNoticeId);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_ONE_SHOT);
+            String id = "channel" + mUniqueId;
             NotificationManager notificationManager = getNotificationManager();
-
-
             if (notificationManager != null) {
-                String id = "channel" + mUniqueId;
-                //Check for oreo (Making notification channel
+                String channelId = "channel" + mUniqueId;
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                     int importance = NotificationManager.IMPORTANCE_HIGH;
-                    NotificationChannel mChannel = new NotificationChannel(id, mTitle, importance);
+
+                    NotificationChannel mChannel = new NotificationChannel(channelId, getString(R.string.app_name), importance);
+                    // Configure the notification channel.
                     mChannel.setDescription(getString(R.string.app_name));
                     mChannel.setShowBadge(true);
                     mChannel.enableLights(true);
-                    mChannel.setLightColor(ContextCompat.getColor(this, R.color.colorPrimary));
                     mChannel.enableVibration(true);
                     mChannel.setVibrationPattern(new long[]{100, 200, 300, 400, 500, 400, 300, 200, 400});
-
                     notificationManager.createNotificationChannel(mChannel);
 
                 }
-
-                //Set Notification for other devices
+                Uri defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
                 NotificationCompat.Builder notificationBuilder =
                         new NotificationCompat.Builder(this, id)
                                 .setSmallIcon(getNotificationIcon())
-                                .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher))
-                                .setColor(ContextCompat.getColor(this, R.color.colorPrimary))
+                                .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.ic_logo))
+                                .setSound(defaultSoundUri)
                                 .setContentText(mTitle)
                                 .setContentTitle(getString(R.string.app_name))
-                                .setAutoCancel(true).setChannelId(id)
+                                .setAutoCancel(true).setChannelId(channelId)
                                 .setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION))
                                 .setContentIntent(pendingIntent);
-
-                // Set a message count to associate with this notification in the long-press menu.
-                // Create a notification and set a number to associate with it.
+                if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    notificationBuilder.setColor(getResources().getColor(R.color.colorPrimary));
+                } else {
+                    notificationBuilder.setSmallIcon(R.drawable.ic_logo);
+                }
+                notificationManager.notify(mUniqueId, notificationBuilder.build());
 
                 Notification notification = notificationBuilder.build();
 
                 notification.sound = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
 
                 notification.flags |=
-                        Notification.FLAG_AUTO_CANCEL; //Do not clear  the notification
+                        Notification.FLAG_AUTO_CANCEL; //Do not clear the notification
                 notification.defaults |= Notification.DEFAULT_LIGHTS; // LED
                 notification.defaults |= Notification.DEFAULT_VIBRATE;//Vibration
 
                 notificationManager.notify(mUniqueId, notification);
-
-                //Uri defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
-                //NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-                //notificationManager.notify(mUniqueId, notificationBuilder.build());
             }
+
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -136,6 +132,6 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
      */
     private int getNotificationIcon() {
         boolean useWhiteIcon = (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP);
-        return useWhiteIcon ? R.drawable.ic_logo : R.drawable.ic_logo ;
+        return useWhiteIcon ? R.drawable.ic_logo : R.drawable.ic_logo;
     }
 }

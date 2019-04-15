@@ -47,7 +47,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
     private AppCompatTextView tvGlance, tvClearicalDeploymentCondition;
     private AppCompatTextView tvPensionScheme;
     private AppCompatTextView tvDispliniary, tvServiceCondition;
-    private LinearLayout tvNews, tvAchievment, tvBankWiseSettleMent;
+    private LinearLayout tvNews, tvAchievment, tvBankWiseSettleMent, llPdf;
     private int currentPageNumber = 1;
     private boolean isLoading;
     private RelativeLayout rlLogOut;
@@ -117,6 +117,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
         rlLogOut.setOnClickListener(this);
         llActivities.setOnClickListener(this);
         tvServiceCondition.setOnClickListener(this);
+        llPdf.setOnClickListener(this);
 
     }
 
@@ -144,6 +145,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
         tvMedicalScheme = (AppCompatTextView) findViewById(R.id.tv_new_medical_scheme);
         llPhotoGallery = (LinearLayout) findViewById(R.id.ll_photo_gallery);
         llContactUs = (LinearLayout) findViewById(R.id.ll_contact_us);
+        llPdf = (LinearLayout) findViewById(R.id.ll_pdf_list);
         llPhotoGallery.setOnClickListener(this);
         llContactUs.setOnClickListener(this);
         mBinding.toolbar.title.setText(getString(R.string.news));
@@ -267,6 +269,9 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
                 else
                     AppUtils.showToast(this, getString(R.string.no_internet));
 
+                break;
+            case R.id.ll_pdf_list:
+                openActivityForFragments(20);
                 break;
         }
     }

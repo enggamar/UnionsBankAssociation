@@ -162,6 +162,33 @@
 
                         </LinearLayout>
 
+                        <LinearLayout
+                            android:id="@+id/ll_pdf_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <android.support.v7.widget.AppCompatImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="@dimen/_15sdp"
+                                android:src="@drawable/ic_pdf" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/poppins_regular_0"
+                                android:padding="@dimen/_6sdp"
+                                android:text="@string/pdf"
+                                android:textColor="@color/Black"
+                                android:textSize="@dimen/_13sdp" />
+
+                        </LinearLayout>
+
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"

@@ -72,4 +72,7 @@ public interface ApiInterface {
 
     @GET("notice-details")
     Call<ResponseBody> getNoticeDetails(@Header("access_token") String accessToken, @Query("notice_id") String noticeId);
+
+    @GET("pdf-documents")
+    Call<ResponseBody> getPdfListing(@Header("access_token") String accessToken, @Query("page_no") int pageNumber);
 }

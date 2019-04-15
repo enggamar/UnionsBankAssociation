@@ -14,6 +14,7 @@ import com.unionbankassociation.fragments.LeavePolicyFragment;
 import com.unionbankassociation.fragments.NewMedicalScheme;
 import com.unionbankassociation.fragments.NonSunOrdinatorFragment;
 import com.unionbankassociation.fragments.PartTimeEmployeeFragment;
+import com.unionbankassociation.fragments.PdfFragment;
 import com.unionbankassociation.fragments.PensionFragment;
 import com.unionbankassociation.fragments.PhotoGalleryFragment;
 import com.unionbankassociation.fragments.SalaryComponentFragment;
@@ -120,6 +121,9 @@ public class CommonActivityForFragment extends BaseActivity {
                 break;
             case 19:
                 addFragmentWithBackstack(R.id.container, new SalaryComponentSubStaffFragment(), SalaryComponentSubStaffFragment.class.getSimpleName());
+                break;
+            case 20:
+                addFragmentWithBackstack(R.id.container, new PdfFragment(), PdfFragment.class.getSimpleName());
                 break;
 
         }

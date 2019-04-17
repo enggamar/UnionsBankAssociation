@@ -31,6 +31,18 @@
                 android:textColor="@color/White"
                 android:textSize="20sp" />
 
+            <ImageView
+                android:id="@+id/iv_download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                android:src="@drawable/ic_download"
+                android:tint="@color/White"
+                android:visibility="gone" />
+
+
         </RelativeLayout>
 
     </RelativeLayout>

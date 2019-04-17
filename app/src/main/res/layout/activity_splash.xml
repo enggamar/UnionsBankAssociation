@@ -1,25 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/splash_layer"
     android:orientation="vertical">
 
-    <android.support.v7.widget.AppCompatImageView
-        android:layout_width="@dimen/_200sdp"
-        android:layout_height="@dimen/_200sdp"
-        android:layout_centerInParent="true"
-        android:src="@drawable/ic_launcher" />
-
     <android.support.v7.widget.AppCompatTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_above="@id/logo"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="@dimen/_20sdp"
         android:fontFamily="@font/poppins_bold_0"
         android:text="@string/u_p_bank_employees_union"
         android:textColor="@color/White"
-        android:textSize="@dimen/_14sdp" />
+        android:textSize="@dimen/_16sdp" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/logo"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_200sdp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_launcher" />
+
+
 </RelativeLayout>
